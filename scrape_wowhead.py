@@ -19,7 +19,7 @@ def scroll_to_bottom(driver, pause_time=2):
         last_height = new_height
 
 def main():
-    url = "https://www.wowhead.com/items"
+    url = "https://www.wowhead.com/classic/skill=185/cooking"
 
     options = Options()
     options.add_argument("--headless")
