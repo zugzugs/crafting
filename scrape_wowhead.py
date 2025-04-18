@@ -18,7 +18,7 @@ def main():
     time.sleep(10)
 
     items = driver.find_elements(By.CSS_SELECTOR, ".listview-mode-default a.listview-cleartext")
-    for item in items
+    for item in items:
         print(item.text)
 
     driver.quit()
