@@ -46,15 +46,16 @@ def get_materials_data(url):
             item_id_match = re.search(r"item=(\d+)", href)
             if item_id_match:
                 item_id = int(item_id_match.group(1))
-                name = link.text.strip()
+                material_name = link.text.strip()  # <- fixed here
 
-                quantity_match = re.search(re.escape(name) + r"\s*\((\d+)\)", reagent_text)
+                quantity_match = re.search(re.escape(material_name) + r"\s*\((\d+)\)", reagent_text)
                 quantity = int(quantity_match.group(1)) if quantity_match else 1
 
                 materials.append({
                     "itemId": item_id,
                     "quantity": quantity
                 })
+
 
     # Result item ID
     result_item = soup.select_one("span.q2 a[href*='/item=']")
