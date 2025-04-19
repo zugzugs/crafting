@@ -82,16 +82,14 @@ def get_materials_data(url):
 
     # Quantity crafted (default 1 if unknown)
     # Quantity crafted (default 1 if unknown)
-    # Quantity crafted (default 1 if unknown)
-    # Quantity crafted (default 1 if unknown)
     result_quantity = 1
-    if result_item and reagent_text:
-        result_name = result_item.text.strip()
-        match = re.search(re.escape(result_name) + r'\s*\(\s*(\d+)\s*\)', reagent_text)
+    tooltip_div = soup.select_one(f"div#tt{recipe_id}")
+    if tooltip_div:
+        tooltip_text = tooltip_div.get_text(separator=' ', strip=True)
+        result_name = name  # already parsed from <h1> earlier
+        match = re.search(re.escape(result_name) + r'\s*\(\s*(\d+)\s*\)', tooltip_text)
         if match:
             result_quantity = int(match.group(1))
-
-
 
 
     result = {
