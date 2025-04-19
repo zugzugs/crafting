@@ -1,1 +1,31 @@
-[]
+[
+    {
+        "recipeId": 25659,
+        "name": "Dirge's Kickin' Chimaerok Chops",
+        "profession": "Cooking",
+        "skillLevel": 0,
+        "icon": "inv_misc_food_65",
+        "result": {
+            "itemId": 25659,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 2692,
+                "quantity": 1
+            },
+            {
+                "itemId": 9061,
+                "quantity": 1
+            },
+            {
+                "itemId": 8150,
+                "quantity": 1
+            },
+            {
+                "itemId": 21024,
+                "quantity": 1
+            }
+        ]
+    }
+]
