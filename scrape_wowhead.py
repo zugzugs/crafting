@@ -13,7 +13,11 @@ def get_materials_data(url):
     options.add_argument("--disable-dev-shm-usage")
 
     driver = webdriver.Chrome(options=options)
-    driver.get(url, timeout=15)
+    driver.set_page_load_timeout(15)
+    driver.set_script_timeout(15)
+
+    driver.get(url)
+    
     time.sleep(2)
 
     soup = BeautifulSoup(driver.page_source, 'html.parser')
