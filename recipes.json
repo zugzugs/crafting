@@ -377,6 +377,27 @@
         ]
     },
     {
+        "recipeId": 18239,
+        "name": "Cooked Glossy Mightfish",
+        "profession": "Cooking",
+        "skillLevel": 0,
+        "icon": "inv_misc_monsterhead_03",
+        "result": {
+            "itemId": 18239,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 13754,
+                "quantity": 1
+            },
+            {
+                "itemId": 3713,
+                "quantity": 1
+            }
+        ]
+    },
+    {
         "recipeId": 18241,
         "name": "Filet of Redgill",
         "profession": "Cooking",
@@ -1125,6 +1146,31 @@
         ]
     },
     {
+        "recipeId": 6501,
+        "name": "Clam Chowder",
+        "profession": "Cooking",
+        "skillLevel": 0,
+        "icon": "inv_potion_01",
+        "result": {
+            "itemId": 6501,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 5503,
+                "quantity": 1
+            },
+            {
+                "itemId": 1179,
+                "quantity": 1
+            },
+            {
+                "itemId": 2678,
+                "quantity": 1
+            }
+        ]
+    },
+    {
         "recipeId": 6417,
         "name": "Dig Rat Stew",
         "profession": "Cooking",
@@ -1360,6 +1406,27 @@
         ]
     },
     {
+        "recipeId": 6499,
+        "name": "Boiled Clams",
+        "profession": "Cooking",
+        "skillLevel": 0,
+        "icon": "inv_misc_shell_02",
+        "result": {
+            "itemId": 6499,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 5503,
+                "quantity": 1
+            },
+            {
+                "itemId": 159,
+                "quantity": 1
+            }
+        ]
+    },
+    {
         "recipeId": 2541,
         "name": "Coyote Steak",
         "profession": "Cooking",
@@ -1372,6 +1439,27 @@
         "materials": [
             {
                 "itemId": 2673,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 6415,
+        "name": "Fillet of Frenzy",
+        "profession": "Cooking",
+        "skillLevel": 0,
+        "icon": "inv_misc_fish_05",
+        "result": {
+            "itemId": 6415,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 5468,
+                "quantity": 1
+            },
+            {
+                "itemId": 2678,
                 "quantity": 1
             }
         ]
@@ -1431,6 +1519,23 @@
         "materials": [
             {
                 "itemId": 6289,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 7827,
+        "name": "Rainbow Fin Albacore",
+        "profession": "Cooking",
+        "skillLevel": 0,
+        "icon": "inv_misc_fish_27",
+        "result": {
+            "itemId": 7827,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 6361,
                 "quantity": 1
             }
         ]
