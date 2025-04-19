@@ -27,5 +27,34 @@
                 "quantity": 1
             }
         ]
+    },
+    {
+        "recipeId": 1225763,
+        "name": "Grand Lobster Banquet",
+        "profession": "Cooking",
+        "skillLevel": 0,
+        "icon": "inv_misc_food_63",
+        "result": {
+            "itemId": 238642,
+            "quantity": 2
+        },
+        "materials": [
+            {
+                "itemId": 13888,
+                "quantity": 12
+            },
+            {
+                "itemId": 3712,
+                "quantity": 4
+            },
+            {
+                "itemId": 3404,
+                "quantity": 3
+            },
+            {
+                "itemId": 239017,
+                "quantity": 1
+            }
+        ]
     }
 ]
