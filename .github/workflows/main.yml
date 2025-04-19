@@ -26,3 +26,7 @@ jobs:
 
     - name: Run scraper
       run: python scrape_wowhead.py
+      
+    - name: cat
+      run: cat recipes.json
+
