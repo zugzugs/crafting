@@ -81,8 +81,15 @@ def get_materials_data(url):
             result_item_id = int(item_id_match.group(1))
 
     # Quantity crafted (default 1 if unknown)
-    quantity_match = re.search(re.escape(material_name) + r'.*?\(\s*(\d+)\s*\)', reagent_text)
-    result_quantity = int(quantity_match.group(1)) if quantity_match else 1
+    # Quantity crafted (default 1 if unknown)
+    result_quantity = 1
+    if result_item:
+        result_name = result_item.text.strip()
+        full_text = soup.get_text(separator=' ', strip=True)
+        match = re.search(re.escape(result_name) + r'.*?\(\s*(\d+)\s*\)', full_text)
+        if match:
+            result_quantity = int(match.group(1))
+
 
     result = {
         "itemId": result_item_id or recipe_id,
