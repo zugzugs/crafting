@@ -100,8 +100,26 @@ def get_materials_data(url):
     driver.quit()
     return recipe_data
 
-# Example usage
+def scrape_from_file(input_file, output_file):
+    with open(input_file, "r") as f:
+        urls = [line.strip() for line in f if line.strip()]
+
+    all_recipes = []
+    for url in urls:
+        try:
+            print(f"Scraping: {url}")
+            recipe = get_materials_data(url)
+            all_recipes.append(recipe)
+        except Exception as e:
+            print(f"Error scraping {url}: {e}")
+
+    with open(output_file, "w") as f:
+        json.dump(all_recipes, f, indent=4)
+
+    print(f"\nSaved {len(all_recipes)} recipes to {output_file}")
+
+
 if __name__ == "__main__":
-    url = "https://www.wowhead.com/classic/spell=1225763/grand-lobster-banquet"
+    scrape_from_file("urls.txt", "recipes.json")
     recipe_json = get_materials_data(url)
     print(json.dumps([recipe_json], indent=4))
