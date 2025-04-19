@@ -83,17 +83,14 @@ def get_materials_data(url):
     # Quantity crafted (default 1 if unknown)
     # Quantity crafted (default 1 if unknown)
     # Quantity crafted (default 1 if unknown)
+    # Quantity crafted (default 1 if unknown)
     result_quantity = 1
-    if result_item:
+    if result_item and reagent_text:
         result_name = result_item.text.strip()
-    
-        # Look for a pattern like: "Dirge's Kickin' Chimaerok Chops (5)"
-        text_candidates = soup.find_all(string=re.compile(re.escape(result_name) + r"\s*\(\d+\)"))
-        for text in text_candidates:
-            match = re.search(re.escape(result_name) + r'\s*\(\s*(\d+)\s*\)', text)
-            if match:
-                result_quantity = int(match.group(1))
-                break
+        match = re.search(re.escape(result_name) + r'\s*\(\s*(\d+)\s*\)', reagent_text)
+        if match:
+            result_quantity = int(match.group(1))
+
 
 
 
