@@ -100,23 +100,41 @@ def get_materials_data(url):
     driver.quit()
     return recipe_data
 
-def scrape_from_file(input_file, output_file):
+def scrape_from_file(input_file, output_file, max_retries=3, delay=2):
     with open(input_file, "r") as f:
         urls = [line.strip() for line in f if line.strip()]
 
     all_recipes = []
-    for url in urls:
-        try:
-            print(f"Scraping: {url}")
-            recipe = get_materials_data(url)
-            all_recipes.append(recipe)
-        except Exception as e:
-            print(f"Error scraping {url}: {e}")
+    failed_urls = []
 
+    def try_scrape(url):
+        for attempt in range(1, max_retries + 1):
+            try:
+                print(f"Scraping (Attempt {attempt}): {url}")
+                recipe = get_materials_data(url)
+                all_recipes.append(recipe)
+                return True
+            except Exception as e:
+                print(f"Error on attempt {attempt} for {url}: {e}")
+                time.sleep(delay)  # wait before retry
+        return False
+
+    for url in urls:
+        success = try_scrape(url)
+        if not success:
+            failed_urls.append(url)
+
+    # Write successful recipes
     with open(output_file, "w") as f:
         json.dump(all_recipes, f, indent=4)
 
-    print(f"\nSaved {len(all_recipes)} recipes to {output_file}")
+    # Optionally save the failed ones
+    if failed_urls:
+        with open("failed_urls.txt", "w") as f:
+            f.write("\n".join(failed_urls))
+        print(f"\n⚠️ Failed to scrape {len(failed_urls)} recipes. Saved to failed_urls.txt")
+
+    print(f"\n✅ Successfully saved {len(all_recipes)} recipes to {output_file}")
 
 
 if __name__ == "__main__":
