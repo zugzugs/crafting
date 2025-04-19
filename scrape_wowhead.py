@@ -26,6 +26,15 @@ def get_materials_data(url):
     name_tag = soup.find("h1", class_="heading-size-1")
     name = name_tag.text.strip() if name_tag else "Unknown"
 
+    # Recipe icon
+    icon_url = ""
+    icon_li = soup.select_one("li.icon-db-link ins[style]")
+    if icon_li and "background-image" in icon_li["style"]:
+        match = re.search(r'url\(["\']?(.*?)["\']?\)', icon_li["style"])
+        if match:
+            icon_url = match.group(1)
+
+
     # Profession from breadcrumb (last <a> in breadcrumb)
     breadcrumb = soup.select_one("div.breadcrumb")
     profession = "Unknown"
@@ -80,9 +89,11 @@ def get_materials_data(url):
         "name": name,
         "profession": profession,
         "skillLevel": 0,
+        "icon": icon_url,
         "result": result,
         "materials": materials
     }
+
 
     driver.quit()
     return recipe_data
