@@ -102,7 +102,11 @@ def get_materials_data(url):
 
 def scrape_from_file(input_file, output_file, max_retries=3, delay=2):
     with open(input_file, "r") as f:
-        urls = [line.strip() for line in f if line.strip()]
+        urls = [
+            line.strip()
+            for line in f
+            if line.strip() and not line.strip().startswith("#")
+        ]
 
     all_recipes = []
     failed_urls = []
