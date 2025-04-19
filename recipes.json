@@ -1851,5 +1851,3193 @@
                 "quantity": 1
             }
         ]
+    },
+    {
+        "recipeId": 1213571,
+        "name": "Elixir of Alacrity",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_112",
+        "result": {
+            "itemId": 1213571,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 13463,
+                "quantity": 2
+            },
+            {
+                "itemId": 234012,
+                "quantity": 2
+            },
+            {
+                "itemId": 234011,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 1213559,
+        "name": "Elixir of the Honey Badger",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_109",
+        "result": {
+            "itemId": 1213559,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 13465,
+                "quantity": 2
+            },
+            {
+                "itemId": 234012,
+                "quantity": 2
+            },
+            {
+                "itemId": 234011,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 1213565,
+        "name": "Elixir of the Ironside",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_108",
+        "result": {
+            "itemId": 1213565,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 13467,
+                "quantity": 2
+            },
+            {
+                "itemId": 234012,
+                "quantity": 2
+            },
+            {
+                "itemId": 234011,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 1213563,
+        "name": "Elixir of the Mage-Lord",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_110",
+        "result": {
+            "itemId": 1213563,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 13466,
+                "quantity": 2
+            },
+            {
+                "itemId": 234012,
+                "quantity": 2
+            },
+            {
+                "itemId": 234011,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 1213546,
+        "name": "Flask of Ancient Knowledge",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_alchemy_endlessflask_04",
+        "result": {
+            "itemId": 1213546,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 9149,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 1213552,
+        "name": "Flask of Madness",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_alchemy_endlessflask_06",
+        "result": {
+            "itemId": 1213552,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 9149,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 1213548,
+        "name": "Flask of the Old Gods",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_alchemy_endlessflask_05",
+        "result": {
+            "itemId": 1213548,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 9149,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 1213544,
+        "name": "Flask of Unyielding Sorrow",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_alchemy_endlessflask_03",
+        "result": {
+            "itemId": 1213544,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 9149,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 24266,
+        "name": "Gurubashi Mojo Madness",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_poison_mindnumbing",
+        "result": {
+            "itemId": 24266,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 12938,
+                "quantity": 1
+            },
+            {
+                "itemId": 19943,
+                "quantity": 1
+            },
+            {
+                "itemId": 12804,
+                "quantity": 6
+            },
+            {
+                "itemId": 13468,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 17632,
+        "name": "Alchemist's Stone",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_misc_orb_02",
+        "result": {
+            "itemId": 17632,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 7078,
+                "quantity": 8
+            },
+            {
+                "itemId": 7076,
+                "quantity": 8
+            },
+            {
+                "itemId": 7082,
+                "quantity": 8
+            },
+            {
+                "itemId": 7080,
+                "quantity": 8
+            },
+            {
+                "itemId": 12803,
+                "quantity": 8
+            },
+            {
+                "itemId": 9262,
+                "quantity": 2
+            },
+            {
+                "itemId": 13468,
+                "quantity": 4
+            }
+        ]
+    },
+    {
+        "recipeId": 17638,
+        "name": "Flask of Chromatic Resistance",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_48",
+        "result": {
+            "itemId": 17638,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 13467,
+                "quantity": 30
+            },
+            {
+                "itemId": 13465,
+                "quantity": 10
+            },
+            {
+                "itemId": 13468,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 17636,
+        "name": "Flask of Distilled Wisdom",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_97",
+        "result": {
+            "itemId": 17636,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 13463,
+                "quantity": 30
+            },
+            {
+                "itemId": 13467,
+                "quantity": 10
+            },
+            {
+                "itemId": 13468,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 17634,
+        "name": "Flask of Petrification",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_26",
+        "result": {
+            "itemId": 17634,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 9149,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 17637,
+        "name": "Flask of Supreme Power",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_41",
+        "result": {
+            "itemId": 17637,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 13463,
+                "quantity": 30
+            },
+            {
+                "itemId": 13465,
+                "quantity": 10
+            },
+            {
+                "itemId": 13468,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 17635,
+        "name": "Flask of the Titans",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_62",
+        "result": {
+            "itemId": 17635,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 8846,
+                "quantity": 30
+            },
+            {
+                "itemId": 13423,
+                "quantity": 10
+            },
+            {
+                "itemId": 13468,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 22732,
+        "name": "Major Rejuvenation Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_47",
+        "result": {
+            "itemId": 22732,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 10286,
+                "quantity": 1
+            },
+            {
+                "itemId": 13464,
+                "quantity": 4
+            },
+            {
+                "itemId": 13463,
+                "quantity": 4
+            },
+            {
+                "itemId": 18256,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 25146,
+        "name": "Transmute: Elemental Fire",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "spell_fire_fire",
+        "result": {
+            "itemId": 25146,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 9149,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 17580,
+        "name": "Major Mana Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_76",
+        "result": {
+            "itemId": 17580,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 13463,
+                "quantity": 3
+            },
+            {
+                "itemId": 13467,
+                "quantity": 2
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 17577,
+        "name": "Greater Arcane Protection Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_83",
+        "result": {
+            "itemId": 17577,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 11176,
+                "quantity": 1
+            },
+            {
+                "itemId": 13463,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 17574,
+        "name": "Greater Fire Protection Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_24",
+        "result": {
+            "itemId": 17574,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 7068,
+                "quantity": 1
+            },
+            {
+                "itemId": 13463,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 17575,
+        "name": "Greater Frost Protection Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_20",
+        "result": {
+            "itemId": 17575,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 7070,
+                "quantity": 1
+            },
+            {
+                "itemId": 13463,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 17576,
+        "name": "Greater Nature Protection Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_22",
+        "result": {
+            "itemId": 17576,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 7067,
+                "quantity": 1
+            },
+            {
+                "itemId": 13463,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 17578,
+        "name": "Greater Shadow Protection Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_23",
+        "result": {
+            "itemId": 17578,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 3824,
+                "quantity": 1
+            },
+            {
+                "itemId": 13463,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 24368,
+        "name": "Major Troll's Blood Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_80",
+        "result": {
+            "itemId": 24368,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 8846,
+                "quantity": 1
+            },
+            {
+                "itemId": 13466,
+                "quantity": 2
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 17573,
+        "name": "Greater Arcane Elixir",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_25",
+        "result": {
+            "itemId": 17573,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 13463,
+                "quantity": 3
+            },
+            {
+                "itemId": 13465,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 24367,
+        "name": "Living Action Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_07",
+        "result": {
+            "itemId": 24367,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 13467,
+                "quantity": 2
+            },
+            {
+                "itemId": 13465,
+                "quantity": 2
+            },
+            {
+                "itemId": 10286,
+                "quantity": 2
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 17572,
+        "name": "Purification Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_31",
+        "result": {
+            "itemId": 17572,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 13467,
+                "quantity": 2
+            },
+            {
+                "itemId": 13466,
+                "quantity": 2
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 17571,
+        "name": "Elixir of the Mongoose",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_32",
+        "result": {
+            "itemId": 17571,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 13465,
+                "quantity": 2
+            },
+            {
+                "itemId": 13466,
+                "quantity": 2
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 17570,
+        "name": "Greater Stoneshield Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_69",
+        "result": {
+            "itemId": 17570,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 13423,
+                "quantity": 3
+            },
+            {
+                "itemId": 10620,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 17557,
+        "name": "Elixir of Brute Force",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_40",
+        "result": {
+            "itemId": 17557,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 8846,
+                "quantity": 2
+            },
+            {
+                "itemId": 13466,
+                "quantity": 2
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 24366,
+        "name": "Greater Dreamless Sleep Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_83",
+        "result": {
+            "itemId": 24366,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 13463,
+                "quantity": 2
+            },
+            {
+                "itemId": 13464,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 24365,
+        "name": "Mageblood Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_45",
+        "result": {
+            "itemId": 24365,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 13463,
+                "quantity": 1
+            },
+            {
+                "itemId": 13466,
+                "quantity": 2
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 17556,
+        "name": "Major Healing Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_54",
+        "result": {
+            "itemId": 17556,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 13464,
+                "quantity": 2
+            },
+            {
+                "itemId": 13465,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 17559,
+        "name": "Transmute: Air to Fire",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "spell_fire_volcano",
+        "result": {
+            "itemId": 7078,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 9149,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 17187,
+        "name": "Transmute: Arcanite",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_misc_stonetablet_05",
+        "result": {
+            "itemId": 12360,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 9149,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 17566,
+        "name": "Transmute: Earth to Life",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "spell_nature_abolishmagic",
+        "result": {
+            "itemId": 12803,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 9149,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 17561,
+        "name": "Transmute: Earth to Water",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "spell_nature_acid_01",
+        "result": {
+            "itemId": 7080,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 9149,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 17560,
+        "name": "Transmute: Fire to Earth",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "spell_nature_strengthofearthtotem02",
+        "result": {
+            "itemId": 7076,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 9149,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 17565,
+        "name": "Transmute: Life to Earth",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "spell_nature_strengthofearthtotem02",
+        "result": {
+            "itemId": 7076,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 9149,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 17563,
+        "name": "Transmute: Undeath to Water",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "spell_nature_acid_01",
+        "result": {
+            "itemId": 7080,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 9149,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 17562,
+        "name": "Transmute: Water to Air",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "spell_nature_earthbind",
+        "result": {
+            "itemId": 7082,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 9149,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 17564,
+        "name": "Transmute: Water to Undeath",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "spell_shadow_shadetruesight",
+        "result": {
+            "itemId": 12808,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 9149,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 17555,
+        "name": "Elixir of the Sages",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_29",
+        "result": {
+            "itemId": 17555,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 13463,
+                "quantity": 1
+            },
+            {
+                "itemId": 13466,
+                "quantity": 2
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 1231583,
+        "name": "Major Discolored Healing Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_37",
+        "result": {
+            "itemId": 1231583,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 241652,
+                "quantity": 1
+            },
+            {
+                "itemId": 13466,
+                "quantity": 2
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 17554,
+        "name": "Elixir of Superior Defense",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_66",
+        "result": {
+            "itemId": 17554,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 13423,
+                "quantity": 2
+            },
+            {
+                "itemId": 8838,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 17553,
+        "name": "Superior Mana Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_74",
+        "result": {
+            "itemId": 17553,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 8838,
+                "quantity": 2
+            },
+            {
+                "itemId": 8839,
+                "quantity": 2
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 17552,
+        "name": "Mighty Rage Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_41",
+        "result": {
+            "itemId": 17552,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 8846,
+                "quantity": 3
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 3175,
+        "name": "Limited Invulnerability Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_62",
+        "result": {
+            "itemId": 3175,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 8839,
+                "quantity": 2
+            },
+            {
+                "itemId": 8845,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 11477,
+        "name": "Elixir of Demonslaying",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_27",
+        "result": {
+            "itemId": 11477,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 8846,
+                "quantity": 1
+            },
+            {
+                "itemId": 8845,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 11478,
+        "name": "Elixir of Detect Demon",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_53",
+        "result": {
+            "itemId": 11478,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 8846,
+                "quantity": 2
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 26277,
+        "name": "Elixir of Greater Firepower",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_60",
+        "result": {
+            "itemId": 26277,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 6371,
+                "quantity": 3
+            },
+            {
+                "itemId": 4625,
+                "quantity": 3
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 11476,
+        "name": "Elixir of Shadow Power",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_46",
+        "result": {
+            "itemId": 11476,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 8845,
+                "quantity": 3
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 17551,
+        "name": "Stonescale Oil",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_68",
+        "result": {
+            "itemId": 17551,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 13422,
+                "quantity": 1
+            },
+            {
+                "itemId": 3372,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 446226,
+        "name": "Flask of Everlasting Nightmares",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_alchemy_endlessflask_01",
+        "result": {
+            "itemId": 446226,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 221021,
+                "quantity": 10
+            },
+            {
+                "itemId": 220688,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 446851,
+        "name": "Flask of Nightmarish Mojo",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_alchemy_elixir_03",
+        "result": {
+            "itemId": 446851,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 221021,
+                "quantity": 5
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            },
+            {
+                "itemId": 221312,
+                "quantity": 5
+            }
+        ]
+    },
+    {
+        "recipeId": 448085,
+        "name": "Flask of Restless Dreams",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_alchemy_endlessflask_02",
+        "result": {
+            "itemId": 448085,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 221021,
+                "quantity": 10
+            },
+            {
+                "itemId": 220688,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 11472,
+        "name": "Elixir of Giants",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_61",
+        "result": {
+            "itemId": 11472,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 8838,
+                "quantity": 1
+            },
+            {
+                "itemId": 8846,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 11473,
+        "name": "Ghost Dye",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_poison_mindnumbing",
+        "result": {
+            "itemId": 11473,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 8845,
+                "quantity": 2
+            },
+            {
+                "itemId": 4342,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 11468,
+        "name": "Elixir of Dream Vision",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_14",
+        "result": {
+            "itemId": 11468,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 8831,
+                "quantity": 3
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 11467,
+        "name": "Elixir of Greater Agility",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_94",
+        "result": {
+            "itemId": 11467,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 8838,
+                "quantity": 1
+            },
+            {
+                "itemId": 3821,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 11466,
+        "name": "Gift of Arthas",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_28",
+        "result": {
+            "itemId": 11466,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 8836,
+                "quantity": 1
+            },
+            {
+                "itemId": 8839,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 11461,
+        "name": "Arcane Elixir",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_30",
+        "result": {
+            "itemId": 11461,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 8839,
+                "quantity": 1
+            },
+            {
+                "itemId": 3821,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 11465,
+        "name": "Elixir of Greater Intellect",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_10",
+        "result": {
+            "itemId": 11465,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 8839,
+                "quantity": 1
+            },
+            {
+                "itemId": 3358,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 11464,
+        "name": "Invisibility Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_25",
+        "result": {
+            "itemId": 11464,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 8845,
+                "quantity": 1
+            },
+            {
+                "itemId": 8838,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 15833,
+        "name": "Dreamless Sleep Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_83",
+        "result": {
+            "itemId": 15833,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 8831,
+                "quantity": 3
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 11460,
+        "name": "Elixir of Detect Undead",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_53",
+        "result": {
+            "itemId": 11460,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 8836,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 11459,
+        "name": "Philosophers' Stone",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_misc_orb_01",
+        "result": {
+            "itemId": 11459,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 3575,
+                "quantity": 4
+            },
+            {
+                "itemId": 9262,
+                "quantity": 1
+            },
+            {
+                "itemId": 8831,
+                "quantity": 4
+            },
+            {
+                "itemId": 4625,
+                "quantity": 4
+            }
+        ]
+    },
+    {
+        "recipeId": 11479,
+        "name": "Transmute: Iron to Gold",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_ingot_03",
+        "result": {
+            "itemId": 3577,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 9149,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 11480,
+        "name": "Transmute: Mithril to Truesilver",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_ingot_08",
+        "result": {
+            "itemId": 6037,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 9149,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 11458,
+        "name": "Wildvine Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_34",
+        "result": {
+            "itemId": 11458,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 8153,
+                "quantity": 1
+            },
+            {
+                "itemId": 8831,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 435971,
+        "name": "Mildly Irradiated Rejuvenation Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_alchemy_elixir_03",
+        "result": {
+            "itemId": 435971,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 213371,
+                "quantity": 1
+            },
+            {
+                "itemId": 2456,
+                "quantity": 1
+            },
+            {
+                "itemId": 215430,
+                "quantity": 3
+            },
+            {
+                "itemId": 8925,
+                "quantity": 5
+            }
+        ]
+    },
+    {
+        "recipeId": 22808,
+        "name": "Elixir of Greater Water Breathing",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_05",
+        "result": {
+            "itemId": 22808,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 7972,
+                "quantity": 1
+            },
+            {
+                "itemId": 8831,
+                "quantity": 2
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 4942,
+        "name": "Lesser Stoneshield Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_67",
+        "result": {
+            "itemId": 4942,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 3858,
+                "quantity": 1
+            },
+            {
+                "itemId": 3821,
+                "quantity": 1
+            },
+            {
+                "itemId": 3372,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 11457,
+        "name": "Superior Healing Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_53",
+        "result": {
+            "itemId": 11457,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 8838,
+                "quantity": 1
+            },
+            {
+                "itemId": 3358,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 11452,
+        "name": "Restorative Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_01",
+        "result": {
+            "itemId": 11452,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 7067,
+                "quantity": 1
+            },
+            {
+                "itemId": 3821,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 11456,
+        "name": "Goblin Rocket Fuel",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_cask_02",
+        "result": {
+            "itemId": 11456,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 4625,
+                "quantity": 1
+            },
+            {
+                "itemId": 9260,
+                "quantity": 1
+            },
+            {
+                "itemId": 3372,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 11453,
+        "name": "Magic Resistance Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_16",
+        "result": {
+            "itemId": 11453,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 3358,
+                "quantity": 1
+            },
+            {
+                "itemId": 8831,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 439960,
+        "name": "Lesser Arcane Elixir",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_108",
+        "result": {
+            "itemId": 439960,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 3356,
+                "quantity": 1
+            },
+            {
+                "itemId": 3821,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 11448,
+        "name": "Greater Mana Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_73",
+        "result": {
+            "itemId": 11448,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 3358,
+                "quantity": 1
+            },
+            {
+                "itemId": 3821,
+                "quantity": 1
+            },
+            {
+                "itemId": 3372,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 11451,
+        "name": "Oil of Immolation",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_11",
+        "result": {
+            "itemId": 11451,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 4625,
+                "quantity": 1
+            },
+            {
+                "itemId": 3821,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 12609,
+        "name": "Catseye Elixir",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_36",
+        "result": {
+            "itemId": 12609,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 3821,
+                "quantity": 1
+            },
+            {
+                "itemId": 3818,
+                "quantity": 1
+            },
+            {
+                "itemId": 3372,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 3454,
+        "name": "Frost Oil",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_20",
+        "result": {
+            "itemId": 3454,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 3358,
+                "quantity": 4
+            },
+            {
+                "itemId": 3819,
+                "quantity": 2
+            },
+            {
+                "itemId": 3372,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 435969,
+        "name": "Insulating Gniodine",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_164",
+        "result": {
+            "itemId": 435969,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 3372,
+                "quantity": 1
+            },
+            {
+                "itemId": 213371,
+                "quantity": 5
+            }
+        ]
+    },
+    {
+        "recipeId": 3453,
+        "name": "Elixir of Detect Lesser Invisibility",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_01",
+        "result": {
+            "itemId": 3453,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 3358,
+                "quantity": 1
+            },
+            {
+                "itemId": 3818,
+                "quantity": 1
+            },
+            {
+                "itemId": 3372,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 11450,
+        "name": "Elixir of Greater Defense",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_65",
+        "result": {
+            "itemId": 11450,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 3355,
+                "quantity": 1
+            },
+            {
+                "itemId": 3821,
+                "quantity": 1
+            },
+            {
+                "itemId": 3372,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 21923,
+        "name": "Elixir of Frost Power",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_03",
+        "result": {
+            "itemId": 21923,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 3819,
+                "quantity": 2
+            },
+            {
+                "itemId": 3358,
+                "quantity": 1
+            },
+            {
+                "itemId": 3372,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 7259,
+        "name": "Nature Protection Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_06",
+        "result": {
+            "itemId": 7259,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 3357,
+                "quantity": 1
+            },
+            {
+                "itemId": 3820,
+                "quantity": 1
+            },
+            {
+                "itemId": 3372,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 7258,
+        "name": "Frost Protection Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_13",
+        "result": {
+            "itemId": 7258,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 3819,
+                "quantity": 1
+            },
+            {
+                "itemId": 3821,
+                "quantity": 1
+            },
+            {
+                "itemId": 3372,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 11449,
+        "name": "Elixir of Agility",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_93",
+        "result": {
+            "itemId": 11449,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 3820,
+                "quantity": 1
+            },
+            {
+                "itemId": 3821,
+                "quantity": 1
+            },
+            {
+                "itemId": 3372,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 3451,
+        "name": "Mighty Troll's Blood Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_79",
+        "result": {
+            "itemId": 3451,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 3357,
+                "quantity": 1
+            },
+            {
+                "itemId": 2453,
+                "quantity": 1
+            },
+            {
+                "itemId": 3372,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 3450,
+        "name": "Elixir of Fortitude",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_43",
+        "result": {
+            "itemId": 3450,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 3355,
+                "quantity": 1
+            },
+            {
+                "itemId": 3821,
+                "quantity": 1
+            },
+            {
+                "itemId": 3372,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 6618,
+        "name": "Great Rage Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_21",
+        "result": {
+            "itemId": 6618,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 5637,
+                "quantity": 1
+            },
+            {
+                "itemId": 3356,
+                "quantity": 1
+            },
+            {
+                "itemId": 3372,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 7257,
+        "name": "Fire Protection Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_16",
+        "result": {
+            "itemId": 7257,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 4402,
+                "quantity": 1
+            },
+            {
+                "itemId": 6371,
+                "quantity": 1
+            },
+            {
+                "itemId": 3372,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 3449,
+        "name": "Shadow Oil",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_23",
+        "result": {
+            "itemId": 3449,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 3818,
+                "quantity": 4
+            },
+            {
+                "itemId": 3369,
+                "quantity": 4
+            },
+            {
+                "itemId": 3372,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 3448,
+        "name": "Lesser Invisibility Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_18",
+        "result": {
+            "itemId": 3448,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 3818,
+                "quantity": 1
+            },
+            {
+                "itemId": 3355,
+                "quantity": 1
+            },
+            {
+                "itemId": 3372,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 3452,
+        "name": "Mana Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_72",
+        "result": {
+            "itemId": 3452,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 3820,
+                "quantity": 1
+            },
+            {
+                "itemId": 3356,
+                "quantity": 1
+            },
+            {
+                "itemId": 3372,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 7181,
+        "name": "Greater Healing Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_52",
+        "result": {
+            "itemId": 7181,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 3357,
+                "quantity": 1
+            },
+            {
+                "itemId": 3356,
+                "quantity": 1
+            },
+            {
+                "itemId": 3372,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 3188,
+        "name": "Elixir of Ogre's Strength",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_57",
+        "result": {
+            "itemId": 3188,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 2449,
+                "quantity": 1
+            },
+            {
+                "itemId": 3356,
+                "quantity": 1
+            },
+            {
+                "itemId": 3372,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 6624,
+        "name": "Free Action Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_04",
+        "result": {
+            "itemId": 6624,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 6370,
+                "quantity": 2
+            },
+            {
+                "itemId": 3820,
+                "quantity": 1
+            },
+            {
+                "itemId": 3372,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 7845,
+        "name": "Elixir of Firepower",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_33",
+        "result": {
+            "itemId": 7845,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 6371,
+                "quantity": 2
+            },
+            {
+                "itemId": 3356,
+                "quantity": 1
+            },
+            {
+                "itemId": 3372,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 2333,
+        "name": "Elixir of Lesser Agility",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_92",
+        "result": {
+            "itemId": 2333,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 3355,
+                "quantity": 1
+            },
+            {
+                "itemId": 2452,
+                "quantity": 1
+            },
+            {
+                "itemId": 3372,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 7256,
+        "name": "Shadow Protection Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_44",
+        "result": {
+            "itemId": 7256,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 3369,
+                "quantity": 1
+            },
+            {
+                "itemId": 3356,
+                "quantity": 1
+            },
+            {
+                "itemId": 3372,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 3177,
+        "name": "Elixir of Defense",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_64",
+        "result": {
+            "itemId": 3177,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 3355,
+                "quantity": 1
+            },
+            {
+                "itemId": 3820,
+                "quantity": 1
+            },
+            {
+                "itemId": 3372,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 7837,
+        "name": "Fire Oil",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_38",
+        "result": {
+            "itemId": 7837,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 6359,
+                "quantity": 2
+            },
+            {
+                "itemId": 3371,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 3176,
+        "name": "Strong Troll's Blood Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_78",
+        "result": {
+            "itemId": 3176,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 2453,
+                "quantity": 2
+            },
+            {
+                "itemId": 2450,
+                "quantity": 2
+            },
+            {
+                "itemId": 3372,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 3174,
+        "name": "Elixir of Poison Resistance",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_12",
+        "result": {
+            "itemId": 3174,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 1288,
+                "quantity": 1
+            },
+            {
+                "itemId": 2453,
+                "quantity": 1
+            },
+            {
+                "itemId": 3372,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 3173,
+        "name": "Lesser Mana Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_71",
+        "result": {
+            "itemId": 3173,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 785,
+                "quantity": 1
+            },
+            {
+                "itemId": 3820,
+                "quantity": 1
+            },
+            {
+                "itemId": 3371,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 3447,
+        "name": "Healing Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_51",
+        "result": {
+            "itemId": 3447,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 2453,
+                "quantity": 1
+            },
+            {
+                "itemId": 2450,
+                "quantity": 1
+            },
+            {
+                "itemId": 3372,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 3172,
+        "name": "Minor Magic Resistance Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_08",
+        "result": {
+            "itemId": 3172,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 785,
+                "quantity": 3
+            },
+            {
+                "itemId": 3355,
+                "quantity": 1
+            },
+            {
+                "itemId": 3371,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 7255,
+        "name": "Holy Protection Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_09",
+        "result": {
+            "itemId": 7255,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 2453,
+                "quantity": 1
+            },
+            {
+                "itemId": 2452,
+                "quantity": 1
+            },
+            {
+                "itemId": 3371,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 7841,
+        "name": "Swim Speed Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_13",
+        "result": {
+            "itemId": 7841,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 2452,
+                "quantity": 1
+            },
+            {
+                "itemId": 6370,
+                "quantity": 1
+            },
+            {
+                "itemId": 3371,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 8240,
+        "name": "Elixir of Giant Growth",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_10",
+        "result": {
+            "itemId": 8240,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 6522,
+                "quantity": 1
+            },
+            {
+                "itemId": 2449,
+                "quantity": 1
+            },
+            {
+                "itemId": 3371,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 7179,
+        "name": "Elixir of Water Breathing",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_17",
+        "result": {
+            "itemId": 7179,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 3820,
+                "quantity": 1
+            },
+            {
+                "itemId": 6370,
+                "quantity": 2
+            },
+            {
+                "itemId": 3371,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 3171,
+        "name": "Elixir of Wisdom",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_06",
+        "result": {
+            "itemId": 3171,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 785,
+                "quantity": 1
+            },
+            {
+                "itemId": 2450,
+                "quantity": 2
+            },
+            {
+                "itemId": 3371,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 426607,
+        "name": "Elixir of Coalesced Regret",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_19",
+        "result": {
+            "itemId": 426607,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 3820,
+                "quantity": 5
+            },
+            {
+                "itemId": 3372,
+                "quantity": 1
+            },
+            {
+                "itemId": 3369,
+                "quantity": 5
+            },
+            {
+                "itemId": 11083,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 7836,
+        "name": "Blackmouth Oil",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_drink_12",
+        "result": {
+            "itemId": 7836,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 6358,
+                "quantity": 2
+            },
+            {
+                "itemId": 3371,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 6617,
+        "name": "Rage Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_24",
+        "result": {
+            "itemId": 6617,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 5635,
+                "quantity": 1
+            },
+            {
+                "itemId": 2450,
+                "quantity": 1
+            },
+            {
+                "itemId": 3371,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 2335,
+        "name": "Swiftness Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_95",
+        "result": {
+            "itemId": 2335,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 2452,
+                "quantity": 1
+            },
+            {
+                "itemId": 2450,
+                "quantity": 1
+            },
+            {
+                "itemId": 3371,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 2337,
+        "name": "Lesser Healing Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_50",
+        "result": {
+            "itemId": 2337,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 118,
+                "quantity": 1
+            },
+            {
+                "itemId": 2450,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 4508,
+        "name": "Discolored Healing Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_35",
+        "result": {
+            "itemId": 4508,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 3164,
+                "quantity": 1
+            },
+            {
+                "itemId": 2447,
+                "quantity": 1
+            },
+            {
+                "itemId": 3371,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 3230,
+        "name": "Elixir of Minor Agility",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_91",
+        "result": {
+            "itemId": 3230,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 2452,
+                "quantity": 1
+            },
+            {
+                "itemId": 765,
+                "quantity": 1
+            },
+            {
+                "itemId": 3371,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 2334,
+        "name": "Elixir of Minor Fortitude",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_42",
+        "result": {
+            "itemId": 2334,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 2449,
+                "quantity": 2
+            },
+            {
+                "itemId": 2447,
+                "quantity": 1
+            },
+            {
+                "itemId": 3371,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 2332,
+        "name": "Minor Rejuvenation Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_02",
+        "result": {
+            "itemId": 2332,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 785,
+                "quantity": 2
+            },
+            {
+                "itemId": 2447,
+                "quantity": 1
+            },
+            {
+                "itemId": 3371,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 2331,
+        "name": "Minor Mana Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_70",
+        "result": {
+            "itemId": 2331,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 785,
+                "quantity": 1
+            },
+            {
+                "itemId": 765,
+                "quantity": 1
+            },
+            {
+                "itemId": 3371,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 3170,
+        "name": "Weak Troll's Blood Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_77",
+        "result": {
+            "itemId": 3170,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 2447,
+                "quantity": 1
+            },
+            {
+                "itemId": 2449,
+                "quantity": 2
+            },
+            {
+                "itemId": 3371,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 2329,
+        "name": "Elixir of Lion's Strength",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_56",
+        "result": {
+            "itemId": 2329,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 2449,
+                "quantity": 1
+            },
+            {
+                "itemId": 765,
+                "quantity": 1
+            },
+            {
+                "itemId": 3371,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 7183,
+        "name": "Elixir of Minor Defense",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_63",
+        "result": {
+            "itemId": 7183,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 765,
+                "quantity": 2
+            },
+            {
+                "itemId": 3371,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 2330,
+        "name": "Minor Healing Potion",
+        "profession": "Alchemy",
+        "skillLevel": 0,
+        "icon": "inv_potion_49",
+        "result": {
+            "itemId": 2330,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 2447,
+                "quantity": 1
+            },
+            {
+                "itemId": 765,
+                "quantity": 1
+            },
+            {
+                "itemId": 3371,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 6619,
+        "name": "Cowardly Flight Potion",
+        "profession": "Uncategorized",
+        "skillLevel": 0,
+        "icon": "inv_potion_12",
+        "result": {
+            "itemId": 6619,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 5636,
+                "quantity": 1
+            },
+            {
+                "itemId": 3356,
+                "quantity": 1
+            },
+            {
+                "itemId": 3372,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 2336,
+        "name": "Elixir of Tongues",
+        "profession": "Uncategorized",
+        "skillLevel": 0,
+        "icon": "inv_potion_12",
+        "result": {
+            "itemId": 2336,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 2449,
+                "quantity": 2
+            },
+            {
+                "itemId": 785,
+                "quantity": 2
+            },
+            {
+                "itemId": 3371,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 11447,
+        "name": "Elixir of Waterwalking",
+        "profession": "Uncategorized",
+        "skillLevel": 0,
+        "icon": "inv_potion_15",
+        "result": {
+            "itemId": 11447,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 6370,
+                "quantity": 1
+            },
+            {
+                "itemId": 3357,
+                "quantity": 1
+            },
+            {
+                "itemId": 3372,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 17579,
+        "name": "Greater Holy Protection Potion",
+        "profession": "Uncategorized",
+        "skillLevel": 0,
+        "icon": "inv_potion_09",
+        "result": {
+            "itemId": 17579,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 7069,
+                "quantity": 1
+            },
+            {
+                "itemId": 13463,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
     }
 ]
