@@ -121,5 +121,3 @@ def scrape_from_file(input_file, output_file):
 
 if __name__ == "__main__":
     scrape_from_file("urls.txt", "recipes.json")
-    recipe_json = get_materials_data(url)
-    print(json.dumps([recipe_json], indent=4))
