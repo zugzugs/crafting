@@ -77,7 +77,7 @@ def get_materials_data(url):
             result_item_id = int(item_id_match.group(1))
 
     # Quantity crafted (default 1 if unknown)
-    quantity_match = re.search(r"\((\d+)\)", result_item.text if result_item else "")
+    quantity_match = re.search(re.escape(material_name) + r'.*?\(\s*(\d+)\s*\)', reagent_text)
     result_quantity = int(quantity_match.group(1)) if quantity_match else 1
 
     result = {
