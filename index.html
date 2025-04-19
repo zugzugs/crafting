@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crafting Profit Tracker | WoW Classic SoD</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .recipe-card {
+      margin-bottom: 1rem;
+    }
+    .profit-positive {
+      color: green;
+      font-weight: bold;
+    }
+    .profit-negative {
+      color: red;
+      font-weight: bold;
+    }
+    .filter-container {
+      margin-bottom: 2rem;
+    }
+    .item-link {
+      text-decoration: none;
+      color: #007bff;
+    }
+    .item-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <main class="container my-4">
+    <h1 class="text-center mb-4">WoW Classic SoD Crafting Prices</h1>
+
+    <section class="filter-container">
+      <label for="professionFilter" class="form-label">Filter by Profession:</label>
+      <select id="professionFilter" class="form-select w-100 w-md-25">
+        <option value="all">All Professions</option>
+      </select>
+    </section>
+
+    <section id="recipeList" class="row" aria-live="polite"></section>
+  </main>
+
+  <script>
+    let materials = [];
+    let recipes = [];
+    let pricing = [];
+
+    const professionFilter = document.getElementById("professionFilter");
+    const recipeList = document.getElementById("recipeList");
+
+    const formatCopper = (copper) => {
+      if (!copper) return "N/A";
+      const gold = Math.floor(copper / 10000);
+      const silver = Math.floor((copper % 10000) / 100);
+      const cop = copper % 100;
+      return `${gold ? gold + 'g ' : ''}${silver ? silver + 's ' : ''}${cop}c`.trim();
+    };
+
+    const calculateRecipeCost = (recipe, priceMap) => {
+      let totalCost = 0;
+      recipe.materials.forEach(mat => {
+        const price = priceMap.get(mat.itemId) || 0;
+        totalCost += price * mat.quantity;
+      });
+      const resultPrice = priceMap.get(recipe.result.itemId) || 0;
+      const profit = (resultPrice * recipe.result.quantity) - totalCost;
+      return { totalCost, profit, resultPrice };
+    };
+
+    const renderRecipes = (filterProfession = "all") => {
+      recipeList.innerHTML = "";
+      const priceMap = new Map(pricing.map(p => [p.itemId, p.marketValue]));
+      const materialMap = new Map(materials.map(m => [m.itemId, m.name]));
+
+      const filteredRecipes = filterProfession === "all"
+        ? recipes
+        : recipes.filter(r => r.profession === filterProfession);
+
+      filteredRecipes.forEach(recipe => {
+        const { totalCost, profit, resultPrice } = calculateRecipeCost(recipe, priceMap);
+        const resultName = materialMap.get(recipe.result.itemId) || "Unknown Item";
+
+        const materialsHTML = recipe.materials.map(mat => {
+          const name = materialMap.get(mat.itemId) || "Unknown";
+          const matPrice = (priceMap.get(mat.itemId) || 0) * mat.quantity;
+          return `
+            <li>
+              <a href="https://www.wowhead.com/classic/item=${mat.itemId}" 
+                 class="item-link" target="_blank" rel="noopener noreferrer">
+                ${name}
+              </a> x${mat.quantity} (${formatCopper(matPrice)})
+            </li>`;
+        }).join("");
+
+        recipeList.insertAdjacentHTML("beforeend", `
+          <div class="col-md-4 recipe-card">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">${recipe.name}</h5>
+                <p class="card-text">
+                  <strong>Profession:</strong> ${recipe.profession}<br>
+                  <strong>Skill Level:</strong> ${recipe.skillLevel}<br>
+                  <strong>Result:</strong>
+                  <a href="https://www.wowhead.com/classic/item=${recipe.result.itemId}" 
+                     class="item-link" target="_blank" rel="noopener noreferrer">
+                    ${resultName}
+                  </a> x${recipe.result.quantity} (${formatCopper(resultPrice)})<br>
+                  <strong>Materials:</strong>
+                  <ul>${materialsHTML}</ul>
+                  <strong>Total Cost:</strong> ${formatCopper(totalCost)}<br>
+                  <strong>Profit:</strong> 
+                  <span class="${profit >= 0 ? 'profit-positive' : 'profit-negative'}">
+                    ${formatCopper(profit)}
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+        `);
+      });
+    };
+
+    const loadData = async () => {
+      try {
+        const [matRes, recRes, priceRes] = await Promise.all([
+          fetch('materials.json'),
+          fetch('recipes.json'),
+          fetch('horde.json')
+        ]);
+        materials = await matRes.json();
+        recipes = await recRes.json();
+        const priceData = await priceRes.json();
+        pricing = priceData.pricing_data;
+
+        // Fill profession filter
+        const professions = [...new Set(recipes.map(r => r.profession))];
+        professions.forEach(prof => {
+          const option = document.createElement("option");
+          option.value = prof;
+          option.textContent = prof;
+          professionFilter.appendChild(option);
+        });
+
+        renderRecipes();
+      } catch (err) {
+        console.error("Failed to load data:", err);
+        recipeList.innerHTML = `<p class="text-danger">Error loading data. Check console for details.</p>`;
+      }
+    };
+
+    professionFilter.addEventListener("change", (e) => {
+      renderRecipes(e.target.value);
+    });
+
+    document.addEventListener("DOMContentLoaded", loadData);
+  </script>
+</body>
+</html>
