@@ -62,8 +62,10 @@ def get_materials_data(url):
             if item_id_match:
                 item_id = int(item_id_match.group(1))
                 material_name = link.text.strip()  # <- fixed here
+                print(material_name)
 
                 quantity_match = re.search(re.escape(material_name) + r"\s*\((\d+)\)", reagent_text)
+                print(quantity_match)
                 quantity = int(quantity_match.group(1)) if quantity_match else 1
 
                 materials.append({
