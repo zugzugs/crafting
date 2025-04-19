@@ -27,12 +27,14 @@ def get_materials_data(url):
     name = name_tag.text.strip() if name_tag else "Unknown"
 
     # Recipe icon
-    icon_url = ""
+    icon_name = ""
     icon_li = soup.select_one("li.icon-db-link ins[style]")
     if icon_li and "background-image" in icon_li["style"]:
         match = re.search(r'url\(["\']?(.*?)["\']?\)', icon_li["style"])
         if match:
             icon_url = match.group(1)
+            icon_name = icon_url.split('/')[-1].split('.')[0]
+
 
 
     # Profession from breadcrumb (last <a> in breadcrumb)
@@ -89,7 +91,7 @@ def get_materials_data(url):
         "name": name,
         "profession": profession,
         "skillLevel": 0,
-        "icon": icon_url,
+        "icon": icon_name,
         "result": result,
         "materials": materials
     }
