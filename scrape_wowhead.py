@@ -71,25 +71,28 @@ def get_materials_data(url):
                     "quantity": quantity
                 })
 
-
-    # Result item ID
-    result_item = soup.select_one("span.q2 a[href*='/item=']")
+    # Result itemId and quantity from tooltip
     result_item_id = 0
-    if result_item:
-        item_id_match = re.search(r"item=(\d+)", result_item["href"])
-        if item_id_match:
-            result_item_id = int(item_id_match.group(1))
-
-    # Quantity crafted (default 1 if unknown)
-    # Quantity crafted (default 1 if unknown)
     result_quantity = 1
     tooltip_div = soup.select_one(f"div#tt{recipe_id}")
     if tooltip_div:
+        # Get itemId from link in tooltip
+        item_link = tooltip_div.select_one("a[href*='/item=']")
+        if item_link:
+            item_id_match = re.search(r"item=(\d+)", item_link["href"])
+            if item_id_match:
+                result_item_id = int(item_id_match.group(1))
+        
+        # Get quantity from tooltip text
         tooltip_text = tooltip_div.get_text(separator=' ', strip=True)
-        result_name = name  # already parsed from <h1> earlier
-        match = re.search(re.escape(result_name) + r'\s*\(\s*(\d+)\s*\)', tooltip_text)
+        match = re.search(re.escape(name) + r"\s*\(\s*(\d+)\s*\)", tooltip_text)
         if match:
             result_quantity = int(match.group(1))
+
+# Fallback if something fails: ensure result_item_id is never same as recipeId
+if result_item_id == recipe_id:
+    result_item_id = 0
+
 
 
     result = {
