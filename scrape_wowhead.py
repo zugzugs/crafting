@@ -17,7 +17,6 @@ def get_materials_data(url):
     driver.set_script_timeout(15)
 
     driver.get(url)
-    
     time.sleep(2)
 
     soup = BeautifulSoup(driver.page_source, 'html.parser')
@@ -39,9 +38,7 @@ def get_materials_data(url):
             icon_url = match.group(1)
             icon_name = icon_url.split('/')[-1].split('.')[0]
 
-
-
-    # Profession from breadcrumb (last <a> in breadcrumb)
+    # Profession from breadcrumb
     breadcrumb = soup.select_one("div.breadcrumb")
     profession = "Unknown"
     if breadcrumb:
@@ -61,7 +58,7 @@ def get_materials_data(url):
             item_id_match = re.search(r"item=(\d+)", href)
             if item_id_match:
                 item_id = int(item_id_match.group(1))
-                material_name = link.text.strip()  # <- fixed here
+                material_name = link.text.strip()
 
                 quantity_match = re.search(re.escape(material_name) + r"\s*\((\d+)\)", reagent_text)
                 quantity = int(quantity_match.group(1)) if quantity_match else 1
@@ -82,25 +79,22 @@ def get_materials_data(url):
             item_id_match = re.search(r"item=(\d+)", item_link["href"])
             if item_id_match:
                 result_item_id = int(item_id_match.group(1))
-        
+
         # Get quantity from tooltip text
         tooltip_text = tooltip_div.get_text(separator=' ', strip=True)
         match = re.search(re.escape(name) + r"\s*\(\s*(\d+)\s*\)", tooltip_text)
         if match:
             result_quantity = int(match.group(1))
 
-# Fallback if something fails: ensure result_item_id is never same as recipeId
-if result_item_id == recipe_id:
-    result_item_id = 0
-
-
+    # Fallback: ensure result_item_id never equals recipeId
+    if result_item_id == recipe_id:
+        result_item_id = 0
 
     result = {
         "itemId": result_item_id or recipe_id,
         "quantity": result_quantity
     }
 
-    # Final structure
     recipe_data = {
         "recipeId": recipe_id,
         "name": name,
@@ -110,7 +104,6 @@ if result_item_id == recipe_id:
         "result": result,
         "materials": materials
     }
-
 
     driver.quit()
     return recipe_data
