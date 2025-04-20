@@ -29,7 +29,7 @@ def get_materials_data(url):
     name_tag = soup.find("h1", class_="heading-size-1")
     name = name_tag.text.strip() if name_tag else "Unknown"
 
-    # Recipe icon
+    # Icon
     icon_name = ""
     icon_li = soup.select_one("li.icon-db-link ins[style]")
     if icon_li and "background-image" in icon_li["style"]:
@@ -46,7 +46,7 @@ def get_materials_data(url):
         if links:
             profession = links[-1].text.strip()
 
-    # Reagents
+    # Reagents (materials)
     reagents_div = soup.select_one("div.indent.q1")
     materials = []
     if reagents_div:
@@ -59,7 +59,6 @@ def get_materials_data(url):
             if item_id_match:
                 item_id = int(item_id_match.group(1))
                 material_name = link.text.strip()
-
                 quantity_match = re.search(re.escape(material_name) + r"\s*\((\d+)\)", reagent_text)
                 quantity = int(quantity_match.group(1)) if quantity_match else 1
 
@@ -68,22 +67,21 @@ def get_materials_data(url):
                     "quantity": quantity
                 })
 
-    # Result itemId and quantity
+    # RESULT: Look for the 'Creates' section and extract the itemId
     result_item_id = 0
     result_quantity = 1
-    tooltip_div = soup.select_one(f"div#tt{recipe_id}")
-    if tooltip_div:
-        # Look for the first item link in the tooltip
-        item_link = tooltip_div.select_one("a[href*='/item=']")
-        if item_link:
-            item_id_match = re.search(r"item=(\d+)", item_link["href"])
+
+    creates_section = soup.find("div", class_="spell-create")
+    if creates_section:
+        link = creates_section.find("a", href=re.compile(r"/item="))
+        if link:
+            item_id_match = re.search(r"item=(\d+)", link["href"])
             if item_id_match:
                 result_item_id = int(item_id_match.group(1))
 
-        tooltip_text = tooltip_div.get_text(separator=' ', strip=True)
-        match = re.search(re.escape(name) + r"\s*\(\s*(\d+)\s*\)", tooltip_text)
-        if match:
-            result_quantity = int(match.group(1))
+        quantity_match = re.search(r"x(\d+)", creates_section.text)
+        if quantity_match:
+            result_quantity = int(quantity_match.group(1))
 
     if result_item_id == 0:
         print(f"[⚠] Could not find result itemId for recipeId {recipe_id} ({name})")
@@ -105,6 +103,7 @@ def get_materials_data(url):
 
     driver.quit()
     return recipe_data
+
 
 def scrape_from_file(input_file, output_file, max_retries=3, delay=2):
     with open(input_file, "r") as f:
