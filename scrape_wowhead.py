@@ -75,6 +75,7 @@ def get_materials_data(url):
     if tooltip_div:
         # Get itemId from link in tooltip
         item_link = tooltip_div.select_one("a[href*='/item=']")
+        print(item_link)
         if item_link:
             item_id_match = re.search(r"item=(\d+)", item_link["href"])
             if item_id_match:
