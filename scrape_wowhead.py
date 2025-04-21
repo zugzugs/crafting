@@ -81,6 +81,7 @@ def get_materials_data(url):
             print(item_id_match)
             if item_id_match:
                 result_item_id = int(item_id_match.group(1))
+                print(result_item_id)
 
         # Get quantity from tooltip text
         tooltip_text = tooltip_div.get_text(separator=' ', strip=True)
