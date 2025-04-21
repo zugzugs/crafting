@@ -6,8 +6,8 @@
         "skillLevel": 0,
         "icon": "inv_misc_food_65",
         "result": {
-            "itemId": 0,
-            "quantity": 1
+            "itemId": 2692,
+            "quantity": 5
         },
         "materials": [
             {
@@ -35,8 +35,8 @@
         "skillLevel": 0,
         "icon": "inv_misc_food_63",
         "result": {
-            "itemId": 0,
-            "quantity": 1
+            "itemId": 13888,
+            "quantity": 2
         },
         "materials": [
             {
@@ -64,7 +64,7 @@
         "skillLevel": 0,
         "icon": "inv_hammer_unique_sulfuras",
         "result": {
-            "itemId": 0,
+            "itemId": 5956,
             "quantity": 1
         },
         "materials": [
