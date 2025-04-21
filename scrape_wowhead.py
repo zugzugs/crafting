@@ -78,6 +78,7 @@ def get_materials_data(url):
         print(item_link)
         if item_link:
             item_id_match = re.search(r"item=(\d+)", item_link["href"])
+            print(item_id_match)
             if item_id_match:
                 result_item_id = int(item_id_match.group(1))
 
