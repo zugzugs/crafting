@@ -91,7 +91,7 @@ def get_materials_data(url):
         result_item_id = 0
 
     result = {
-        "itemId": result_item_id
+        "itemId": result_item_id,
         "quantity": result_quantity
     }
 
