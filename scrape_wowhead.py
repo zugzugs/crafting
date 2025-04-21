@@ -74,7 +74,8 @@ def get_materials_data(url):
     tooltip_div = soup.select_one(f"div#tt{recipe_id}")
     if tooltip_div:
         # Get itemId from link in tooltip
-        item_link = tooltip_div.select_one("a[href*='/item=']")
+        item_links = tooltip_div.select("a[href*='/item=']")
+        item_link = item_links[-1] if item_links else None
         print(item_link)
         if item_link:
             item_id_match = re.search(r"item=(\d+)", item_link["href"])
