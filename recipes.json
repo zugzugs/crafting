@@ -9,7 +9,24 @@
             "itemId": 21023,
             "quantity": 5
         },
-        "materials": []
+        "materials": [
+            {
+                "itemId": 2692,
+                "quantity": 1
+            },
+            {
+                "itemId": 9061,
+                "quantity": 1
+            },
+            {
+                "itemId": 8150,
+                "quantity": 1
+            },
+            {
+                "itemId": 21024,
+                "quantity": 1
+            }
+        ]
     },
     {
         "recipeId": 1225763,
@@ -21,7 +38,24 @@
             "itemId": 238642,
             "quantity": 2
         },
-        "materials": []
+        "materials": [
+            {
+                "itemId": 13888,
+                "quantity": 12
+            },
+            {
+                "itemId": 3712,
+                "quantity": 4
+            },
+            {
+                "itemId": 3404,
+                "quantity": 3
+            },
+            {
+                "itemId": 239017,
+                "quantity": 1
+            }
+        ]
     },
     {
         "recipeId": 460460,
@@ -33,7 +67,36 @@
             "itemId": 227684,
             "quantity": 1
         },
-        "materials": []
+        "materials": [
+            {
+                "itemId": 17203,
+                "quantity": 8
+            },
+            {
+                "itemId": 11371,
+                "quantity": 20
+            },
+            {
+                "itemId": 12360,
+                "quantity": 50
+            },
+            {
+                "itemId": 7078,
+                "quantity": 25
+            },
+            {
+                "itemId": 11382,
+                "quantity": 10
+            },
+            {
+                "itemId": 17011,
+                "quantity": 10
+            },
+            {
+                "itemId": 17010,
+                "quantity": 10
+            }
+        ]
     },
     {
         "recipeId": 1213544,
@@ -45,6 +108,23 @@
             "itemId": 233966,
             "quantity": 1
         },
-        "materials": []
+        "materials": [
+            {
+                "itemId": 16203,
+                "quantity": 1
+            },
+            {
+                "itemId": 234012,
+                "quantity": 1
+            },
+            {
+                "itemId": 13511,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
     }
 ]
