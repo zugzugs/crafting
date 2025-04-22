@@ -6,6 +6,7 @@ import json
 import re
 import time
 
+
 def get_materials_data(url):
     options = Options()
     options.add_argument("--headless")
@@ -19,7 +20,7 @@ def get_materials_data(url):
     driver.get(url)
     time.sleep(2)
 
-    soup = BeautifulSoup(driver.page_source, 'html.parser')
+    soup = BeautifulSoup(driver.page_source, "html.parser")
 
     # Recipe ID from URL
     recipe_id_match = re.search(r"spell=(\d+)", url)
@@ -36,7 +37,7 @@ def get_materials_data(url):
         match = re.search(r'url\(["\']?(.*?)["\']?\)', icon_li["style"])
         if match:
             icon_url = match.group(1)
-            icon_name = icon_url.split('/')[-1].split('.')[0]
+            icon_name = icon_url.split("/")[-1].split(".")[0]
 
     # Profession from breadcrumb
     breadcrumb = soup.select_one("div.breadcrumb")
@@ -46,27 +47,37 @@ def get_materials_data(url):
         if links:
             profession = links[-1].text.strip()
 
-    # Reagents
-    reagents_div = soup.select_one("div.indent.q1")
+    # Reagents (accurate parsing even when Tools are present)
     materials = []
-    if reagents_div:
-        reagent_text = reagents_div.get_text(separator=' ', strip=True)
-        links = reagents_div.find_all("a")
+    td = soup.find("td")
+    found_reagents = False
 
-        for link in links:
-            href = link.get("href", "")
-            item_id_match = re.search(r"item=(\d+)", href)
-            if item_id_match:
-                item_id = int(item_id_match.group(1))
-                material_name = link.text.strip()
+    if td:
+        for element in td.contents:
+            if isinstance(element, str) and "Reagents:" in element:
+                found_reagents = True
+            elif (
+                found_reagents
+                and getattr(element, "name", None) == "div"
+                and "indent" in element.get("class", [])
+                and "q1" in element.get("class", [])
+            ):
+                reagent_text = element.get_text(separator=" ", strip=True)
+                links = element.find_all("a")
+                for link in links:
+                    href = link.get("href", "")
+                    item_id_match = re.search(r"item=(\d+)", href)
+                    if item_id_match:
+                        item_id = int(item_id_match.group(1))
+                        material_name = link.text.strip()
 
-                quantity_match = re.search(re.escape(material_name) + r"\s*\((\d+)\)", reagent_text)
-                quantity = int(quantity_match.group(1)) if quantity_match else 1
+                        quantity_match = re.search(
+                            re.escape(material_name) + r"\s*\((\d+)\)", reagent_text
+                        )
+                        quantity = int(quantity_match.group(1)) if quantity_match else 1
 
-                materials.append({
-                    "itemId": item_id,
-                    "quantity": quantity
-                })
+                        materials.append({"itemId": item_id, "quantity": quantity})
+                break  # stop after finding the Reagents div
 
     # Result itemId and quantity from tooltip
     result_item_id = 0
@@ -85,7 +96,7 @@ def get_materials_data(url):
                 print(result_item_id)
 
         # Get quantity from tooltip text
-        tooltip_text = tooltip_div.get_text(separator=' ', strip=True)
+        tooltip_text = tooltip_div.get_text(separator=" ", strip=True)
         match = re.search(re.escape(name) + r"\s*\(\s*(\d+)\s*\)", tooltip_text)
         if match:
             result_quantity = int(match.group(1))
@@ -94,10 +105,7 @@ def get_materials_data(url):
     if result_item_id == recipe_id:
         result_item_id = 0
 
-    result = {
-        "itemId": result_item_id,
-        "quantity": result_quantity
-    }
+    result = {"itemId": result_item_id, "quantity": result_quantity}
 
     recipe_data = {
         "recipeId": recipe_id,
@@ -106,11 +114,12 @@ def get_materials_data(url):
         "skillLevel": 0,
         "icon": icon_name,
         "result": result,
-        "materials": materials
+        "materials": materials,
     }
 
     driver.quit()
     return recipe_data
+
 
 def scrape_from_file(input_file, output_file, max_retries=3, delay=2):
     with open(input_file, "r") as f:
@@ -148,7 +157,9 @@ def scrape_from_file(input_file, output_file, max_retries=3, delay=2):
     if failed_urls:
         with open("failed_urls.txt", "w") as f:
             f.write("\n".join(failed_urls))
-        print(f"\n⚠️ Failed to scrape {len(failed_urls)} recipes. Saved to failed_urls.txt")
+        print(
+            f"\n⚠️ Failed to scrape {len(failed_urls)} recipes. Saved to failed_urls.txt"
+        )
 
     print(f"\n✅ Successfully saved {len(all_recipes)} recipes to {output_file}")
 
