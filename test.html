@@ -2,36 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Item ID & Name Checker</title>
+  <title>Missing Item ID Checker</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       padding: 2rem;
-      background: #f9f9f9;
+      background: #f4f4f4;
     }
     .missing {
       color: red;
+      margin-bottom: 0.5rem;
     }
-    .ok {
-      color: green;
+    h1 {
+      margin-bottom: 1rem;
     }
   </style>
 </head>
 <body>
-  <h1>Item ID & Name Checker</h1>
-  <p>This checks if all item IDs in recipes and pricing exist in materials.</p>
+  <h1>Missing Item Checker</h1>
   <ul id="output"></ul>
 
   <script>
-    let materials = [];
-    let recipes = [];
-    let pricing = [];
-
     const output = document.getElementById("output");
 
-    const logItem = (msg, isOk = true) => {
+    const logMissing = (msg) => {
       const li = document.createElement("li");
-      li.className = isOk ? "ok" : "missing";
+      li.className = "missing";
       li.textContent = msg;
       output.appendChild(li);
     };
@@ -43,44 +39,38 @@
           fetch('recipes.json'),
           fetch('horde.json')
         ]);
-        materials = await matRes.json();
-        recipes = await recRes.json();
-        pricing = (await priceRes.json()).pricing_data;
+        const materials = await matRes.json();
+        const recipes = await recRes.json();
+        const pricing = (await priceRes.json()).pricing_data;
 
         const materialMap = new Map(materials.map(m => [m.itemId, m.name]));
 
-        let allItemIds = new Set();
+        const checkItemId = (itemId, context) => {
+          if (!materialMap.has(itemId)) {
+            logMissing(`Missing itemId ${itemId} in materials.json (used in ${context})`);
+          }
+        };
 
         recipes.forEach(recipe => {
-          if (!materialMap.has(recipe.result.itemId)) {
-            logItem(`Missing result itemId: ${recipe.result.itemId}`, false);
-          } else {
-            logItem(`OK result itemId: ${recipe.result.itemId} (${materialMap.get(recipe.result.itemId)})`);
-          }
+          checkItemId(recipe.result.itemId, `recipe result: "${recipe.name}"`);
           recipe.materials.forEach(mat => {
-            if (!materialMap.has(mat.itemId)) {
-              logItem(`Missing material itemId: ${mat.itemId}`, false);
-            } else {
-              logItem(`OK material itemId: ${mat.itemId} (${materialMap.get(mat.itemId)})`);
-            }
-            allItemIds.add(mat.itemId);
+            checkItemId(mat.itemId, `recipe material: "${recipe.name}"`);
           });
-          allItemIds.add(recipe.result.itemId);
         });
 
         pricing.forEach(price => {
-          if (!materialMap.has(price.itemId)) {
-            logItem(`Missing priced itemId: ${price.itemId}`, false);
-          } else {
-            logItem(`OK priced itemId: ${price.itemId} (${materialMap.get(price.itemId)})`);
-          }
-          allItemIds.add(price.itemId);
+          checkItemId(price.itemId, `pricing`);
         });
 
-        logItem(`✅ Finished checking ${allItemIds.size} unique item IDs.`);
+        if (!output.hasChildNodes()) {
+          const li = document.createElement("li");
+          li.textContent = "✅ No missing itemIds found. Everything looks good!";
+          li.style.color = "green";
+          output.appendChild(li);
+        }
       } catch (err) {
-        logItem("❌ Error loading one or more files. Check console.", false);
-        console.error(err);
+        console.error("Data loading error:", err);
+        logMissing("❌ Error loading files. Check console.");
       }
     };
 
