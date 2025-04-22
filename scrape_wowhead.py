@@ -48,7 +48,7 @@ def get_materials_data(url):
             profession = links[-1].text.strip()
             
     # Skill level (e.g., "Requires Cooking (285)")
-    skill_level = 0
+    skill_level = 'N/A'
     skill_divs = soup.find_all("div", attrs={"data-markup-content-target": "1"})
     for div in skill_divs:
         text = div.get_text(strip=True)
