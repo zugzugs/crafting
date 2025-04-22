@@ -29,6 +29,43 @@
         ]
     },
     {
+        "recipeId": 19796,
+        "name": "Dark Iron Rifle",
+        "profession": "Engineering",
+        "skillLevel": 275,
+        "icon": "inv_weapon_rifle_08",
+        "result": {
+            "itemId": 16004,
+            "quantity": 1
+        },
+        "materials": [
+            {
+                "itemId": 16000,
+                "quantity": 2
+            },
+            {
+                "itemId": 11371,
+                "quantity": 6
+            },
+            {
+                "itemId": 10546,
+                "quantity": 2
+            },
+            {
+                "itemId": 12361,
+                "quantity": 2
+            },
+            {
+                "itemId": 12799,
+                "quantity": 2
+            },
+            {
+                "itemId": 8170,
+                "quantity": 4
+            }
+        ]
+    },
+    {
         "recipeId": 1225763,
         "name": "Grand Lobster Banquet",
         "profession": "Cooking",
