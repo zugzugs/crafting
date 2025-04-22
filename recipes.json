@@ -32,7 +32,7 @@
         "recipeId": 1225763,
         "name": "Grand Lobster Banquet",
         "profession": "Cooking",
-        "skillLevel": 0,
+        "skillLevel": "N/A",
         "icon": "inv_misc_food_63",
         "result": {
             "itemId": 238642,
@@ -61,7 +61,7 @@
         "recipeId": 460460,
         "name": "Sulfuron Hammer",
         "profession": "Blacksmithing",
-        "skillLevel": 0,
+        "skillLevel": "N/A",
         "icon": "inv_hammer_unique_sulfuras",
         "result": {
             "itemId": 227684,
@@ -102,7 +102,7 @@
         "recipeId": 1213544,
         "name": "Flask of Unyielding Sorrow",
         "profession": "Alchemy",
-        "skillLevel": 0,
+        "skillLevel": "N/A",
         "icon": "inv_alchemy_endlessflask_03",
         "result": {
             "itemId": 233966,
