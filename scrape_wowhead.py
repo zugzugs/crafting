@@ -46,6 +46,16 @@ def get_materials_data(url):
         links = breadcrumb.find_all("a")
         if links:
             profession = links[-1].text.strip()
+            
+    # Skill level (e.g., "Requires Cooking (285)")
+    skill_level = 0
+    skill_divs = soup.find_all("div", attrs={"data-markup-content-target": "1"})
+    for div in skill_divs:
+        text = div.get_text(strip=True)
+        match = re.search(r"Requires .*?\((\d+)\)", text)
+        if match:
+            skill_level = int(match.group(1))
+            break
 
     # Reagents (robust approach to avoid Tools mix-up)
     materials = []
@@ -103,7 +113,7 @@ def get_materials_data(url):
         "recipeId": recipe_id,
         "name": name,
         "profession": profession,
-        "skillLevel": 0,
+        "skillLevel": skill_level,
         "icon": icon_name,
         "result": result,
         "materials": materials,
