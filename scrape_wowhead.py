@@ -49,10 +49,13 @@ def get_materials_data(url):
 
     # Reagents (robust approach to avoid Tools mix-up)
     materials = []
-    td = soup.find("td")
 
-    if td:
-        reagents_label = td.find(string=re.compile(r"Reagents:"))
+    # Result itemId and quantity from tooltip
+    result_item_id = 0
+    result_quantity = 1
+    tooltip_div = soup.select_one(f"div#tt{recipe_id}")
+    if tooltip_div:
+        reagents_label = tooltip_div.find(string=re.compile(r"Reagents:"))
         if reagents_label:
             # Get the next sibling div after "Reagents:"
             reagents_div = reagents_label.find_next("div", class_="indent q1")
@@ -73,11 +76,6 @@ def get_materials_data(url):
 
                         materials.append({"itemId": item_id, "quantity": quantity})
 
-    # Result itemId and quantity from tooltip
-    result_item_id = 0
-    result_quantity = 1
-    tooltip_div = soup.select_one(f"div#tt{recipe_id}")
-    if tooltip_div:
         # Get itemId from link in tooltip
         item_links = tooltip_div.select("a[href*='/item=']")
         item_link = item_links[-1] if item_links else None
