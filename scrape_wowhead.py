@@ -47,23 +47,18 @@ def get_materials_data(url):
         if links:
             profession = links[-1].text.strip()
 
-    # Reagents (accurate parsing even when Tools are present)
+    # Reagents (robust approach to avoid Tools mix-up)
     materials = []
     td = soup.find("td")
-    found_reagents = False
 
     if td:
-        for element in td.contents:
-            if isinstance(element, str) and "Reagents:" in element:
-                found_reagents = True
-            elif (
-                found_reagents
-                and getattr(element, "name", None) == "div"
-                and "indent" in element.get("class", [])
-                and "q1" in element.get("class", [])
-            ):
-                reagent_text = element.get_text(separator=" ", strip=True)
-                links = element.find_all("a")
+        reagents_label = td.find(string=re.compile(r"Reagents:"))
+        if reagents_label:
+            # Get the next sibling div after "Reagents:"
+            reagents_div = reagents_label.find_next("div", class_="indent q1")
+            if reagents_div:
+                reagent_text = reagents_div.get_text(separator=" ", strip=True)
+                links = reagents_div.find_all("a")
                 for link in links:
                     href = link.get("href", "")
                     item_id_match = re.search(r"item=(\d+)", href)
@@ -77,7 +72,6 @@ def get_materials_data(url):
                         quantity = int(quantity_match.group(1)) if quantity_match else 1
 
                         materials.append({"itemId": item_id, "quantity": quantity})
-                break  # stop after finding the Reagents div
 
     # Result itemId and quantity from tooltip
     result_item_id = 0
