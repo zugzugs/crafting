@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Item ID & Name Checker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background: #f9f9f9;
+    }
+    .missing {
+      color: red;
+    }
+    .ok {
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <h1>Item ID & Name Checker</h1>
+  <p>This checks if all item IDs in recipes and pricing exist in materials.</p>
+  <ul id="output"></ul>
+
+  <script>
+    let materials = [];
+    let recipes = [];
+    let pricing = [];
+
+    const output = document.getElementById("output");
+
+    const logItem = (msg, isOk = true) => {
+      const li = document.createElement("li");
+      li.className = isOk ? "ok" : "missing";
+      li.textContent = msg;
+      output.appendChild(li);
+    };
+
+    const loadData = async () => {
+      try {
+        const [matRes, recRes, priceRes] = await Promise.all([
+          fetch('materials.json'),
+          fetch('recipes.json'),
+          fetch('horde.json')
+        ]);
+        materials = await matRes.json();
+        recipes = await recRes.json();
+        pricing = (await priceRes.json()).pricing_data;
+
+        const materialMap = new Map(materials.map(m => [m.itemId, m.name]));
+
+        let allItemIds = new Set();
+
+        recipes.forEach(recipe => {
+          if (!materialMap.has(recipe.result.itemId)) {
+            logItem(`Missing result itemId: ${recipe.result.itemId}`, false);
+          } else {
+            logItem(`OK result itemId: ${recipe.result.itemId} (${materialMap.get(recipe.result.itemId)})`);
+          }
+          recipe.materials.forEach(mat => {
+            if (!materialMap.has(mat.itemId)) {
+              logItem(`Missing material itemId: ${mat.itemId}`, false);
+            } else {
+              logItem(`OK material itemId: ${mat.itemId} (${materialMap.get(mat.itemId)})`);
+            }
+            allItemIds.add(mat.itemId);
+          });
+          allItemIds.add(recipe.result.itemId);
+        });
+
+        pricing.forEach(price => {
+          if (!materialMap.has(price.itemId)) {
+            logItem(`Missing priced itemId: ${price.itemId}`, false);
+          } else {
+            logItem(`OK priced itemId: ${price.itemId} (${materialMap.get(price.itemId)})`);
+          }
+          allItemIds.add(price.itemId);
+        });
+
+        logItem(`✅ Finished checking ${allItemIds.size} unique item IDs.`);
+      } catch (err) {
+        logItem("❌ Error loading one or more files. Check console.", false);
+        console.error(err);
+      }
+    };
+
+    document.addEventListener("DOMContentLoaded", loadData);
+  </script>
+</body>
+</html>
