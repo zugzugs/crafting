@@ -51,8 +51,14 @@
       color: #e0e0e0; /* Light text */
       transition: all 0.3s ease;
     }
-    .card.img {
-      background-color: #000000;}
+    .card img {
+      border: 1px solid #444; /* Match card border in dark mode */
+      background-color: #000000;
+      padding: 4px; /* Space between image and border */
+      margin: 10px 0; /* Space above and below image */
+      max-width: 48px; /* Ensure consistent image size */
+      transition: border-color 0.3s ease;
+    }
     .card.light-mode {
       background-color: #ffffff;
       border: 1px solid #ddd;
