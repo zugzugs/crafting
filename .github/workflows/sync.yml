@@ -30,7 +30,9 @@ jobs:
             echo "{\"last_updated\": \"$(date -u +"%Y-%m-%dT%H:%M:%SZ")\"}" > horde_update.json
             
             git add horde.json horde_update.json
-            git commit -m "Update horde.json"
+            git commit -m "Update horde.json and timestamp from lonewolf"
             git push
           else
             echo "No changes to horde.json, no update needed."
+          fi
+
