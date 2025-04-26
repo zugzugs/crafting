@@ -1,0 +1,31 @@
+name: Sync horde.json
+
+on:
+  schedule:
+    - cron: "0 * * * *"  # every hour
+  workflow_dispatch:  # allow manual trigger
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout this repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Fetch horde.json from lonewolf
+        run: |
+          curl -o horde.json https://raw.githubusercontent.com/researchersec/lonewolf/main/horde.json
+
+      - name: Check for changes
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          if ! git diff --quiet horde.json; then
+            git add horde.json
+            git commit -m "Update horde.json"
+            git push
+          else
+            echo "No changes to commit"
+          fi
