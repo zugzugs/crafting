@@ -1955,7 +1955,7 @@
         "icon": "inv_alchemy_endlessflask_04",
         "result": {
             "itemId": 233964,
-            "quantity": 1
+            "quantity": 2
         },
         "materials": [
             {
@@ -1984,7 +1984,7 @@
         "icon": "inv_alchemy_endlessflask_06",
         "result": {
             "itemId": 233962,
-            "quantity": 1
+            "quantity": 2
         },
         "materials": [
             {
@@ -2013,7 +2013,7 @@
         "icon": "inv_alchemy_endlessflask_05",
         "result": {
             "itemId": 233965,
-            "quantity": 1
+            "quantity": 2
         },
         "materials": [
             {
@@ -2042,7 +2042,7 @@
         "icon": "inv_alchemy_endlessflask_03",
         "result": {
             "itemId": 233966,
-            "quantity": 1
+            "quantity": 2
         },
         "materials": [
             {
@@ -2141,7 +2141,7 @@
         "icon": "inv_potion_48",
         "result": {
             "itemId": 13513,
-            "quantity": 1
+            "quantity": 2
         },
         "materials": [
             {
@@ -2170,7 +2170,7 @@
         "icon": "inv_potion_97",
         "result": {
             "itemId": 13511,
-            "quantity": 1
+            "quantity": 2
         },
         "materials": [
             {
@@ -2199,7 +2199,7 @@
         "icon": "inv_potion_26",
         "result": {
             "itemId": 13506,
-            "quantity": 1
+            "quantity": 2
         },
         "materials": [
             {
@@ -2228,7 +2228,7 @@
         "icon": "inv_potion_41",
         "result": {
             "itemId": 13512,
-            "quantity": 1
+            "quantity": 2
         },
         "materials": [
             {
@@ -2257,7 +2257,7 @@
         "icon": "inv_potion_62",
         "result": {
             "itemId": 13510,
-            "quantity": 1
+            "quantity": 2
         },
         "materials": [
             {
@@ -8557,11 +8557,11 @@
         "recipeId": 1224633,
         "name": "Scarlet Soldier's Chestplate",
         "profession": "Blacksmithing",
-        "skillLevel": "N/A",
+        "skillLevel": "285",
         "icon": "inv_chest_plate08",
         "result": {
             "itemId": 238290,
-            "quantity": 2
+            "quantity": 1
         },
         "materials": [
             {
@@ -8582,11 +8582,11 @@
         "recipeId": 1224631,
         "name": "Scarlet Soldier's Helmet",
         "profession": "Blacksmithing",
-        "skillLevel": "N/A",
+        "skillLevel": "285",
         "icon": "inv_helmet_12",
         "result": {
             "itemId": 238288,
-            "quantity": 2
+            "quantity": 1
         },
         "materials": [
             {
@@ -8607,11 +8607,11 @@
         "recipeId": 1224632,
         "name": "Scarlet Soldier's Spaulders",
         "profession": "Blacksmithing",
-        "skillLevel": "N/A",
+        "skillLevel": "285",
         "icon": "inv_shoulder_29",
         "result": {
             "itemId": 238289,
-            "quantity": 2
+            "quantity": 1
         },
         "materials": [
             {
@@ -8790,11 +8790,11 @@
         "recipeId": 1224638,
         "name": "Scarlet Soldier's Legplates",
         "profession": "Blacksmithing",
-        "skillLevel": "N/A",
+        "skillLevel": "280",
         "icon": "inv_pants_plate_02",
         "result": {
             "itemId": 238294,
-            "quantity": 2
+            "quantity": 1
         },
         "materials": [
             {
@@ -9069,7 +9069,7 @@
         "recipeId": 1224636,
         "name": "Scarlet Soldier's Grips",
         "profession": "Blacksmithing",
-        "skillLevel": "N/A",
+        "skillLevel": "270",
         "icon": "inv_gauntlets_26",
         "result": {
             "itemId": 238292,
@@ -9090,11 +9090,11 @@
         "recipeId": 1224639,
         "name": "Scarlet Soldier's Stompers",
         "profession": "Blacksmithing",
-        "skillLevel": "N/A",
+        "skillLevel": "270",
         "icon": "inv_boots_plate_08",
         "result": {
             "itemId": 238295,
-            "quantity": 2
+            "quantity": 1
         },
         "materials": [
             {
@@ -9240,7 +9240,7 @@
         "recipeId": 1224635,
         "name": "Scarlet Soldier's Protectors",
         "profession": "Blacksmithing",
-        "skillLevel": "N/A",
+        "skillLevel": "250",
         "icon": "inv_bracer_26b",
         "result": {
             "itemId": 238291,
@@ -13378,7 +13378,7 @@
         "icon": "spell_arcane_portaldalaran",
         "result": {
             "itemId": 233988,
-            "quantity": 2
+            "quantity": 1
         },
         "materials": [
             {
@@ -22547,7 +22547,7 @@
         "icon": "inv_belt_09",
         "result": {
             "itemId": 238285,
-            "quantity": 2
+            "quantity": 1
         },
         "materials": [
             {
@@ -22568,7 +22568,7 @@
         "icon": "inv_bracer_23a",
         "result": {
             "itemId": 238283,
-            "quantity": 2
+            "quantity": 1
         },
         "materials": [
             {
@@ -22585,7 +22585,7 @@
         "icon": "inv_belt_37a",
         "result": {
             "itemId": 238277,
-            "quantity": 2
+            "quantity": 1
         },
         "materials": [
             {
@@ -22606,7 +22606,7 @@
         "icon": "inv_bracer_02",
         "result": {
             "itemId": 238275,
-            "quantity": 2
+            "quantity": 1
         },
         "materials": [
             {
