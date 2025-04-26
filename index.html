@@ -19,7 +19,7 @@
     }
     .recipe-card {
       margin-bottom: 1rem;
-      animation: fadeIn 0.5s ease-in;
+      animation: fadeIn 0.5s ease-in      animation: fadeIn 0.5s ease-in;
     }
     .profit-positive {
       color: #28a745; /* Green for positive profit */
@@ -101,6 +101,11 @@
     }
     .form-label.light-mode {
       color: #212529;
+    }
+    /* Last updated styling */
+    #lastUpdated {
+      font-size: 0.9rem; /* Slightly smaller text */
+      font-style: italic; /* Optional: make it stand out */
     }
     /* Error message styling */
     .text-danger {
@@ -190,6 +195,9 @@
         <label for="favoritesFilter" class="form-label">Favourites:</label>
         <button id="favoritesFilter" class="btn favorites-filter-btn w-75 w-md-25">Show Favorites Only</button>
       </div>
+      <div class="align-self-center">
+        <span id="lastUpdated" class="form-label">Last updated: Loading...</span>
+      </div>
     </section>
 
     <div id="loadingSpinner" class="loading-spinner">
@@ -218,7 +226,7 @@
       3713: 169, // Soothing Spices
       159: 27, // Refreshing Spring Water
       2894: 52, // Rhapsody Malt
-      1179: 140, //Ice Cold Milk
+      1179: 140, // Ice Cold Milk
       14341: 5294, // Rune Thread
     };
 
@@ -229,12 +237,26 @@
     const themeToggle = document.getElementById("themeToggle");
     const favoritesFilter = document.getElementById("favoritesFilter");
 
+    // Format copper to gold/silver/copper
     const formatCopper = (copper) => {
       if (!copper) return "N/A";
       const gold = Math.floor(copper / 10000);
       const silver = Math.floor((copper % 10000) / 100);
       const cop = copper % 100;
       return `${gold ? gold + 'g ' : ''}${silver ? silver + 's ' : ''}${cop}c`.trim();
+    };
+
+    // Format ISO timestamp to readable format (e.g., "Apr 26, 2025, 4:08 PM")
+    const formatTimestamp = (isoString) => {
+      const date = new Date(isoString);
+      return date.toLocaleString('en-US', {
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric',
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true,
+      });
     };
 
     const calculateRecipeCost = (recipe, priceMap) => {
@@ -362,15 +384,22 @@
     const loadData = async () => {
       try {
         loadingSpinner.classList.add('show');
-        const [matRes, recRes, priceRes] = await Promise.all([
+        const [matRes, recRes, priceRes, updateRes] = await Promise.all([
           fetch('materials.json'),
           fetch('recipes.json'),
-          fetch('horde.json')
+          fetch('horde.json'),
+          fetch('horde_update.json')
         ]);
         materials = await matRes.json();
         recipes = await recRes.json();
         const priceData = await priceRes.json();
         pricing = priceData.pricing_data;
+        const updateData = await updateRes.json();
+        const lastUpdated = updateData.last_updated;
+
+        // Update the "Last updated" timestamp in the UI
+        const lastUpdatedElement = document.getElementById('lastUpdated');
+        lastUpdatedElement.textContent = `Last updated: ${formatTimestamp(lastUpdated)}`;
 
         // Ensure each recipe has a unique ID
         recipes = recipes.map((recipe, index) => ({
