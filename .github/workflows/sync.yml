@@ -14,18 +14,23 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Fetch horde.json from lonewolf
+      - name: Fetch horde.json
         run: |
           curl -o horde.json https://raw.githubusercontent.com/researchersec/lonewolf/main/horde.json
 
-      - name: Check for changes
+      - name: Check for changes and update timestamp
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
+          
           if ! git diff --quiet horde.json; then
-            git add horde.json
+            echo "horde.json changed, updating timestamp..."
+            
+            # Save the current UTC time into horde_update.json
+            echo "{\"last_updated\": \"$(date -u +"%Y-%m-%dT%H:%M:%SZ")\"}" > horde_update.json
+            
+            git add horde.json horde_update.json
             git commit -m "Update horde.json"
             git push
           else
-            echo "No changes to commit"
-          fi
+            echo "No changes to horde.json, no update needed."
