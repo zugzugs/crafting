@@ -2332,7 +2332,7 @@
         "icon": "inv_potion_76",
         "result": {
             "itemId": 13444,
-            "quantity": 1
+            "quantity": 2
         },
         "materials": [
             {
@@ -2357,11 +2357,36 @@
         "icon": "inv_potion_83",
         "result": {
             "itemId": 13461,
-            "quantity": 1
+            "quantity": 2
         },
         "materials": [
             {
                 "itemId": 11176,
+                "quantity": 1
+            },
+            {
+                "itemId": 13463,
+                "quantity": 1
+            },
+            {
+                "itemId": 8925,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "recipeId": 17579,
+        "name": "Greater Holy Protection Potion",
+        "profession": "Alchemy",
+        "skillLevel": 290,
+        "icon": "inv_potion_83",
+        "result": {
+            "itemId": 13460,
+            "quantity": 2
+        },
+        "materials": [
+            {
+                "itemId": 7069,
                 "quantity": 1
             },
             {
@@ -2382,7 +2407,7 @@
         "icon": "inv_potion_24",
         "result": {
             "itemId": 13457,
-            "quantity": 1
+            "quantity": 2
         },
         "materials": [
             {
@@ -2407,7 +2432,7 @@
         "icon": "inv_potion_20",
         "result": {
             "itemId": 13456,
-            "quantity": 1
+            "quantity": 2
         },
         "materials": [
             {
@@ -2432,7 +2457,7 @@
         "icon": "inv_potion_22",
         "result": {
             "itemId": 13458,
-            "quantity": 1
+            "quantity": 2
         },
         "materials": [
             {
@@ -2457,7 +2482,7 @@
         "icon": "inv_potion_23",
         "result": {
             "itemId": 13459,
-            "quantity": 1
+            "quantity": 2
         },
         "materials": [
             {
