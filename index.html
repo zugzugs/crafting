@@ -18,7 +18,7 @@
       color: #212529;
     }
     .recipe-card {
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem; /* Less space between cards */
       animation: fadeIn 0.5s ease-in;
     }
     .profit-positive {
@@ -39,6 +39,7 @@
     .item-link {
       text-decoration: none;
       color: #66b0ff; /* Lighter blue for links */
+      font-size: 0.85rem; /* Smaller font for links */
     }
     .item-link:hover {
       text-decoration: underline;
@@ -50,19 +51,43 @@
       border: 1px solid #444; /* Subtle border */
       color: #e0e0e0; /* Light text */
       transition: all 0.3s ease;
+      margin-bottom: 0.5rem; /* Reduce margin between cards */
+    }
+    .card-body {
+      padding: 0.75rem; /* Reduce padding for compactness */
+      font-size: 0.9rem; /* Smaller font size for card content */
+    }
+    .card-title {
+      font-size: 1.1rem; /* Smaller heading size */
+      margin-bottom: 0.5rem; /* Reduce spacing below title */
     }
     .card img {
       border: 1px solid #444; /* Match card border in dark mode */
       background-color: #000000;
-      padding: 4px; /* Space between image and border */
-      margin: 10px 0; /* Space above and below image */
-      max-width: 48px; /* Ensure consistent image size */
+      padding: 2px; /* Reduce padding around image */
+      margin: 5px 0; /* Reduce vertical spacing */
+      max-width: 36px; /* Smaller image size */
       transition: border-color 0.3s ease;
     }
     .card.light-mode {
       background-color: #ffffff;
       border: 1px solid #ddd;
       color: #212529;
+    }
+    .card ul {
+      padding-left: 1rem; /* Reduce indent for list */
+      margin-bottom: 0.5rem; /* Reduce spacing below list */
+    }
+    .card ul li {
+      font-size: 0.85rem; /* Smaller font for materials */
+    }
+    .card-text strong {
+      font-size: 0.9rem; /* Slightly smaller font for strong text */
+    }
+    /* Adjust spacing in grid */
+    .col-md-4 {
+      padding-left: 0.5rem; /* Reduce horizontal padding */
+      padding-right: 0.5rem;
     }
     /* Dropdown styling */
     .form-select {
@@ -162,6 +187,15 @@
     /* Wowhead tooltips */
     .wowhead-tooltip {
       z-index: 1000;
+    }
+    /* Responsive adjustments for smaller screens */
+    @media (max-width: 576px) {
+      .card-body {
+        font-size: 0.85rem;
+      }
+      .card-title {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
