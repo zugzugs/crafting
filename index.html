@@ -80,6 +80,9 @@
     }
     .card ul li {
       font-size: 0.85rem; /* Smaller font for materials */
+      display: flex;
+      align-items: center;
+      gap: 5px;
     }
     .card-text strong {
       font-size: 0.9rem; /* Slightly smaller font for strong text */
@@ -188,6 +191,16 @@
     .wowhead-tooltip {
       z-index: 1000;
     }
+    /* Badge styling for material quantities */
+    .badge-light {
+      background-color: #444;
+      color: #e0e0e0;
+      font-size: 0.75rem;
+    }
+    .card.light-mode .badge-light {
+      background-color: #e0e0e0;
+      color: #212529;
+    }
     /* Responsive adjustments for smaller screens */
     @media (max-width: 576px) {
       .card-body {
@@ -195,6 +208,9 @@
       }
       .card-title {
         font-size: 1rem;
+      }
+      .badge-light {
+        font-size: 0.7rem;
       }
     }
   </style>
@@ -367,13 +383,14 @@
           const matPrice = fixedPrices[mat.itemId] !== undefined ? fixedPrices[mat.itemId] * mat.quantity : (priceMap.get(mat.itemId) || 0) * mat.quantity;
           return `
             <li>
+              <span class="badge badge-light">${mat.quantity}</span>
               <a href="https://www.wowhead.com/classic/item=${mat.itemId}" 
                  class="item-link" 
                  data-wowhead="item=${mat.itemId}" 
                  target="_blank" 
                  rel="noopener noreferrer">
                 ${name}
-              </a> x${mat.quantity} (${formatCopper(matPrice)}${fixedPrices[mat.itemId] !== undefined ? ' (Vendor)' : ''})
+              </a> (${formatCopper(matPrice)}${fixedPrices[mat.itemId] !== undefined ? ' (Vendor)' : ''})
             </li>`;
         }).join("");
 
