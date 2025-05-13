@@ -201,6 +201,14 @@
       background-color: #e0e0e0;
       color: #212529;
     }
+    /* Money icon styling */
+    .money-icon {
+      width: 16px;
+      height: 16px;
+      vertical-align: middle;
+      margin-right: 2px;
+      margin-left: 2px;
+    }
     /* Responsive adjustments for smaller screens */
     @media (max-width: 576px) {
       .card-body {
@@ -211,6 +219,10 @@
       }
       .badge-light {
         font-size: 0.7rem;
+      }
+      .money-icon {
+        width: 14px;
+        height: 14px;
       }
     }
   </style>
@@ -287,13 +299,23 @@
     const themeToggle = document.getElementById("themeToggle");
     const favoritesFilter = document.getElementById("favoritesFilter");
 
-    // Format copper to gold/silver/copper
+    // Format copper to display with gold, silver, copper images
     const formatCopper = (copper) => {
-      if (!copper) return "N/A";
+      if (!copper || copper === 0) return "N/A";
       const gold = Math.floor(copper / 10000);
       const silver = Math.floor((copper % 10000) / 100);
       const cop = copper % 100;
-      return `${gold ? gold + 'g ' : ''}${silver ? silver + 's ' : ''}${cop}c`.trim();
+      let result = '';
+      if (gold > 0) {
+        result += `${gold}<img src="https://wow.zamimg.com/images/icons/money-gold.gif" alt="gold" class="money-icon">`;
+      }
+      if (silver > 0) {
+        result += `${silver}<img src="https://wow.zamimg.com/images/icons/money-silver.gif" alt="silver" class="money-icon">`;
+      }
+      if (cop > 0 || result === '') {
+        result += `${cop}<img src="https://wow.zamimg.com/images/icons/money-copper.gif" alt="copper" class="money-icon">`;
+      }
+      return result.trim();
     };
 
     // Format ISO timestamp to readable format (e.g., "Apr 26, 2025, 4:08 PM")
