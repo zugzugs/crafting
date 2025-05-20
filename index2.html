@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minto | WoW Classic SoD Crafting</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://wow.zamimg.com/widgets/power.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+    body {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAAAAAAD/4QAWRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAG6ADAAQAAAABAAAAGgAAAAD/2wBDAAoHBwkHBgoJCAkLCwoMDxkQDw4ODx4WFxIZJCAmJSMgIyMjKC0nLCIuMjIyQjU1Hi4vNDIyZSIzMjIyMjIyMjL/wAALCAAIAAoBAREA/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/9oACAEBAAA/ALqY/9k=') repeat;
+      background-size: 300px 300px;
+      color: #e6d5a8;
+      font-family: 'Cinzel', serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGxpbmVhckdyYWRpZW50IGlkPSJoZWFkZXJncmFkIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQ0MzcxNiIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMjkyMTA5Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNDQzNzE2Ii8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIGZpbGw9InVybCgjZ3JhZCkiLz48L3N2Zz4=') repeat;
+      border-bottom: 4px solid #b89737;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .header img {
+      height: 50px;
+      filter: drop-shadow(2px 2px 4px #000);
+    }
+
+    .header h1 {
+      font-size: 2rem;
+      color: #f0c05a;
+      text-shadow: 3px 3px 5px #000;
+      margin: 0 15px;
+      letter-spacing: 2px;
+    }
+
+    .main-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      padding: 20px 10px;
+    }
+
+    .window {
+      background: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAAAAAAD/4QAWRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAG6ADAAQAAAABAAAAGgAAAAD/2wBDAAoHBwkHBgoJCAkLCwoMDxkQDw4ODx4WFxIZJCAmJSMgIyMjKC0nLCIuMjIyQjU1Hi4vNDIyZSIzMjIyMjIyMjL/wAALCAAIAAoBAREA/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/9oACAEBAAA/ALqY/9k=') repeat;
+      background-size: 200px 200px;
+      border: 6px solid transparent;
+      border-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2I4OTczNyIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjNDQzNzE2Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjYjg5NzM3Ii8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIxIiB5PSIxIiB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIGZpbGw9InVybCgjZ3JhZCkiLz48cmVjdCB4PSIyIiB5PSIyIiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIGZpbGw9IiMyOTIxMDkiIG9wYWNpdHk9IjAuNSIvPjwvc3ZnPg==') 6 stretch;
+      width: 90%;
+      max-width: 1000px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .filter-container {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+      flex-wrap: wrap;
+      align-items: center;
+      background: rgba(41, 33, 9, 0.9);
+      border: 3px solid #b89737;
+      padding: 10px;
+      border-radius: 8px;
+      grid-column: span 2;
+      animation: fadeIn 0.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .form-control, .form-select {
+      background: #2e2610;
+      color: #e6d5a8;
+      border: 2px solid #b89737;
+      font-size: 1rem;
+      padding: 6px 10px;
+      border-radius: 6px;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .form-control:focus, .form-select:focus {
+      border-color: #f0c05a;
+      outline: none;
+      box-shadow: 0 0 10px rgba(240, 192, 90, 0.5);
+    }
+
+    .form-select {
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBvbHlnb24gcG9pbnRzPSI3LDE0IDE0LDcgMCw3IiBmaWxsPSIjZjBjMDVhIi8+PC9zdmc+');
+      background-position: right 10px center;
+      background-size: 14px;
+      background-repeat: no-repeat;
+    }
+
+    .form-label {
+      color: #f0c05a;
+      font-size: 1.1rem;
+      margin: 0;
+      font-weight: bold;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    .favorites-filter-btn {
+      background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGxpbmVhckdyYWRpZW50IGlkPSJidG5ncmFkIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQ0MzcxNiIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMjkyMTA5Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNDQzNzE2Ii8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIGZpbGw9InVybCgjYnRuZ3JhZCkiLz48L3N2Zz4=') repeat;
+      border: 2px solid #b89737;
+      color: #e6d5a8;
+      padding: 6px 15px;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: transform 0.2s, background 0.3s;
+      font-family: 'Cinzel', serif;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    .favorites-filter-btn:hover {
+      transform: scale(1.05);
+      background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGxpbmVhckdyYWRpZW50IGlkPSJidG5ncmFkIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzU0NDcxNiIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMzkyMTA5Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNTQ0NzE2Ii8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIGZpbGw9InVybCgjYnRuZ3JhZCkiLz48L3N2Zz4=') repeat;
+    }
+
+    .favorites-filter-btn.active {
+      background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGxpbmVhckdyYWRpZW50IGlkPSJidG5ncmFkIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY0NTcxNiIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjNDkyMTA5Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNjQ1NzE2Ii8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIGZpbGw9InVybCgjYnRuZ3JhZCkiLz48L3N2Zz4=') repeat;
+      color: #f0c05a;
+    }
+
+    #lastUpdated {
+      font-size: 0.9rem;
+      font-style: italic;
+      color: #b89737;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    .recipe-list {
+      max-height: 550px;
+      overflow-y: auto;
+      border: 3px solid #b89737;
+      background: rgba(41, 33, 9, 0.9);
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    .recipe-item {
+      display: flex;
+      align-items: center;
+      padding: 8px;
+      border-bottom: 1px solid #b89737;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+      background: rgba(0, 0, 0, 0.2);
+      margin-bottom: 5px;
+      border-radius: 4px;
+      gap: 10px;
+    }
+
+    .recipe-item:hover {
+      background: rgba(184, 151, 55, 0.2);
+      transform: translateX(5px);
+    }
+
+    .recipe-item.selected {
+      background: rgba(184, 151, 55, 0.4);
+      border-left: 5px solid #f0c05a;
+      animation: selectGlow 0.5s ease-in-out;
+    }
+
+    @keyframes selectGlow {
+      0% { box-shadow: 0 0 0px #f0c05a; }
+      50% { box-shadow: 0 0 15px #f0c05a; }
+      100% { box-shadow: 0 0 0px #f0c05a; }
+    }
+
+    .recipe-item img {
+      width: 36px;
+      height: 36px;
+      margin-right: 0;
+      border: 2px solid #b89737;
+      border-radius: 4px;
+    }
+
+    .recipe-item span {
+      font-size: 1.1rem;
+      color: #e6d5a8;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    .recipe-item .profit {
+      margin-left: auto;
+      color: #40c040;
+      font-size: 1rem;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    .recipe-item .profit.negative {
+      color: #ff4040;
+    }
+
+    .recipe-details {
+      background: rgba(41, 33, 9, 0.9);
+      border: 3px solid #b89737;
+      padding: 15px;
+      min-height: 550px;
+      border-radius: 8px;
+      display: none;
+    }
+
+    .recipe-details.active {
+      display: block;
+    }
+
+    .recipe-details img {
+      width: 48px;
+      height: 48px;
+      margin-right: 10px;
+      border: 2px solid #b89737;
+      border-radius: 4px;
+    }
+
+    .recipe-details ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0;
+    }
+
+    .recipe-details ul li {
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+      margin-bottom: 8px;
+      padding: 5px;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 4px;
+      gap: 8px;
+    }
+
+    .recipe-details ul li img {
+      width: 28px;
+      height: 28px;
+      border: 1px solid #b89737;
+      border-radius: 4px;
+    }
+
+    .item-link {
+      text-decoration: none;
+      position: relative;
+    }
+
+    .item-link:hover {
+      text-decoration: underline;
+    }
+
+    .item-link:hover::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #292109;
+      color: #e6d5a8;
+      padding: 6px 10px;
+      border: 2px solid #b89737;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      white-space: nowrap;
+      z-index: 1000;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    .profit-positive {
+      color: #40c040;
+      font-weight: bold;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    .profit-negative {
+      color: #ff4040;
+      font-weight: bold;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    .money-icon {
+      width: 12px;
+      height: 12px;
+      vertical-align: middle;
+      margin: 0 2px;
+    }
+
+    .badge-light {
+      background: #2e2610;
+      color: #e6d5a8;
+      font-size: 0.9rem;
+      margin-right: 5px;
+      padding: 4px 8px;
+      border-radius: 4px;
+      border: 1px solid #b89737;
+    }
+
+    .create-container {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .create-input {
+      background: #2e2610;
+      color: #e6d5a8;
+      border: 2px solid #b89737;
+      font-size: 1rem;
+      padding: 6px 10px;
+      border-radius: 6px;
+      width: 80px;
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .create-input:focus {
+      border-color: #f0c05a;
+      outline: none;
+      box-shadow: 0 0 10px rgba(240, 192, 90, 0.5);
+    }
+
+    .quantity-btn {
+      background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGxpbmVhckdyYWRpZW50IGlkPSJidG5ncmFkIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQ0MzcxNiIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMjkyMTA5Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNDQzNzE2Ii8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIGZpbGw9InVybCgjYnRuZ3JhZCkiLz48L3N2Zz4=') repeat;
+      border: 2px solid #b89737;
+      color: #e6d5a8;
+      font-size: 1.3rem;
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.3s;
+      border-radius: 6px;
+    }
+
+    .quantity-btn:hover {
+      background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGxpbmVhckdyYWRpZW50IGlkPSJidG5ncmFkIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzU0NDcxNiIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMzkyMTA5Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNTQ0NzE2Ii8+PC9liW5lYXJHcmFkaWVudD48cmVjdCB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIGZpbGw9InVybCgjYnRuZ3JhZCkiLz48L3N2Zz4=') repeat;
+      transform: scale(1.05);
+    }
+
+    .quantity-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .footer {
+      background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGxpbmVhckdyYWRpZW50IGlkPSJmb290ZXJncmFkIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQ0MzcxNiIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMjkyMTA5Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNDQzNzE2Ii8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIGZpbGw9InVybCgjZm9vdGVyZ3JhZCkiLz48L3N2Zz4=') repeat;
+      border-top: 4px solid #b89737;
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #b89737;
+      text-shadow: 1px 1px 2px #000;
+      margin-top: 20px;
+    }
+
+    .footer a {
+      color: #f0c05a;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+      color: #ffdd99;
+    }
+
+    .loading-spinner {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2000;
+      grid-column: span 2;
+    }
+
+    .loading-spinner.show {
+      display: block;
+    }
+
+    .progress-bar {
+      width: 250px;
+      height: 15px;
+      background: #2e2610;
+      border: 2px solid #b89737;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+
+    .progress {
+      height: 100%;
+      background: #f0c05a;
+      width: 0;
+      transition: width 0.5s ease;
+    }
+
+    /* Custom Scrollbar Styling */
+    .recipe-list {
+      scrollbar-width: thin;
+      scrollbar-color: #b89737 #292109;
+    }
+    .recipe-list::-webkit-scrollbar {
+      width: 14px;
+    }
+    .recipe-list::-webkit-scrollbar-track {
+      background: #292109;
+      border-radius: 8px;
+    }
+    .recipe-list::-webkit-scrollbar-thumb {
+      background: #b89737;
+      border-radius: 8px;
+      border: 2px solid #292109;
+    }
+    .recipe-list::-webkit-scrollbar-thumb:hover {
+      background: #f0c05a;
+    }
+
+    @media (max-width: 768px) {
+      .window {
+        grid-template-columns: 1fr;
+      }
+      .recipe-details {
+        min-height: 350px;
+        margin-top: 15px;
+      }
+      .filter-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+      }
+      .create-input {
+        width: 70px;
+      }
+      .quantity-btn {
+        width: 40px;
+        height: 40px;
+      }
+      .header h1 {
+        font-size: 1.5rem;
+      }
+      .recipe-item img {
+        width: 32px;
+        height: 32px;
+      }
+      .recipe-details img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <img src="https://via.placeholder.com/50x50?text=WoW+Logo" alt="WoW Logo">
+    <h1>WoW Classic SoD Crafting</h1>
+  </header>
+
+  <div class="main-container">
+    <div class="window">
+      <section class="filter-container">
+        <div>
+          <label for="searchFilter" class="form-label">Search:</label>
+          <input type="text" id="searchFilter" class="form-control" placeholder="Recipe name...">
+        </div>
+        <div>
+          <label for="professionFilter" class="form-label">Profession:</label>
+          <select id="professionFilter" class="form-select">
+            <option value="all">All Professions</option>
+          </select>
+        </div>
+        <div>
+          <label for="sortFilter" class="form-label">Sort by:</label>
+          <select id="sortFilter" class="form-select">
+            <option value="default">Default</option>
+            <option value="profit-desc" selected>Profit (High to Low)</option>
+            <option value="profit-asc">Profit (Low to High)</option>
+          </select>
+        </div>
+        <div>
+          <label for="favoritesFilter" class="form-label">Favourites:</label>
+          <button id="favoritesFilter" class="favorites-filter-btn">Show Favorites</button>
+        </div>
+        <div>
+          <span id="lastUpdated" class="form-label">Last updated: May 20, 2025, 2:47 AM CEST</span>
+        </div>
+      </section>
+
+      <div id="loadingSpinner" class="loading-spinner">
+        <div class="spinner-border text-warning" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="progress-bar">
+          <div id="progress" class="progress"></div>
+        </div>
+      </div>
+
+      <section id="recipeList" class="recipe-list"></section>
+      <section id="recipeDetails" class="recipe-details"></section>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Powered by <a href="https://www.wowhead.com/" target="_blank">Wowhead</a> | © 2025 xAI</p>
+  </footer>
+
+  <script>
+    let materials = [];
+    let recipes = [];
+    let pricing = [];
+    let favorites = JSON.parse(localStorage.getItem('favoriteRecipes') || '[]');
+    let showFavoritesOnly = false;
+    let selectedRecipe = null;
+    let currentQuantity = 1;
+
+    const fixedPrices = {
+      3371: 25,
+      3372: 220,
+      8925: 2600,
+      2678: 10,
+      2692: 42,
+      3713: 169,
+      159: 27,
+      2894: 52,
+      1179: 140,
+      14341: 5294,
+    };
+
+    const qualityColors = {
+      0: '#9d9d9d', // Poor
+      1: '#ffffff', // Common
+      2: '#1eff00', // Uncommon
+      3: '#0070dd', // Rare
+      4: '#a335ee', // Epic
+      5: '#ff8000', // Legendary
+      6: '#e6cc80', // Artifact
+      7: '#00ccff', // Heirloom
+      8: '#00ccff'  // WoW Token
+    };
+
+    const professionFilter = document.getElementById("professionFilter");
+    const sortFilter = document.getElementById("sortFilter");
+    const searchFilter = document.getElementById("searchFilter");
+    const recipeList = document.getElementById("recipeList");
+    const recipeDetails = document.getElementById("recipeDetails");
+    const favoritesFilter = document.getElementById("favoritesFilter");
+    const loadingSpinner = document.getElementById("loadingSpinner");
+    const progress = document.getElementById("progress");
+
+    const formatCopper = (copper) => {
+      if (!copper || copper === 0) return "N/A";
+      const gold = Math.floor(copper / 10000);
+      const silver = Math.floor((copper % 10000) / 100);
+      const cop = copper % 100;
+      let result = '';
+      if (gold > 0) result += `${gold}<img src="https://wow.zamimg.com/images/icons/money-gold.gif" alt="gold" class="money-icon">`;
+      if (silver > 0) result += `${silver}<img src="https://wow.zamimg.com/images/icons/money-silver.gif" alt="silver" class="money-icon">`;
+      if (cop > 0 || result === '') result += `${cop}<img src="https://wow.zamimg.com/images/icons/money-copper.gif" alt="copper" class="money-icon">`;
+      return result.trim();
+    };
+
+    const formatTimestamp = (isoString) => {
+      const date = new Date(isoString);
+      return date.toLocaleString('en-US', {
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric',
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true,
+        timeZone: 'CET'
+      });
+    };
+
+    const calculateRecipeCost = (recipe, quantity, priceMap) => {
+      let totalCost = 0;
+      recipe.materials.forEach(mat => {
+        const price = fixedPrices[mat.itemId] !== undefined ? fixedPrices[mat.itemId] : (priceMap.get(mat.itemId) || 0);
+        totalCost += price * mat.quantity * quantity;
+      });
+      const resultPrice = priceMap.get(recipe.result.itemId) || 0;
+      const profit = (resultPrice * recipe.result.quantity * quantity) - totalCost;
+      return { totalCost, profit, resultPrice };
+    };
+
+    const toggleFavorite = (recipeId) => {
+      if (favorites.includes(recipeId)) {
+        favorites = favorites.filter(id => id !== recipeId);
+      } else {
+        favorites.push(recipeId);
+      }
+      localStorage.setItem('favoriteRecipes', JSON.stringify(favorites));
+      renderRecipes(professionFilter.value, sortFilter.value, searchFilter.value);
+    };
+
+    const updateDynamicElements = (recipe, quantity) => {
+      const priceMap = new Map(pricing.map(p => [p.itemId, p.marketValue]));
+      const materialMap = new Map(materials.map(m => [m.itemId, { name: m.name, quality: m.quality, iconname: m.iconname || "inv_misc_questionmark" }]));
+      const { totalCost, profit, resultPrice } = calculateRecipeCost(recipe, quantity, priceMap);
+
+      // Update AH price
+      const ahPriceElement = document.querySelector('#recipeDetails .d-flex div');
+      const resultData = materialMap.get(recipe.result.itemId) || { name: recipe.name, quality: 1, iconname: recipe.icon };
+      ahPriceElement.innerHTML = `
+        <strong>${recipe.name}</strong><br>
+        AH: ${formatCopper(resultPrice * recipe.result.quantity * quantity)} x${recipe.result.quantity * quantity}
+      `;
+
+      // Update reagents
+      const reagentsList = document.querySelector('#reagentsList');
+      const materialsHTML = recipe.materials.map(mat => {
+        const matData = materialMap.get(mat.itemId) || { name: "Unknown", quality: 1, iconname: "inv_misc_questionmark" };
+        const name = matData.name;
+        const quality = matData.quality;
+        const qualityColor = qualityColors[quality] || qualityColors[1]; // Default to Common if quality not found
+        const iconname = matData.iconname;
+        const matPrice = fixedPrices[mat.itemId] !== undefined ? fixedPrices[mat.itemId] * mat.quantity * quantity : (priceMap.get(mat.itemId) || 0) * mat.quantity * quantity;
+        return `
+          <li>
+            <span class="badge badge-light">${mat.quantity * quantity}</span>
+            <img src="https://wow.zamimg.com/images/wow/icons/small/${iconname}.jpg">
+            <a href="https://www.wowhead.com/classic/item=${mat.itemId}" 
+               class="item-link" 
+               style="color: ${qualityColor};"
+               data-wowhead="item=${mat.itemId}" 
+               data-tooltip="${name} (ID: ${mat.itemId})" 
+               target="_blank" 
+               rel="noopener noreferrer">
+              ${name}
+            </a> (${formatCopper(matPrice)}${fixedPrices[mat.itemId] !== undefined ? ' (Vendor)' : ''})
+          </li>`;
+      }).join("");
+      reagentsList.innerHTML = materialsHTML;
+
+      // Update reagents label
+      const reagentsLabel = document.querySelector('#reagentsLabel');
+      reagentsLabel.textContent = `Reagents (for ${quantity}):`;
+
+      // Update total cost and profit
+      document.getElementById('totalCost').innerHTML = formatCopper(totalCost);
+      document.getElementById('profit').innerHTML = `
+        <span class="${profit >= 0 ? 'profit-positive' : 'profit-negative'}">
+          ${formatCopper(profit)}
+        </span>`;
+    };
+
+    const renderRecipeDetails = (recipe) => {
+      const priceMap = new Map(pricing.map(p => [p.itemId, p.marketValue]));
+      const materialMap = new Map(materials.map(m => [m.itemId, { name: m.name, quality: m.quality, iconname: m.iconname || "inv_misc_questionmark" }]));
+      const quantity = currentQuantity;
+      const { totalCost, profit, resultPrice } = calculateRecipeCost(recipe, quantity, priceMap);
+      const resultData = materialMap.get(recipe.result.itemId) || { name: recipe.name, quality: 1, iconname: recipe.icon };
+      const resultName = resultData.name;
+      const resultQuality = resultData.quality;
+      const resultIcon = resultData.iconname;
+
+      const materialsHTML = recipe.materials.map(mat => {
+        const matData = materialMap.get(mat.itemId) || { name: "Unknown", quality: 1, iconname: "inv_misc_questionmark" };
+        const name = matData.name;
+        const quality = matData.quality;
+        const qualityColor = qualityColors[quality] || qualityColors[1]; // Default to Common if quality not found
+        const iconname = matData.iconname;
+        const matPrice = fixedPrices[mat.itemId] !== undefined ? fixedPrices[mat.itemId] * mat.quantity * quantity : (priceMap.get(mat.itemId) || 0) * mat.quantity * quantity;
+        return `
+          <li>
+            <span class="badge badge-light">${mat.quantity * quantity}</span>
+            <img src="https://wow.zamimg.com/images/wow/icons/small/${iconname}.jpg">
+            <a href="https://www.wowhead.com/classic/item=${mat.itemId}" 
+               class="item-link" 
+               style="color: ${qualityColor};"
+               data-wowhead="item=${mat.itemId}" 
+               data-tooltip="${name} (ID: ${mat.itemId})" 
+               target="_blank" 
+               rel="noopener noreferrer">
+              ${name}
+            </a> (${formatCopper(matPrice)}${fixedPrices[mat.itemId] !== undefined ? ' (Vendor)' : ''})
+          </li>`;
+      }).join("");
+
+      recipeDetails.innerHTML = `
+        <div class="d-flex align-items-center mb-2">
+          <img src="https://wow.zamimg.com/images/wow/icons/large/${resultIcon}.jpg">
+          <div>
+            <strong>${recipe.name}</strong><br>
+            AH: ${formatCopper(resultPrice * recipe.result.quantity * quantity)} x${recipe.result.quantity * quantity}
+          </div>
+        </div>
+        <div class="create-container">
+          <button id="minusBtn" class="quantity-btn">−</button>
+          <input type="number" id="createQuantity" class="create-input" min="1" value="${quantity}" placeholder="Enter quantity...">
+          <button id="plusBtn" class="quantity-btn">+</button>
+        </div>
+        <div>
+          <strong id="reagentsLabel">Reagents (for ${quantity}):</strong>
+          <ul id="reagentsList">${materialsHTML}</ul>
+          <strong>Total Cost:</strong> <span id="totalCost">${formatCopper(totalCost)}</span><br>
+          <strong>Profit:</strong> 
+          <span id="profit" class="${profit >= 0 ? 'profit-positive' : 'profit-negative'}">
+            ${formatCopper(profit)}
+          </span>
+        </div>
+      `;
+      recipeDetails.classList.add('active');
+    };
+
+    const adjustQuantity = (delta) => {
+      currentQuantity += delta;
+      if (currentQuantity < 1) currentQuantity = 1;
+      document.getElementById("createQuantity").value = currentQuantity;
+      if (selectedRecipe) {
+        updateDynamicElements(selectedRecipe, currentQuantity);
+      }
+    };
+
+    const handleQuantityInput = () => {
+      const input = document.getElementById("createQuantity");
+      let value = parseInt(input.value);
+      if (isNaN(value) || value < 1) {
+        value = 1;
+        input.value = 1;
+      }
+      currentQuantity = value;
+      if (selectedRecipe) {
+        updateDynamicElements(selectedRecipe, currentQuantity);
+      }
+    };
+
+    // Event delegation for quantity controls
+    recipeDetails.addEventListener('click', (e) => {
+      if (e.target.id === 'plusBtn') {
+        adjustQuantity(1);
+      } else if (e.target.id === 'minusBtn') {
+        adjustQuantity(-1);
+      }
+    });
+
+    recipeDetails.addEventListener('input', (e) => {
+      if (e.target.id === 'createQuantity') {
+        handleQuantityInput();
+      }
+    });
+
+    const renderRecipes = (filterProfession = "all", sortOption = "default", searchTerm = "") => {
+      recipeList.innerHTML = "";
+      const priceMap = new Map(pricing.map(p => [p.itemId, p.marketValue]));
+
+      let filteredRecipes = filterProfession === "all"
+        ? recipes
+        : recipes.filter(r => r.profession === filterProfession);
+
+      if (searchTerm) {
+        filteredRecipes = filteredRecipes.filter(r => 
+          r.name.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+      }
+
+      if (showFavoritesOnly) {
+        filteredRecipes = filteredRecipes.filter(r => favorites.includes(r.id));
+      }
+
+      if (sortOption === "profit-desc") {
+        filteredRecipes = filteredRecipes.sort((a, b) => {
+          const profitA = calculateRecipeCost(a, 1, priceMap).profit;
+          const profitB = calculateRecipeCost(b, 1, priceMap).profit;
+          return profitB - profitA;
+        });
+      } else if (sortOption === "profit-asc") {
+        filteredRecipes = filteredRecipes.sort((a, b) => {
+          const profitA = calculateRecipeCost(a, 1, priceMap).profit;
+          const profitB = calculateRecipeCost(b, 1, priceMap).profit;
+          return profitA - profitB;
+        });
+      }
+
+      filteredRecipes.forEach((recipe, index) => {
+        const isFavorited = favorites.includes(recipe.id);
+        const isSelected = selectedRecipe && selectedRecipe.id === recipe.id;
+        const { profit } = calculateRecipeCost(recipe, 1, priceMap);
+
+        recipeList.insertAdjacentHTML("beforeend", `
+          <div class="recipe-item ${isSelected ? 'selected' : ''}" 
+               onclick="selectRecipe('${recipe.id}')">
+            <img src="https://wow.zamimg.com/images/wow/icons/small/${recipe.icon}.jpg">
+            <span>${recipe.name}${isFavorited ? ' ★' : ''}</span>
+            <span class="profit ${profit < 0 ? 'negative' : ''}">${formatCopper(profit)}</span>
+          </div>
+        `);
+      });
+
+      if (selectedRecipe) {
+        const updatedRecipe = filteredRecipes.find(r => r.id === selectedRecipe.id);
+        if (updatedRecipe) {
+          renderRecipeDetails(updatedRecipe);
+        } else {
+          recipeDetails.innerHTML = "";
+          recipeDetails.classList.remove('active');
+          selectedRecipe = null;
+        }
+      } else {
+        recipeDetails.innerHTML = "";
+        recipeDetails.classList.remove('active');
+      }
+    };
+
+    const selectRecipe = (recipeId) => {
+      selectedRecipe = recipes.find(r => r.id === recipeId);
+      currentQuantity = 1; // Reset quantity when selecting a new recipe
+      renderRecipes(professionFilter.value, sortFilter.value, searchFilter.value);
+    };
+
+    const loadData = async () => {
+      try {
+        loadingSpinner.classList.add('show');
+        let progressWidth = 0;
+        const updateProgress = () => {
+          progressWidth += 25;
+          progress.style.width = `${progressWidth}%`;
+          if (progressWidth >= 100) progressWidth = 100;
+        };
+
+        const [matRes, recRes, priceRes, updateRes] = await Promise.all([
+          fetch('materials.json'),
+          fetch('recipes.json'),
+          fetch('horde.json'),
+          fetch('horde_update.json')
+        ]);
+        updateProgress();
+
+        materials = await matRes.json();
+        recipes = await recRes.json();
+        const priceData = await priceRes.json();
+        pricing = priceData.pricing_data;
+        const updateData = await updateRes.json();
+        updateProgress();
+
+        const lastUpdated = updateData.last_updated || '2025-05-20T02:47:00Z'; // Default to current time if not provided
+        document.getElementById('lastUpdated').textContent = `Last updated: ${formatTimestamp(lastUpdated)}`;
+        updateProgress();
+
+        recipes = recipes.map((recipe, index) => ({
+          ...recipe,
+          id: recipe.id || `recipe-${recipe.result.itemId}-${index}`
+        }));
+
+        const professions = [...new Set(recipes.map(r => r.profession))];
+        professions.forEach(prof => {
+          const option = document.createElement("option");
+          option.value = prof;
+          option.textContent = prof;
+          if (prof === "Alchemy") {
+            option.selected = true;
+          }
+          professionFilter.appendChild(option);
+        });
+        updateProgress();
+
+        renderRecipes("Alchemy", "profit-desc");
+      } catch (err) {
+        console.error("Failed to load data:", err);
+        recipeList.innerHTML = `<p style="color: #ff6666;">Error loading data. Check console for details.</p>`;
+      } finally {
+        loadingSpinner.classList.remove('show');
+        progress.style.width = "100%";
+      }
+    };
+
+    professionFilter.addEventListener("change", (e) => {
+      renderRecipes(e.target.value, sortFilter.value, searchFilter.value);
+    });
+
+    sortFilter.addEventListener("change", (e) => {
+      renderRecipes(professionFilter.value, e.target.value, searchFilter.value);
+    });
+
+    searchFilter.addEventListener("input", (e) => {
+      renderRecipes(professionFilter.value, sortFilter.value, e.target.value);
+    });
+
+    favoritesFilter.addEventListener("click", () => {
+      showFavoritesOnly = !showFavoritesOnly;
+      favoritesFilter.classList.toggle('active');
+      favoritesFilter.textContent = showFavoritesOnly ? 'Show All' : 'Show Favorites';
+      renderRecipes(professionFilter.value, sortFilter.value, searchFilter.value);
+    });
+
+    document.addEventListener("DOMContentLoaded", loadData);
+  </script>
+</body>
+</html>
