@@ -41529,6 +41529,534 @@
             "itemName": "Minor Mana Oil"
         },
         {
+            "itemId": 21547,
+            "minBuyout": 19999,
+            "quantity": 4,
+            "marketValue": 61363,
+            "numAuctions": 3,
+            "itemName": "Recipe: Elixir of Greater Firepower"
+        },
+        {
+            "itemId": 21548,
+            "minBuyout": 119987,
+            "quantity": 4,
+            "marketValue": 157247,
+            "numAuctions": 3,
+            "itemName": "Pattern: Stormshroud Gloves"
+        },
+        {
+            "itemId": 21557,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 2462,
+            "numAuctions": 0,
+            "itemName": "Small Red Rocket"
+        },
+        {
+            "itemId": 21558,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 2528,
+            "numAuctions": 0,
+            "itemName": "Small Blue Rocket"
+        },
+        {
+            "itemId": 21569,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 1499999,
+            "numAuctions": 0,
+            "itemName": "Firework Launcher"
+        },
+        {
+            "itemId": 21570,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 2385796,
+            "numAuctions": 0,
+            "itemName": "Cluster Launcher"
+        },
+        {
+            "itemId": 21571,
+            "minBuyout": 49998,
+            "quantity": 10,
+            "marketValue": 49998,
+            "numAuctions": 1,
+            "itemName": "Blue Rocket Cluster"
+        },
+        {
+            "itemId": 21574,
+            "minBuyout": 49999,
+            "quantity": 10,
+            "marketValue": 49999,
+            "numAuctions": 1,
+            "itemName": "Green Rocket Cluster"
+        },
+        {
+            "itemId": 21713,
+            "minBuyout": 9691337,
+            "quantity": 2,
+            "marketValue": 9948233,
+            "numAuctions": 2,
+            "itemName": "Elune's Candle"
+        },
+        {
+            "itemId": 932,
+            "minBuyout": 19988,
+            "quantity": 4,
+            "marketValue": 22002,
+            "numAuctions": 4,
+            "itemName": "Fel Steed Saddlebags"
+        },
+        {
+            "itemId": 933,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 22799,
+            "numAuctions": 0,
+            "itemName": "Large Rucksack"
+        },
+        {
+            "itemId": 934,
+            "minBuyout": 699999,
+            "quantity": 2,
+            "marketValue": 191913,
+            "numAuctions": 1,
+            "itemName": "Stalvan's Reaper"
+        },
+        {
+            "itemId": 935,
+            "minBuyout": 2009755,
+            "quantity": 2,
+            "marketValue": 1772214,
+            "numAuctions": 2,
+            "itemName": "Night Watch Shortsword"
+        },
+        {
+            "itemId": 936,
+            "minBuyout": 120000,
+            "quantity": 3,
+            "marketValue": 160900,
+            "numAuctions": 3,
+            "itemName": "Midnight Mace"
+        },
+        {
+            "itemId": 937,
+            "minBuyout": 137297,
+            "quantity": 2,
+            "marketValue": 115902,
+            "numAuctions": 2,
+            "itemName": "Black Duskwood Staff"
+        },
+        {
+            "itemId": 940,
+            "minBuyout": 1119579,
+            "quantity": 1,
+            "marketValue": 800679,
+            "numAuctions": 1,
+            "itemName": "Robes of Insight"
+        },
+        {
+            "itemId": 942,
+            "minBuyout": 1119998,
+            "quantity": 3,
+            "marketValue": 864605,
+            "numAuctions": 3,
+            "itemName": "Freezing Band"
+        },
+        {
+            "itemId": 943,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 866634,
+            "numAuctions": 0,
+            "itemName": "Warden Staff"
+        },
+        {
+            "itemId": 944,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 2601387,
+            "numAuctions": 0,
+            "itemName": "Elemental Mage Staff"
+        },
+        {
+            "itemId": 954,
+            "minBuyout": 2974,
+            "quantity": 7,
+            "marketValue": 2596,
+            "numAuctions": 4,
+            "itemName": "Scroll of Strength"
+        },
+        {
+            "itemId": 955,
+            "minBuyout": 10498,
+            "quantity": 1,
+            "marketValue": 444,
+            "numAuctions": 1,
+            "itemName": "Scroll of Intellect"
+        },
+        {
+            "itemId": 1015,
+            "minBuyout": 956,
+            "quantity": 89,
+            "marketValue": 1364,
+            "numAuctions": 16,
+            "itemName": "Lean Wolf Flank"
+        },
+        {
+            "itemId": 1074,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 24579,
+            "numAuctions": 0,
+            "itemName": "Hard Spider Leg Tip"
+        },
+        {
+            "itemId": 1076,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 262926,
+            "numAuctions": 0,
+            "itemName": "Defias Renegade Ring"
+        },
+        {
+            "itemId": 1080,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 500,
+            "numAuctions": 0,
+            "itemName": "Tough Condor Meat"
+        },
+        {
+            "itemId": 1081,
+            "minBuyout": 137,
+            "quantity": 88,
+            "marketValue": 131,
+            "numAuctions": 11,
+            "itemName": "Crisp Spider Meat"
+        },
+        {
+            "itemId": 1121,
+            "minBuyout": 279996,
+            "quantity": 1,
+            "marketValue": 376464,
+            "numAuctions": 1,
+            "itemName": "Feet of the Lynx"
+        },
+        {
+            "itemId": 1168,
+            "minBuyout": 6009999,
+            "quantity": 2,
+            "marketValue": 6229207,
+            "numAuctions": 2,
+            "itemName": "Skullflame Shield"
+        },
+        {
+            "itemId": 1169,
+            "minBuyout": 1323682,
+            "quantity": 1,
+            "marketValue": 1356061,
+            "numAuctions": 1,
+            "itemName": "Blackskull Shield"
+        },
+        {
+            "itemId": 1177,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 7927,
+            "numAuctions": 0,
+            "itemName": "Oil of Olaf"
+        },
+        {
+            "itemId": 1179,
+            "minBuyout": 180,
+            "quantity": 31,
+            "marketValue": 244,
+            "numAuctions": 3,
+            "itemName": "Ice Cold Milk"
+        },
+        {
+            "itemId": 1180,
+            "minBuyout": 1398,
+            "quantity": 1,
+            "marketValue": 1281,
+            "numAuctions": 1,
+            "itemName": "Scroll of Stamina"
+        },
+        {
+            "itemId": 1181,
+            "minBuyout": 10256,
+            "quantity": 2,
+            "marketValue": 287,
+            "numAuctions": 2,
+            "itemName": "Scroll of Spirit"
+        },
+        {
+            "itemId": 1198,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 20000000,
+            "numAuctions": 0,
+            "itemName": "Claymore"
+        },
+        {
+            "itemId": 1200,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 2000000,
+            "numAuctions": 0,
+            "itemName": "Large Wooden Shield"
+        },
+        {
+            "itemId": 1202,
+            "minBuyout": 29992,
+            "quantity": 4,
+            "marketValue": 23195,
+            "numAuctions": 2,
+            "itemName": "Wall Shield"
+        },
+        {
+            "itemId": 1203,
+            "minBuyout": 1034306,
+            "quantity": 2,
+            "marketValue": 660229,
+            "numAuctions": 2,
+            "itemName": "Aegis of Stormwind"
+        },
+        {
+            "itemId": 1204,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 1921507,
+            "numAuctions": 0,
+            "itemName": "The Green Tower"
+        },
+        {
+            "itemId": 1205,
+            "minBuyout": 339,
+            "quantity": 9,
+            "marketValue": 140,
+            "numAuctions": 2,
+            "itemName": "Melon Juice"
+        },
+        {
+            "itemId": 1206,
+            "minBuyout": 8235,
+            "quantity": 34,
+            "marketValue": 16502,
+            "numAuctions": 13,
+            "itemName": "Moss Agate"
+        },
+        {
+            "itemId": 1207,
+            "minBuyout": 30000,
+            "quantity": 3,
+            "marketValue": 24007,
+            "numAuctions": 3,
+            "itemName": "Murphstar"
+        },
+        {
+            "itemId": 1210,
+            "minBuyout": 268,
+            "quantity": 38,
+            "marketValue": 620,
+            "numAuctions": 15,
+            "itemName": "Shadowgem"
+        },
+        {
+            "itemId": 1251,
+            "minBuyout": 342,
+            "quantity": 60,
+            "marketValue": 503,
+            "numAuctions": 1,
+            "itemName": "Linen Bandage"
+        },
+        {
+            "itemId": 1263,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 903895,
+            "numAuctions": 0,
+            "itemName": "Brain Hacker"
+        },
+        {
+            "itemId": 1265,
+            "minBuyout": 136593,
+            "quantity": 2,
+            "marketValue": 133740,
+            "numAuctions": 2,
+            "itemName": "Scorpion Sting"
+        },
+        {
+            "itemId": 1274,
+            "minBuyout": 1218,
+            "quantity": 18,
+            "marketValue": 1224,
+            "numAuctions": 1,
+            "itemName": "Hops"
+        },
+        {
+            "itemId": 1288,
+            "minBuyout": 1044,
+            "quantity": 3,
+            "marketValue": 2593,
+            "numAuctions": 2,
+            "itemName": "Large Venom Sac"
+        },
+        {
+            "itemId": 1296,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 25000,
+            "numAuctions": 0,
+            "itemName": "Blackrock Mace"
+        },
+        {
+            "itemId": 1299,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 250000,
+            "numAuctions": 0,
+            "itemName": "Lesser Belt of the Spire"
+        },
+        {
+            "itemId": 1314,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 45156,
+            "numAuctions": 0,
+            "itemName": "Ghoul Fingers"
+        },
+        {
+            "itemId": 1315,
+            "minBuyout": 459991,
+            "quantity": 3,
+            "marketValue": 393737,
+            "numAuctions": 3,
+            "itemName": "Lei of Lilies"
+        },
+        {
+            "itemId": 1318,
+            "minBuyout": 1289904,
+            "quantity": 2,
+            "marketValue": 1140158,
+            "numAuctions": 2,
+            "itemName": "Night Reaver"
+        },
+        {
+            "itemId": 1355,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 6582,
+            "numAuctions": 0,
+            "itemName": "Buckskin Cape"
+        },
+        {
+            "itemId": 1368,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 200,
+            "numAuctions": 0,
+            "itemName": "Ragged Leather Gloves"
+        },
+        {
+            "itemId": 1369,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 10000,
+            "numAuctions": 0,
+            "itemName": "Ragged Leather Belt"
+        },
+        {
+            "itemId": 1370,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 10000,
+            "numAuctions": 0,
+            "itemName": "Ragged Leather Bracers"
+        },
+        {
+            "itemId": 1372,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 10000,
+            "numAuctions": 0,
+            "itemName": "Ragged Cloak"
+        },
+        {
+            "itemId": 1380,
+            "minBuyout": 500,
+            "quantity": 1,
+            "marketValue": 6485,
+            "numAuctions": 1,
+            "itemName": "Frayed Robe"
+        },
+        {
+            "itemId": 1387,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 49753,
+            "numAuctions": 0,
+            "itemName": "Ghoulfang"
+        },
+        {
+            "itemId": 1411,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 29799,
+            "numAuctions": 0,
+            "itemName": "Withered Staff"
+        },
+        {
+            "itemId": 1414,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 31337,
+            "numAuctions": 0,
+            "itemName": "Cracked Sledge"
+        },
+        {
+            "itemId": 1417,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 400,
+            "numAuctions": 0,
+            "itemName": "Beaten Battle Axe"
+        },
+        {
+            "itemId": 1425,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 50000,
+            "numAuctions": 0,
+            "itemName": "Worn Leather Vest"
+        },
+        {
+            "itemId": 1431,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 9991,
+            "numAuctions": 0,
+            "itemName": "Patchwork Pants"
+        },
+        {
+            "itemId": 1433,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 89996,
+            "numAuctions": 0,
+            "itemName": "Patchwork Armor"
+        },
+        {
+            "itemId": 1443,
+            "minBuyout": 4000000,
+            "quantity": 1,
+            "marketValue": 2680736,
+            "numAuctions": 1,
+            "itemName": "Jeweled Amulet of Cainwyn"
+        },
+        {
             "itemId": 20746,
             "minBuyout": 40000,
             "quantity": 5,
@@ -42169,182 +42697,6 @@
             "itemName": "Guide: Multi-Shot V"
         },
         {
-            "itemId": 21305,
-            "minBuyout": 133700,
-            "quantity": 1,
-            "marketValue": 111679,
-            "numAuctions": 1,
-            "itemName": "Red Helper Box"
-        },
-        {
-            "itemId": 21306,
-            "minBuyout": 149984,
-            "quantity": 1,
-            "marketValue": 294014,
-            "numAuctions": 1,
-            "itemName": "Guide: Serpent Sting IX"
-        },
-        {
-            "itemId": 21307,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 496541,
-            "numAuctions": 0,
-            "itemName": "Guide: Aspect of the Hawk VII"
-        },
-        {
-            "itemId": 21308,
-            "minBuyout": 4989,
-            "quantity": 4,
-            "marketValue": 23325,
-            "numAuctions": 4,
-            "itemName": "Jingling Bell"
-        },
-        {
-            "itemId": 21309,
-            "minBuyout": 1094,
-            "quantity": 2,
-            "marketValue": 7772,
-            "numAuctions": 2,
-            "itemName": "Snowman Kit"
-        },
-        {
-            "itemId": 21340,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 625779,
-            "numAuctions": 0,
-            "itemName": "Soul Pouch"
-        },
-        {
-            "itemId": 21341,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 7198374,
-            "numAuctions": 0,
-            "itemName": "Felcloth Bag"
-        },
-        {
-            "itemId": 21342,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 15947461,
-            "numAuctions": 0,
-            "itemName": "Core Felcloth Bag"
-        },
-        {
-            "itemId": 21358,
-            "minBuyout": 55000,
-            "quantity": 1,
-            "marketValue": 48782,
-            "numAuctions": 1,
-            "itemName": "Pattern: Soul Pouch"
-        },
-        {
-            "itemId": 21371,
-            "minBuyout": 549996,
-            "quantity": 3,
-            "marketValue": 1852960,
-            "numAuctions": 3,
-            "itemName": "Pattern: Core Felcloth Bag"
-        },
-        {
-            "itemId": 21536,
-            "minBuyout": 90909,
-            "quantity": 3,
-            "marketValue": 86542,
-            "numAuctions": 1,
-            "itemName": "Elune Stone"
-        },
-        {
-            "itemId": 21542,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 299972,
-            "numAuctions": 0,
-            "itemName": "Festival Suit"
-        },
-        {
-            "itemId": 21546,
-            "minBuyout": 177344,
-            "quantity": 599,
-            "marketValue": 177314,
-            "numAuctions": 20,
-            "itemName": "Elixir of Greater Firepower"
-        },
-        {
-            "itemId": 21547,
-            "minBuyout": 19999,
-            "quantity": 4,
-            "marketValue": 61363,
-            "numAuctions": 3,
-            "itemName": "Recipe: Elixir of Greater Firepower"
-        },
-        {
-            "itemId": 21548,
-            "minBuyout": 119987,
-            "quantity": 4,
-            "marketValue": 157247,
-            "numAuctions": 3,
-            "itemName": "Pattern: Stormshroud Gloves"
-        },
-        {
-            "itemId": 21557,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 2462,
-            "numAuctions": 0,
-            "itemName": "Small Red Rocket"
-        },
-        {
-            "itemId": 21558,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 2528,
-            "numAuctions": 0,
-            "itemName": "Small Blue Rocket"
-        },
-        {
-            "itemId": 21569,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 1499999,
-            "numAuctions": 0,
-            "itemName": "Firework Launcher"
-        },
-        {
-            "itemId": 21570,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 2385796,
-            "numAuctions": 0,
-            "itemName": "Cluster Launcher"
-        },
-        {
-            "itemId": 21571,
-            "minBuyout": 49998,
-            "quantity": 10,
-            "marketValue": 49998,
-            "numAuctions": 1,
-            "itemName": "Blue Rocket Cluster"
-        },
-        {
-            "itemId": 21574,
-            "minBuyout": 49999,
-            "quantity": 10,
-            "marketValue": 49999,
-            "numAuctions": 1,
-            "itemName": "Green Rocket Cluster"
-        },
-        {
-            "itemId": 21713,
-            "minBuyout": 9691337,
-            "quantity": 2,
-            "marketValue": 9948233,
-            "numAuctions": 2,
-            "itemName": "Elune's Candle"
-        },
-        {
             "itemId": 21721,
             "minBuyout": 10420,
             "quantity": 18,
@@ -42967,6 +43319,278 @@
             "marketValue": 14111106,
             "numAuctions": 2,
             "itemName": "The Apothecary's Metaphysical Primer"
+        },
+        {
+            "itemId": 223263,
+            "minBuyout": 1997032,
+            "quantity": 2,
+            "marketValue": 1686836,
+            "numAuctions": 2,
+            "itemName": "Fel Plate Chest"
+        },
+        {
+            "itemId": 223648,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 150,
+            "numAuctions": 0,
+            "itemName": "Dream Imbued Arrow"
+        },
+        {
+            "itemId": 224806,
+            "minBuyout": 10000,
+            "quantity": 16,
+            "marketValue": 89235,
+            "numAuctions": 2,
+            "itemName": "Legion Portal Tuner"
+        },
+        {
+            "itemId": 224893,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 621732,
+            "numAuctions": 0,
+            "itemName": "Overcharged Portal Tuner"
+        },
+        {
+            "itemId": 224912,
+            "minBuyout": 500000,
+            "quantity": 3,
+            "marketValue": 1773372,
+            "numAuctions": 3,
+            "itemName": "Portal Tuner Tuner"
+        },
+        {
+            "itemId": 226374,
+            "minBuyout": 9999,
+            "quantity": 25,
+            "marketValue": 36842,
+            "numAuctions": 2,
+            "itemName": "Occult Poison I"
+        },
+        {
+            "itemId": 226701,
+            "minBuyout": 259999,
+            "quantity": 7,
+            "marketValue": 331818,
+            "numAuctions": 5,
+            "itemName": "Shadowcraft Belt"
+        },
+        {
+            "itemId": 226702,
+            "minBuyout": 209992,
+            "quantity": 1,
+            "marketValue": 289356,
+            "numAuctions": 1,
+            "itemName": "Shadowcraft Gloves"
+        },
+        {
+            "itemId": 226704,
+            "minBuyout": 130000,
+            "quantity": 3,
+            "marketValue": 131163,
+            "numAuctions": 3,
+            "itemName": "Shadowcraft Bracers"
+        },
+        {
+            "itemId": 226711,
+            "minBuyout": 150000,
+            "quantity": 3,
+            "marketValue": 136722,
+            "numAuctions": 3,
+            "itemName": "Wildheart Gloves"
+        },
+        {
+            "itemId": 226712,
+            "minBuyout": 189997,
+            "quantity": 6,
+            "marketValue": 182136,
+            "numAuctions": 6,
+            "itemName": "Wildheart Belt"
+        },
+        {
+            "itemId": 226714,
+            "minBuyout": 289999,
+            "quantity": 3,
+            "marketValue": 114002,
+            "numAuctions": 3,
+            "itemName": "Wildheart Bracers"
+        },
+        {
+            "itemId": 226717,
+            "minBuyout": 229891,
+            "quantity": 3,
+            "marketValue": 169531,
+            "numAuctions": 3,
+            "itemName": "Beaststalker's Bindings"
+        },
+        {
+            "itemId": 226718,
+            "minBuyout": 249995,
+            "quantity": 4,
+            "marketValue": 293071,
+            "numAuctions": 4,
+            "itemName": "Beaststalker's Belt"
+        },
+        {
+            "itemId": 226721,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 168594,
+            "numAuctions": 0,
+            "itemName": "Beaststalker's Gloves"
+        },
+        {
+            "itemId": 226724,
+            "minBuyout": 159997,
+            "quantity": 5,
+            "marketValue": 125885,
+            "numAuctions": 5,
+            "itemName": "Magister's Belt"
+        },
+        {
+            "itemId": 226725,
+            "minBuyout": 179998,
+            "quantity": 2,
+            "marketValue": 215498,
+            "numAuctions": 2,
+            "itemName": "Magister's Bindings"
+        },
+        {
+            "itemId": 226731,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 143506,
+            "numAuctions": 0,
+            "itemName": "Magister's Gloves"
+        },
+        {
+            "itemId": 226732,
+            "minBuyout": 50000,
+            "quantity": 11,
+            "marketValue": 130036,
+            "numAuctions": 9,
+            "itemName": "Lightforge Belt"
+        },
+        {
+            "itemId": 226737,
+            "minBuyout": 200000,
+            "quantity": 1,
+            "marketValue": 84037,
+            "numAuctions": 1,
+            "itemName": "Lightforge Gauntlets"
+        },
+        {
+            "itemId": 226739,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 103707,
+            "numAuctions": 0,
+            "itemName": "Lightforge Bracers"
+        },
+        {
+            "itemId": 21305,
+            "minBuyout": 133700,
+            "quantity": 1,
+            "marketValue": 111679,
+            "numAuctions": 1,
+            "itemName": "Red Helper Box"
+        },
+        {
+            "itemId": 21306,
+            "minBuyout": 149984,
+            "quantity": 1,
+            "marketValue": 294014,
+            "numAuctions": 1,
+            "itemName": "Guide: Serpent Sting IX"
+        },
+        {
+            "itemId": 21307,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 496541,
+            "numAuctions": 0,
+            "itemName": "Guide: Aspect of the Hawk VII"
+        },
+        {
+            "itemId": 21308,
+            "minBuyout": 4989,
+            "quantity": 4,
+            "marketValue": 23325,
+            "numAuctions": 4,
+            "itemName": "Jingling Bell"
+        },
+        {
+            "itemId": 21309,
+            "minBuyout": 1094,
+            "quantity": 2,
+            "marketValue": 7772,
+            "numAuctions": 2,
+            "itemName": "Snowman Kit"
+        },
+        {
+            "itemId": 21340,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 625779,
+            "numAuctions": 0,
+            "itemName": "Soul Pouch"
+        },
+        {
+            "itemId": 21341,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 7198374,
+            "numAuctions": 0,
+            "itemName": "Felcloth Bag"
+        },
+        {
+            "itemId": 21342,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 15947461,
+            "numAuctions": 0,
+            "itemName": "Core Felcloth Bag"
+        },
+        {
+            "itemId": 21358,
+            "minBuyout": 55000,
+            "quantity": 1,
+            "marketValue": 48782,
+            "numAuctions": 1,
+            "itemName": "Pattern: Soul Pouch"
+        },
+        {
+            "itemId": 21371,
+            "minBuyout": 549996,
+            "quantity": 3,
+            "marketValue": 1852960,
+            "numAuctions": 3,
+            "itemName": "Pattern: Core Felcloth Bag"
+        },
+        {
+            "itemId": 21536,
+            "minBuyout": 90909,
+            "quantity": 3,
+            "marketValue": 86542,
+            "numAuctions": 1,
+            "itemName": "Elune Stone"
+        },
+        {
+            "itemId": 21542,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 299972,
+            "numAuctions": 0,
+            "itemName": "Festival Suit"
+        },
+        {
+            "itemId": 21546,
+            "minBuyout": 177344,
+            "quantity": 599,
+            "marketValue": 177314,
+            "numAuctions": 20,
+            "itemName": "Elixir of Greater Firepower"
         },
         {
             "itemId": 208800,
@@ -43961,486 +44585,6 @@
             "itemName": "Five of Plagues"
         },
         {
-            "itemId": 221286,
-            "minBuyout": 55555,
-            "quantity": 5,
-            "marketValue": 46481,
-            "numAuctions": 4,
-            "itemName": "Six of Plagues"
-        },
-        {
-            "itemId": 221287,
-            "minBuyout": 29998,
-            "quantity": 2,
-            "marketValue": 66764,
-            "numAuctions": 2,
-            "itemName": "Seven of Plagues"
-        },
-        {
-            "itemId": 221288,
-            "minBuyout": 150000,
-            "quantity": 1,
-            "marketValue": 24072,
-            "numAuctions": 1,
-            "itemName": "Eight of Plagues"
-        },
-        {
-            "itemId": 221289,
-            "minBuyout": 9999993,
-            "quantity": 1,
-            "marketValue": 1543901,
-            "numAuctions": 1,
-            "itemName": "Dunes Deck"
-        },
-        {
-            "itemId": 221290,
-            "minBuyout": 29999,
-            "quantity": 3,
-            "marketValue": 60662,
-            "numAuctions": 3,
-            "itemName": "Ace of Dunes"
-        },
-        {
-            "itemId": 221291,
-            "minBuyout": 45572,
-            "quantity": 4,
-            "marketValue": 62812,
-            "numAuctions": 4,
-            "itemName": "Two of Dunes"
-        },
-        {
-            "itemId": 221292,
-            "minBuyout": 199996,
-            "quantity": 5,
-            "marketValue": 46417,
-            "numAuctions": 4,
-            "itemName": "Three of Dunes"
-        },
-        {
-            "itemId": 221293,
-            "minBuyout": 69998,
-            "quantity": 3,
-            "marketValue": 54220,
-            "numAuctions": 3,
-            "itemName": "Four of Dunes"
-        },
-        {
-            "itemId": 221294,
-            "minBuyout": 2500395,
-            "quantity": 2,
-            "marketValue": 54103,
-            "numAuctions": 2,
-            "itemName": "Five of Dunes"
-        },
-        {
-            "itemId": 221295,
-            "minBuyout": 379998,
-            "quantity": 3,
-            "marketValue": 34120,
-            "numAuctions": 3,
-            "itemName": "Six of Dunes"
-        },
-        {
-            "itemId": 221296,
-            "minBuyout": 14998,
-            "quantity": 3,
-            "marketValue": 22536,
-            "numAuctions": 3,
-            "itemName": "Seven of Dunes"
-        },
-        {
-            "itemId": 221297,
-            "minBuyout": 219995,
-            "quantity": 1,
-            "marketValue": 80517,
-            "numAuctions": 1,
-            "itemName": "Eight of Dunes"
-        },
-        {
-            "itemId": 221298,
-            "minBuyout": 20000000,
-            "quantity": 1,
-            "marketValue": 3160755,
-            "numAuctions": 1,
-            "itemName": "Ace of Nightmares"
-        },
-        {
-            "itemId": 221299,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 4174631,
-            "numAuctions": 0,
-            "itemName": "Nightmares Deck"
-        },
-        {
-            "itemId": 221300,
-            "minBuyout": 159990,
-            "quantity": 1,
-            "marketValue": 50537,
-            "numAuctions": 1,
-            "itemName": "Two of Nightmares"
-        },
-        {
-            "itemId": 221301,
-            "minBuyout": 14774,
-            "quantity": 2,
-            "marketValue": 14817,
-            "numAuctions": 2,
-            "itemName": "Three of Nightmares"
-        },
-        {
-            "itemId": 221302,
-            "minBuyout": 550000,
-            "quantity": 3,
-            "marketValue": 20853,
-            "numAuctions": 1,
-            "itemName": "Four of Nightmares"
-        },
-        {
-            "itemId": 221303,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 16019,
-            "numAuctions": 0,
-            "itemName": "Five of Nightmares"
-        },
-        {
-            "itemId": 221304,
-            "minBuyout": 149997,
-            "quantity": 4,
-            "marketValue": 86299,
-            "numAuctions": 4,
-            "itemName": "Six of Nightmares"
-        },
-        {
-            "itemId": 221305,
-            "minBuyout": 29997,
-            "quantity": 1,
-            "marketValue": 17152,
-            "numAuctions": 1,
-            "itemName": "Seven of Nightmares"
-        },
-        {
-            "itemId": 221306,
-            "minBuyout": 259999,
-            "quantity": 3,
-            "marketValue": 33126,
-            "numAuctions": 3,
-            "itemName": "Eight of Nightmares"
-        },
-        {
-            "itemId": 221312,
-            "minBuyout": 89998,
-            "quantity": 63,
-            "marketValue": 77843,
-            "numAuctions": 9,
-            "itemName": "Flask of Atal'ai Mojo"
-        },
-        {
-            "itemId": 221313,
-            "minBuyout": 1849628,
-            "quantity": 5,
-            "marketValue": 1298438,
-            "numAuctions": 3,
-            "itemName": "Flask of Nightmarish Mojo"
-        },
-        {
-            "itemId": 221362,
-            "minBuyout": 14989,
-            "quantity": 15,
-            "marketValue": 14989,
-            "numAuctions": 1,
-            "itemName": "Weapon Cleaning Cloth"
-        },
-        {
-            "itemId": 221547,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 48222,
-            "numAuctions": 0,
-            "itemName": "Coded Warlock Notes"
-        },
-        {
-            "itemId": 221549,
-            "minBuyout": 99995,
-            "quantity": 3,
-            "marketValue": 233290,
-            "numAuctions": 2,
-            "itemName": "Wastewander Cipher"
-        },
-        {
-            "itemId": 223163,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 880394,
-            "numAuctions": 0,
-            "itemName": "Formula: Scroll of Spatial Mending"
-        },
-        {
-            "itemId": 223168,
-            "minBuyout": 1803935,
-            "quantity": 4,
-            "marketValue": 138110,
-            "numAuctions": 3,
-            "itemName": "Worldcore Fragment"
-        },
-        {
-            "itemId": 223219,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 737974,
-            "numAuctions": 0,
-            "itemName": "Fel Cloth Wristbands"
-        },
-        {
-            "itemId": 223221,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 891000,
-            "numAuctions": 0,
-            "itemName": "Fel Leather Wristbands"
-        },
-        {
-            "itemId": 223222,
-            "minBuyout": 1134721,
-            "quantity": 2,
-            "marketValue": 981392,
-            "numAuctions": 2,
-            "itemName": "Fel Mail Wristbands"
-        },
-        {
-            "itemId": 223237,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 1985077,
-            "numAuctions": 0,
-            "itemName": "Fel Cloth Shoulder Pads"
-        },
-        {
-            "itemId": 223238,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 974682,
-            "numAuctions": 0,
-            "itemName": "Fel Leather Shoulder Pads"
-        },
-        {
-            "itemId": 223239,
-            "minBuyout": 1858283,
-            "quantity": 2,
-            "marketValue": 1557141,
-            "numAuctions": 2,
-            "itemName": "Fel Mail Shoulders"
-        },
-        {
-            "itemId": 223242,
-            "minBuyout": 1610952,
-            "quantity": 2,
-            "marketValue": 1304975,
-            "numAuctions": 2,
-            "itemName": "Fel Mail Coif"
-        },
-        {
-            "itemId": 223248,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 1639767,
-            "numAuctions": 0,
-            "itemName": "Fel Cloth Legs"
-        },
-        {
-            "itemId": 223251,
-            "minBuyout": 5225024,
-            "quantity": 1,
-            "marketValue": 4332815,
-            "numAuctions": 1,
-            "itemName": "Fel Plate Legs"
-        },
-        {
-            "itemId": 223256,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 1984010,
-            "numAuctions": 0,
-            "itemName": "Fel Cloth Robes"
-        },
-        {
-            "itemId": 223262,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 1446034,
-            "numAuctions": 0,
-            "itemName": "Fel Mail Chest"
-        },
-        {
-            "itemId": 223263,
-            "minBuyout": 1997032,
-            "quantity": 2,
-            "marketValue": 1686836,
-            "numAuctions": 2,
-            "itemName": "Fel Plate Chest"
-        },
-        {
-            "itemId": 223648,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 150,
-            "numAuctions": 0,
-            "itemName": "Dream Imbued Arrow"
-        },
-        {
-            "itemId": 224806,
-            "minBuyout": 10000,
-            "quantity": 16,
-            "marketValue": 89235,
-            "numAuctions": 2,
-            "itemName": "Legion Portal Tuner"
-        },
-        {
-            "itemId": 224893,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 621732,
-            "numAuctions": 0,
-            "itemName": "Overcharged Portal Tuner"
-        },
-        {
-            "itemId": 224912,
-            "minBuyout": 500000,
-            "quantity": 3,
-            "marketValue": 1773372,
-            "numAuctions": 3,
-            "itemName": "Portal Tuner Tuner"
-        },
-        {
-            "itemId": 226374,
-            "minBuyout": 9999,
-            "quantity": 25,
-            "marketValue": 36842,
-            "numAuctions": 2,
-            "itemName": "Occult Poison I"
-        },
-        {
-            "itemId": 226701,
-            "minBuyout": 259999,
-            "quantity": 7,
-            "marketValue": 331818,
-            "numAuctions": 5,
-            "itemName": "Shadowcraft Belt"
-        },
-        {
-            "itemId": 226702,
-            "minBuyout": 209992,
-            "quantity": 1,
-            "marketValue": 289356,
-            "numAuctions": 1,
-            "itemName": "Shadowcraft Gloves"
-        },
-        {
-            "itemId": 226704,
-            "minBuyout": 130000,
-            "quantity": 3,
-            "marketValue": 131163,
-            "numAuctions": 3,
-            "itemName": "Shadowcraft Bracers"
-        },
-        {
-            "itemId": 226711,
-            "minBuyout": 150000,
-            "quantity": 3,
-            "marketValue": 136722,
-            "numAuctions": 3,
-            "itemName": "Wildheart Gloves"
-        },
-        {
-            "itemId": 226712,
-            "minBuyout": 189997,
-            "quantity": 6,
-            "marketValue": 182136,
-            "numAuctions": 6,
-            "itemName": "Wildheart Belt"
-        },
-        {
-            "itemId": 226714,
-            "minBuyout": 289999,
-            "quantity": 3,
-            "marketValue": 114002,
-            "numAuctions": 3,
-            "itemName": "Wildheart Bracers"
-        },
-        {
-            "itemId": 226717,
-            "minBuyout": 229891,
-            "quantity": 3,
-            "marketValue": 169531,
-            "numAuctions": 3,
-            "itemName": "Beaststalker's Bindings"
-        },
-        {
-            "itemId": 226718,
-            "minBuyout": 249995,
-            "quantity": 4,
-            "marketValue": 293071,
-            "numAuctions": 4,
-            "itemName": "Beaststalker's Belt"
-        },
-        {
-            "itemId": 226721,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 168594,
-            "numAuctions": 0,
-            "itemName": "Beaststalker's Gloves"
-        },
-        {
-            "itemId": 226724,
-            "minBuyout": 159997,
-            "quantity": 5,
-            "marketValue": 125885,
-            "numAuctions": 5,
-            "itemName": "Magister's Belt"
-        },
-        {
-            "itemId": 226725,
-            "minBuyout": 179998,
-            "quantity": 2,
-            "marketValue": 215498,
-            "numAuctions": 2,
-            "itemName": "Magister's Bindings"
-        },
-        {
-            "itemId": 226731,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 143506,
-            "numAuctions": 0,
-            "itemName": "Magister's Gloves"
-        },
-        {
-            "itemId": 226732,
-            "minBuyout": 50000,
-            "quantity": 11,
-            "marketValue": 130036,
-            "numAuctions": 9,
-            "itemName": "Lightforge Belt"
-        },
-        {
-            "itemId": 226737,
-            "minBuyout": 200000,
-            "quantity": 1,
-            "marketValue": 84037,
-            "numAuctions": 1,
-            "itemName": "Lightforge Gauntlets"
-        },
-        {
-            "itemId": 226739,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 103707,
-            "numAuctions": 0,
-            "itemName": "Lightforge Bracers"
-        },
-        {
             "itemId": 226740,
             "minBuyout": 0,
             "quantity": 0,
@@ -45127,6 +45271,342 @@
             "marketValue": 130111,
             "numAuctions": 0,
             "itemName": "Garona: A Study on Stealth and Treachery"
+        },
+        {
+            "itemId": 236722,
+            "minBuyout": 99980,
+            "quantity": 8,
+            "marketValue": 183358,
+            "numAuctions": 7,
+            "itemName": "Bracers of Undead Warding"
+        },
+        {
+            "itemId": 236725,
+            "minBuyout": 79994,
+            "quantity": 5,
+            "marketValue": 115253,
+            "numAuctions": 4,
+            "itemName": "Wristwraps of Undead Cleansing"
+        },
+        {
+            "itemId": 236728,
+            "minBuyout": 79980,
+            "quantity": 6,
+            "marketValue": 109337,
+            "numAuctions": 5,
+            "itemName": "Wristwraps of Undead Purification"
+        },
+        {
+            "itemId": 221286,
+            "minBuyout": 55555,
+            "quantity": 5,
+            "marketValue": 46481,
+            "numAuctions": 4,
+            "itemName": "Six of Plagues"
+        },
+        {
+            "itemId": 221287,
+            "minBuyout": 29998,
+            "quantity": 2,
+            "marketValue": 66764,
+            "numAuctions": 2,
+            "itemName": "Seven of Plagues"
+        },
+        {
+            "itemId": 221288,
+            "minBuyout": 150000,
+            "quantity": 1,
+            "marketValue": 24072,
+            "numAuctions": 1,
+            "itemName": "Eight of Plagues"
+        },
+        {
+            "itemId": 221289,
+            "minBuyout": 9999993,
+            "quantity": 1,
+            "marketValue": 1543901,
+            "numAuctions": 1,
+            "itemName": "Dunes Deck"
+        },
+        {
+            "itemId": 221290,
+            "minBuyout": 29999,
+            "quantity": 3,
+            "marketValue": 60662,
+            "numAuctions": 3,
+            "itemName": "Ace of Dunes"
+        },
+        {
+            "itemId": 221291,
+            "minBuyout": 45572,
+            "quantity": 4,
+            "marketValue": 62812,
+            "numAuctions": 4,
+            "itemName": "Two of Dunes"
+        },
+        {
+            "itemId": 221292,
+            "minBuyout": 199996,
+            "quantity": 5,
+            "marketValue": 46417,
+            "numAuctions": 4,
+            "itemName": "Three of Dunes"
+        },
+        {
+            "itemId": 221293,
+            "minBuyout": 69998,
+            "quantity": 3,
+            "marketValue": 54220,
+            "numAuctions": 3,
+            "itemName": "Four of Dunes"
+        },
+        {
+            "itemId": 221294,
+            "minBuyout": 2500395,
+            "quantity": 2,
+            "marketValue": 54103,
+            "numAuctions": 2,
+            "itemName": "Five of Dunes"
+        },
+        {
+            "itemId": 221295,
+            "minBuyout": 379998,
+            "quantity": 3,
+            "marketValue": 34120,
+            "numAuctions": 3,
+            "itemName": "Six of Dunes"
+        },
+        {
+            "itemId": 221296,
+            "minBuyout": 14998,
+            "quantity": 3,
+            "marketValue": 22536,
+            "numAuctions": 3,
+            "itemName": "Seven of Dunes"
+        },
+        {
+            "itemId": 221297,
+            "minBuyout": 219995,
+            "quantity": 1,
+            "marketValue": 80517,
+            "numAuctions": 1,
+            "itemName": "Eight of Dunes"
+        },
+        {
+            "itemId": 221298,
+            "minBuyout": 20000000,
+            "quantity": 1,
+            "marketValue": 3160755,
+            "numAuctions": 1,
+            "itemName": "Ace of Nightmares"
+        },
+        {
+            "itemId": 221299,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 4174631,
+            "numAuctions": 0,
+            "itemName": "Nightmares Deck"
+        },
+        {
+            "itemId": 221300,
+            "minBuyout": 159990,
+            "quantity": 1,
+            "marketValue": 50537,
+            "numAuctions": 1,
+            "itemName": "Two of Nightmares"
+        },
+        {
+            "itemId": 221301,
+            "minBuyout": 14774,
+            "quantity": 2,
+            "marketValue": 14817,
+            "numAuctions": 2,
+            "itemName": "Three of Nightmares"
+        },
+        {
+            "itemId": 221302,
+            "minBuyout": 550000,
+            "quantity": 3,
+            "marketValue": 20853,
+            "numAuctions": 1,
+            "itemName": "Four of Nightmares"
+        },
+        {
+            "itemId": 221303,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 16019,
+            "numAuctions": 0,
+            "itemName": "Five of Nightmares"
+        },
+        {
+            "itemId": 221304,
+            "minBuyout": 149997,
+            "quantity": 4,
+            "marketValue": 86299,
+            "numAuctions": 4,
+            "itemName": "Six of Nightmares"
+        },
+        {
+            "itemId": 221305,
+            "minBuyout": 29997,
+            "quantity": 1,
+            "marketValue": 17152,
+            "numAuctions": 1,
+            "itemName": "Seven of Nightmares"
+        },
+        {
+            "itemId": 221306,
+            "minBuyout": 259999,
+            "quantity": 3,
+            "marketValue": 33126,
+            "numAuctions": 3,
+            "itemName": "Eight of Nightmares"
+        },
+        {
+            "itemId": 221312,
+            "minBuyout": 89998,
+            "quantity": 63,
+            "marketValue": 77843,
+            "numAuctions": 9,
+            "itemName": "Flask of Atal'ai Mojo"
+        },
+        {
+            "itemId": 221313,
+            "minBuyout": 1849628,
+            "quantity": 5,
+            "marketValue": 1298438,
+            "numAuctions": 3,
+            "itemName": "Flask of Nightmarish Mojo"
+        },
+        {
+            "itemId": 221362,
+            "minBuyout": 14989,
+            "quantity": 15,
+            "marketValue": 14989,
+            "numAuctions": 1,
+            "itemName": "Weapon Cleaning Cloth"
+        },
+        {
+            "itemId": 221547,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 48222,
+            "numAuctions": 0,
+            "itemName": "Coded Warlock Notes"
+        },
+        {
+            "itemId": 221549,
+            "minBuyout": 99995,
+            "quantity": 3,
+            "marketValue": 233290,
+            "numAuctions": 2,
+            "itemName": "Wastewander Cipher"
+        },
+        {
+            "itemId": 223163,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 880394,
+            "numAuctions": 0,
+            "itemName": "Formula: Scroll of Spatial Mending"
+        },
+        {
+            "itemId": 223168,
+            "minBuyout": 1803935,
+            "quantity": 4,
+            "marketValue": 138110,
+            "numAuctions": 3,
+            "itemName": "Worldcore Fragment"
+        },
+        {
+            "itemId": 223219,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 737974,
+            "numAuctions": 0,
+            "itemName": "Fel Cloth Wristbands"
+        },
+        {
+            "itemId": 223221,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 891000,
+            "numAuctions": 0,
+            "itemName": "Fel Leather Wristbands"
+        },
+        {
+            "itemId": 223222,
+            "minBuyout": 1134721,
+            "quantity": 2,
+            "marketValue": 981392,
+            "numAuctions": 2,
+            "itemName": "Fel Mail Wristbands"
+        },
+        {
+            "itemId": 223237,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 1985077,
+            "numAuctions": 0,
+            "itemName": "Fel Cloth Shoulder Pads"
+        },
+        {
+            "itemId": 223238,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 974682,
+            "numAuctions": 0,
+            "itemName": "Fel Leather Shoulder Pads"
+        },
+        {
+            "itemId": 223239,
+            "minBuyout": 1858283,
+            "quantity": 2,
+            "marketValue": 1557141,
+            "numAuctions": 2,
+            "itemName": "Fel Mail Shoulders"
+        },
+        {
+            "itemId": 223242,
+            "minBuyout": 1610952,
+            "quantity": 2,
+            "marketValue": 1304975,
+            "numAuctions": 2,
+            "itemName": "Fel Mail Coif"
+        },
+        {
+            "itemId": 223248,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 1639767,
+            "numAuctions": 0,
+            "itemName": "Fel Cloth Legs"
+        },
+        {
+            "itemId": 223251,
+            "minBuyout": 5225024,
+            "quantity": 1,
+            "marketValue": 4332815,
+            "numAuctions": 1,
+            "itemName": "Fel Plate Legs"
+        },
+        {
+            "itemId": 223256,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 1984010,
+            "numAuctions": 0,
+            "itemName": "Fel Cloth Robes"
+        },
+        {
+            "itemId": 223262,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 1446034,
+            "numAuctions": 0,
+            "itemName": "Fel Mail Chest"
         },
         {
             "itemId": 228692,
@@ -45913,286 +46393,6 @@
             "itemName": "Idol of Ursin Power"
         },
         {
-            "itemId": 234469,
-            "minBuyout": 1345957,
-            "quantity": 6,
-            "marketValue": 1693074,
-            "numAuctions": 4,
-            "itemName": "Idol of Feline Ferocity"
-        },
-        {
-            "itemId": 234474,
-            "minBuyout": 3000000,
-            "quantity": 6,
-            "marketValue": 2751110,
-            "numAuctions": 4,
-            "itemName": "Idol of Sidereal Wrath"
-        },
-        {
-            "itemId": 234478,
-            "minBuyout": 8666626,
-            "quantity": 7,
-            "marketValue": 9263958,
-            "numAuctions": 5,
-            "itemName": "Totem of Thunderous Strikes"
-        },
-        {
-            "itemId": 234479,
-            "minBuyout": 5499492,
-            "quantity": 12,
-            "marketValue": 6397550,
-            "numAuctions": 8,
-            "itemName": "Totem of Flowing Magma"
-        },
-        {
-            "itemId": 234480,
-            "minBuyout": 8749968,
-            "quantity": 11,
-            "marketValue": 6915476,
-            "numAuctions": 5,
-            "itemName": "Totem of Pyroclastic Thunder"
-        },
-        {
-            "itemId": 235275,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 12080661,
-            "numAuctions": 0,
-            "itemName": "Portals Deck"
-        },
-        {
-            "itemId": 235276,
-            "minBuyout": 1499998,
-            "quantity": 2,
-            "marketValue": 674627,
-            "numAuctions": 2,
-            "itemName": "Elementals Deck"
-        },
-        {
-            "itemId": 235277,
-            "minBuyout": 17509997,
-            "quantity": 3,
-            "marketValue": 8343728,
-            "numAuctions": 3,
-            "itemName": "Warlords Deck"
-        },
-        {
-            "itemId": 235278,
-            "minBuyout": 1500000,
-            "quantity": 2,
-            "marketValue": 663789,
-            "numAuctions": 1,
-            "itemName": "Beasts Deck"
-        },
-        {
-            "itemId": 235529,
-            "minBuyout": 3229976,
-            "quantity": 30,
-            "marketValue": 2865628,
-            "numAuctions": 4,
-            "itemName": "Obsidian Scope"
-        },
-        {
-            "itemId": 236656,
-            "minBuyout": 84983,
-            "quantity": 229,
-            "marketValue": 88144,
-            "numAuctions": 13,
-            "itemName": "Frozen Rune"
-        },
-        {
-            "itemId": 236690,
-            "minBuyout": 1549987,
-            "quantity": 3,
-            "marketValue": 1869898,
-            "numAuctions": 3,
-            "itemName": "Glacial Cloak"
-        },
-        {
-            "itemId": 236692,
-            "minBuyout": 4259996,
-            "quantity": 2,
-            "marketValue": 4006411,
-            "numAuctions": 2,
-            "itemName": "Glacial Gloves"
-        },
-        {
-            "itemId": 236693,
-            "minBuyout": 3759997,
-            "quantity": 3,
-            "marketValue": 3444521,
-            "numAuctions": 2,
-            "itemName": "Glacial Wrists"
-        },
-        {
-            "itemId": 236694,
-            "minBuyout": 5559991,
-            "quantity": 5,
-            "marketValue": 5419921,
-            "numAuctions": 3,
-            "itemName": "Glacial Vest"
-        },
-        {
-            "itemId": 236695,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 5463331,
-            "numAuctions": 0,
-            "itemName": "Icebane Breastplate"
-        },
-        {
-            "itemId": 236696,
-            "minBuyout": 3532413,
-            "quantity": 1,
-            "marketValue": 3213704,
-            "numAuctions": 1,
-            "itemName": "Icebane Bracers"
-        },
-        {
-            "itemId": 236697,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 2229998,
-            "numAuctions": 0,
-            "itemName": "Icebane Gauntlets"
-        },
-        {
-            "itemId": 236698,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 3999985,
-            "numAuctions": 0,
-            "itemName": "Icy Scale Bracers"
-        },
-        {
-            "itemId": 236699,
-            "minBuyout": 5990060,
-            "quantity": 3,
-            "marketValue": 5990061,
-            "numAuctions": 1,
-            "itemName": "Icy Scale Breastplate"
-        },
-        {
-            "itemId": 236700,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 3990053,
-            "numAuctions": 0,
-            "itemName": "Icy Scale Gauntlets"
-        },
-        {
-            "itemId": 236701,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 2985398,
-            "numAuctions": 0,
-            "itemName": "Polar Bracers"
-        },
-        {
-            "itemId": 236702,
-            "minBuyout": 6659975,
-            "quantity": 4,
-            "marketValue": 6652978,
-            "numAuctions": 1,
-            "itemName": "Polar Tunic"
-        },
-        {
-            "itemId": 236703,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 3406040,
-            "numAuctions": 0,
-            "itemName": "Polar Gloves"
-        },
-        {
-            "itemId": 236704,
-            "minBuyout": 1699900,
-            "quantity": 2,
-            "marketValue": 1499994,
-            "numAuctions": 1,
-            "itemName": "Frosty Wrists"
-        },
-        {
-            "itemId": 236705,
-            "minBuyout": 3249998,
-            "quantity": 2,
-            "marketValue": 2682998,
-            "numAuctions": 1,
-            "itemName": "Frosty Gloves"
-        },
-        {
-            "itemId": 236706,
-            "minBuyout": 4249998,
-            "quantity": 2,
-            "marketValue": 3842568,
-            "numAuctions": 1,
-            "itemName": "Frosty Vest"
-        },
-        {
-            "itemId": 236710,
-            "minBuyout": 149989,
-            "quantity": 6,
-            "marketValue": 115305,
-            "numAuctions": 4,
-            "itemName": "Wristguards of Undead Slaying"
-        },
-        {
-            "itemId": 236711,
-            "minBuyout": 259988,
-            "quantity": 5,
-            "marketValue": 140278,
-            "numAuctions": 4,
-            "itemName": "Wristwraps of Undead Slaying"
-        },
-        {
-            "itemId": 236712,
-            "minBuyout": 89985,
-            "quantity": 3,
-            "marketValue": 143867,
-            "numAuctions": 3,
-            "itemName": "Bracers of Undead Slaying"
-        },
-        {
-            "itemId": 236716,
-            "minBuyout": 99998,
-            "quantity": 2,
-            "marketValue": 154449,
-            "numAuctions": 2,
-            "itemName": "Bracers of Undead Cleansing"
-        },
-        {
-            "itemId": 236719,
-            "minBuyout": 599996,
-            "quantity": 7,
-            "marketValue": 115450,
-            "numAuctions": 5,
-            "itemName": "Bracers of Undead Purification"
-        },
-        {
-            "itemId": 236722,
-            "minBuyout": 99980,
-            "quantity": 8,
-            "marketValue": 183358,
-            "numAuctions": 7,
-            "itemName": "Bracers of Undead Warding"
-        },
-        {
-            "itemId": 236725,
-            "minBuyout": 79994,
-            "quantity": 5,
-            "marketValue": 115253,
-            "numAuctions": 4,
-            "itemName": "Wristwraps of Undead Cleansing"
-        },
-        {
-            "itemId": 236728,
-            "minBuyout": 79980,
-            "quantity": 6,
-            "marketValue": 109337,
-            "numAuctions": 5,
-            "itemName": "Wristwraps of Undead Purification"
-        },
-        {
             "itemId": 236731,
             "minBuyout": 77969,
             "quantity": 7,
@@ -46617,6 +46817,262 @@
             "itemName": "Pattern: Scarlet Infiltrator's Bracers"
         },
         {
+            "itemId": 234469,
+            "minBuyout": 1345957,
+            "quantity": 6,
+            "marketValue": 1693074,
+            "numAuctions": 4,
+            "itemName": "Idol of Feline Ferocity"
+        },
+        {
+            "itemId": 234474,
+            "minBuyout": 3000000,
+            "quantity": 6,
+            "marketValue": 2751110,
+            "numAuctions": 4,
+            "itemName": "Idol of Sidereal Wrath"
+        },
+        {
+            "itemId": 234478,
+            "minBuyout": 8666626,
+            "quantity": 7,
+            "marketValue": 9263958,
+            "numAuctions": 5,
+            "itemName": "Totem of Thunderous Strikes"
+        },
+        {
+            "itemId": 234479,
+            "minBuyout": 5499492,
+            "quantity": 12,
+            "marketValue": 6397550,
+            "numAuctions": 8,
+            "itemName": "Totem of Flowing Magma"
+        },
+        {
+            "itemId": 234480,
+            "minBuyout": 8749968,
+            "quantity": 11,
+            "marketValue": 6915476,
+            "numAuctions": 5,
+            "itemName": "Totem of Pyroclastic Thunder"
+        },
+        {
+            "itemId": 235275,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 12080661,
+            "numAuctions": 0,
+            "itemName": "Portals Deck"
+        },
+        {
+            "itemId": 235276,
+            "minBuyout": 1499998,
+            "quantity": 2,
+            "marketValue": 674627,
+            "numAuctions": 2,
+            "itemName": "Elementals Deck"
+        },
+        {
+            "itemId": 235277,
+            "minBuyout": 17509997,
+            "quantity": 3,
+            "marketValue": 8343728,
+            "numAuctions": 3,
+            "itemName": "Warlords Deck"
+        },
+        {
+            "itemId": 235278,
+            "minBuyout": 1500000,
+            "quantity": 2,
+            "marketValue": 663789,
+            "numAuctions": 1,
+            "itemName": "Beasts Deck"
+        },
+        {
+            "itemId": 235529,
+            "minBuyout": 3229976,
+            "quantity": 30,
+            "marketValue": 2865628,
+            "numAuctions": 4,
+            "itemName": "Obsidian Scope"
+        },
+        {
+            "itemId": 236656,
+            "minBuyout": 84983,
+            "quantity": 229,
+            "marketValue": 88144,
+            "numAuctions": 13,
+            "itemName": "Frozen Rune"
+        },
+        {
+            "itemId": 236690,
+            "minBuyout": 1549987,
+            "quantity": 3,
+            "marketValue": 1869898,
+            "numAuctions": 3,
+            "itemName": "Glacial Cloak"
+        },
+        {
+            "itemId": 236692,
+            "minBuyout": 4259996,
+            "quantity": 2,
+            "marketValue": 4006411,
+            "numAuctions": 2,
+            "itemName": "Glacial Gloves"
+        },
+        {
+            "itemId": 236693,
+            "minBuyout": 3759997,
+            "quantity": 3,
+            "marketValue": 3444521,
+            "numAuctions": 2,
+            "itemName": "Glacial Wrists"
+        },
+        {
+            "itemId": 236694,
+            "minBuyout": 5559991,
+            "quantity": 5,
+            "marketValue": 5419921,
+            "numAuctions": 3,
+            "itemName": "Glacial Vest"
+        },
+        {
+            "itemId": 236695,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 5463331,
+            "numAuctions": 0,
+            "itemName": "Icebane Breastplate"
+        },
+        {
+            "itemId": 236696,
+            "minBuyout": 3532413,
+            "quantity": 1,
+            "marketValue": 3213704,
+            "numAuctions": 1,
+            "itemName": "Icebane Bracers"
+        },
+        {
+            "itemId": 236697,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 2229998,
+            "numAuctions": 0,
+            "itemName": "Icebane Gauntlets"
+        },
+        {
+            "itemId": 236698,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 3999985,
+            "numAuctions": 0,
+            "itemName": "Icy Scale Bracers"
+        },
+        {
+            "itemId": 236699,
+            "minBuyout": 5990060,
+            "quantity": 3,
+            "marketValue": 5990061,
+            "numAuctions": 1,
+            "itemName": "Icy Scale Breastplate"
+        },
+        {
+            "itemId": 236700,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 3990053,
+            "numAuctions": 0,
+            "itemName": "Icy Scale Gauntlets"
+        },
+        {
+            "itemId": 236701,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 2985398,
+            "numAuctions": 0,
+            "itemName": "Polar Bracers"
+        },
+        {
+            "itemId": 236702,
+            "minBuyout": 6659975,
+            "quantity": 4,
+            "marketValue": 6652978,
+            "numAuctions": 1,
+            "itemName": "Polar Tunic"
+        },
+        {
+            "itemId": 236703,
+            "minBuyout": 0,
+            "quantity": 0,
+            "marketValue": 3406040,
+            "numAuctions": 0,
+            "itemName": "Polar Gloves"
+        },
+        {
+            "itemId": 236704,
+            "minBuyout": 1699900,
+            "quantity": 2,
+            "marketValue": 1499994,
+            "numAuctions": 1,
+            "itemName": "Frosty Wrists"
+        },
+        {
+            "itemId": 236705,
+            "minBuyout": 3249998,
+            "quantity": 2,
+            "marketValue": 2682998,
+            "numAuctions": 1,
+            "itemName": "Frosty Gloves"
+        },
+        {
+            "itemId": 236706,
+            "minBuyout": 4249998,
+            "quantity": 2,
+            "marketValue": 3842568,
+            "numAuctions": 1,
+            "itemName": "Frosty Vest"
+        },
+        {
+            "itemId": 236710,
+            "minBuyout": 149989,
+            "quantity": 6,
+            "marketValue": 115305,
+            "numAuctions": 4,
+            "itemName": "Wristguards of Undead Slaying"
+        },
+        {
+            "itemId": 236711,
+            "minBuyout": 259988,
+            "quantity": 5,
+            "marketValue": 140278,
+            "numAuctions": 4,
+            "itemName": "Wristwraps of Undead Slaying"
+        },
+        {
+            "itemId": 236712,
+            "minBuyout": 89985,
+            "quantity": 3,
+            "marketValue": 143867,
+            "numAuctions": 3,
+            "itemName": "Bracers of Undead Slaying"
+        },
+        {
+            "itemId": 236716,
+            "minBuyout": 99998,
+            "quantity": 2,
+            "marketValue": 154449,
+            "numAuctions": 2,
+            "itemName": "Bracers of Undead Cleansing"
+        },
+        {
+            "itemId": 236719,
+            "minBuyout": 599996,
+            "quantity": 7,
+            "marketValue": 115450,
+            "numAuctions": 5,
+            "itemName": "Bracers of Undead Purification"
+        },
+        {
             "itemId": 238310,
             "minBuyout": 28298,
             "quantity": 17,
@@ -46943,462 +47399,6 @@
             "marketValue": 2583824,
             "numAuctions": 1,
             "itemName": "Mishandled Healing Potion"
-        },
-        {
-            "itemId": 932,
-            "minBuyout": 19988,
-            "quantity": 4,
-            "marketValue": 22002,
-            "numAuctions": 4,
-            "itemName": "Fel Steed Saddlebags"
-        },
-        {
-            "itemId": 933,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 22799,
-            "numAuctions": 0,
-            "itemName": "Large Rucksack"
-        },
-        {
-            "itemId": 934,
-            "minBuyout": 699999,
-            "quantity": 2,
-            "marketValue": 191913,
-            "numAuctions": 1,
-            "itemName": "Stalvan's Reaper"
-        },
-        {
-            "itemId": 935,
-            "minBuyout": 2009755,
-            "quantity": 2,
-            "marketValue": 1772214,
-            "numAuctions": 2,
-            "itemName": "Night Watch Shortsword"
-        },
-        {
-            "itemId": 936,
-            "minBuyout": 120000,
-            "quantity": 3,
-            "marketValue": 160900,
-            "numAuctions": 3,
-            "itemName": "Midnight Mace"
-        },
-        {
-            "itemId": 937,
-            "minBuyout": 137297,
-            "quantity": 2,
-            "marketValue": 115902,
-            "numAuctions": 2,
-            "itemName": "Black Duskwood Staff"
-        },
-        {
-            "itemId": 940,
-            "minBuyout": 1119579,
-            "quantity": 1,
-            "marketValue": 800679,
-            "numAuctions": 1,
-            "itemName": "Robes of Insight"
-        },
-        {
-            "itemId": 942,
-            "minBuyout": 1119998,
-            "quantity": 3,
-            "marketValue": 864605,
-            "numAuctions": 3,
-            "itemName": "Freezing Band"
-        },
-        {
-            "itemId": 943,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 866634,
-            "numAuctions": 0,
-            "itemName": "Warden Staff"
-        },
-        {
-            "itemId": 944,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 2601387,
-            "numAuctions": 0,
-            "itemName": "Elemental Mage Staff"
-        },
-        {
-            "itemId": 954,
-            "minBuyout": 2974,
-            "quantity": 7,
-            "marketValue": 2596,
-            "numAuctions": 4,
-            "itemName": "Scroll of Strength"
-        },
-        {
-            "itemId": 955,
-            "minBuyout": 10498,
-            "quantity": 1,
-            "marketValue": 444,
-            "numAuctions": 1,
-            "itemName": "Scroll of Intellect"
-        },
-        {
-            "itemId": 1015,
-            "minBuyout": 956,
-            "quantity": 89,
-            "marketValue": 1364,
-            "numAuctions": 16,
-            "itemName": "Lean Wolf Flank"
-        },
-        {
-            "itemId": 1074,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 24579,
-            "numAuctions": 0,
-            "itemName": "Hard Spider Leg Tip"
-        },
-        {
-            "itemId": 1076,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 262926,
-            "numAuctions": 0,
-            "itemName": "Defias Renegade Ring"
-        },
-        {
-            "itemId": 1080,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 500,
-            "numAuctions": 0,
-            "itemName": "Tough Condor Meat"
-        },
-        {
-            "itemId": 1081,
-            "minBuyout": 137,
-            "quantity": 88,
-            "marketValue": 131,
-            "numAuctions": 11,
-            "itemName": "Crisp Spider Meat"
-        },
-        {
-            "itemId": 1121,
-            "minBuyout": 279996,
-            "quantity": 1,
-            "marketValue": 376464,
-            "numAuctions": 1,
-            "itemName": "Feet of the Lynx"
-        },
-        {
-            "itemId": 1168,
-            "minBuyout": 6009999,
-            "quantity": 2,
-            "marketValue": 6229207,
-            "numAuctions": 2,
-            "itemName": "Skullflame Shield"
-        },
-        {
-            "itemId": 1169,
-            "minBuyout": 1323682,
-            "quantity": 1,
-            "marketValue": 1356061,
-            "numAuctions": 1,
-            "itemName": "Blackskull Shield"
-        },
-        {
-            "itemId": 1177,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 7927,
-            "numAuctions": 0,
-            "itemName": "Oil of Olaf"
-        },
-        {
-            "itemId": 1179,
-            "minBuyout": 180,
-            "quantity": 31,
-            "marketValue": 244,
-            "numAuctions": 3,
-            "itemName": "Ice Cold Milk"
-        },
-        {
-            "itemId": 1180,
-            "minBuyout": 1398,
-            "quantity": 1,
-            "marketValue": 1281,
-            "numAuctions": 1,
-            "itemName": "Scroll of Stamina"
-        },
-        {
-            "itemId": 1181,
-            "minBuyout": 10256,
-            "quantity": 2,
-            "marketValue": 287,
-            "numAuctions": 2,
-            "itemName": "Scroll of Spirit"
-        },
-        {
-            "itemId": 1198,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 20000000,
-            "numAuctions": 0,
-            "itemName": "Claymore"
-        },
-        {
-            "itemId": 1200,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 2000000,
-            "numAuctions": 0,
-            "itemName": "Large Wooden Shield"
-        },
-        {
-            "itemId": 1202,
-            "minBuyout": 29992,
-            "quantity": 4,
-            "marketValue": 23195,
-            "numAuctions": 2,
-            "itemName": "Wall Shield"
-        },
-        {
-            "itemId": 1203,
-            "minBuyout": 1034306,
-            "quantity": 2,
-            "marketValue": 660229,
-            "numAuctions": 2,
-            "itemName": "Aegis of Stormwind"
-        },
-        {
-            "itemId": 1204,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 1921507,
-            "numAuctions": 0,
-            "itemName": "The Green Tower"
-        },
-        {
-            "itemId": 1205,
-            "minBuyout": 339,
-            "quantity": 9,
-            "marketValue": 140,
-            "numAuctions": 2,
-            "itemName": "Melon Juice"
-        },
-        {
-            "itemId": 1206,
-            "minBuyout": 8235,
-            "quantity": 34,
-            "marketValue": 16502,
-            "numAuctions": 13,
-            "itemName": "Moss Agate"
-        },
-        {
-            "itemId": 1207,
-            "minBuyout": 30000,
-            "quantity": 3,
-            "marketValue": 24007,
-            "numAuctions": 3,
-            "itemName": "Murphstar"
-        },
-        {
-            "itemId": 1210,
-            "minBuyout": 268,
-            "quantity": 38,
-            "marketValue": 620,
-            "numAuctions": 15,
-            "itemName": "Shadowgem"
-        },
-        {
-            "itemId": 1251,
-            "minBuyout": 342,
-            "quantity": 60,
-            "marketValue": 503,
-            "numAuctions": 1,
-            "itemName": "Linen Bandage"
-        },
-        {
-            "itemId": 1263,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 903895,
-            "numAuctions": 0,
-            "itemName": "Brain Hacker"
-        },
-        {
-            "itemId": 1265,
-            "minBuyout": 136593,
-            "quantity": 2,
-            "marketValue": 133740,
-            "numAuctions": 2,
-            "itemName": "Scorpion Sting"
-        },
-        {
-            "itemId": 1274,
-            "minBuyout": 1218,
-            "quantity": 18,
-            "marketValue": 1224,
-            "numAuctions": 1,
-            "itemName": "Hops"
-        },
-        {
-            "itemId": 1288,
-            "minBuyout": 1044,
-            "quantity": 3,
-            "marketValue": 2593,
-            "numAuctions": 2,
-            "itemName": "Large Venom Sac"
-        },
-        {
-            "itemId": 1296,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 25000,
-            "numAuctions": 0,
-            "itemName": "Blackrock Mace"
-        },
-        {
-            "itemId": 1299,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 250000,
-            "numAuctions": 0,
-            "itemName": "Lesser Belt of the Spire"
-        },
-        {
-            "itemId": 1314,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 45156,
-            "numAuctions": 0,
-            "itemName": "Ghoul Fingers"
-        },
-        {
-            "itemId": 1315,
-            "minBuyout": 459991,
-            "quantity": 3,
-            "marketValue": 393737,
-            "numAuctions": 3,
-            "itemName": "Lei of Lilies"
-        },
-        {
-            "itemId": 1318,
-            "minBuyout": 1289904,
-            "quantity": 2,
-            "marketValue": 1140158,
-            "numAuctions": 2,
-            "itemName": "Night Reaver"
-        },
-        {
-            "itemId": 1355,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 6582,
-            "numAuctions": 0,
-            "itemName": "Buckskin Cape"
-        },
-        {
-            "itemId": 1368,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 200,
-            "numAuctions": 0,
-            "itemName": "Ragged Leather Gloves"
-        },
-        {
-            "itemId": 1369,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 10000,
-            "numAuctions": 0,
-            "itemName": "Ragged Leather Belt"
-        },
-        {
-            "itemId": 1370,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 10000,
-            "numAuctions": 0,
-            "itemName": "Ragged Leather Bracers"
-        },
-        {
-            "itemId": 1372,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 10000,
-            "numAuctions": 0,
-            "itemName": "Ragged Cloak"
-        },
-        {
-            "itemId": 1380,
-            "minBuyout": 500,
-            "quantity": 1,
-            "marketValue": 6485,
-            "numAuctions": 1,
-            "itemName": "Frayed Robe"
-        },
-        {
-            "itemId": 1387,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 49753,
-            "numAuctions": 0,
-            "itemName": "Ghoulfang"
-        },
-        {
-            "itemId": 1411,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 29799,
-            "numAuctions": 0,
-            "itemName": "Withered Staff"
-        },
-        {
-            "itemId": 1414,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 31337,
-            "numAuctions": 0,
-            "itemName": "Cracked Sledge"
-        },
-        {
-            "itemId": 1417,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 400,
-            "numAuctions": 0,
-            "itemName": "Beaten Battle Axe"
-        },
-        {
-            "itemId": 1425,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 50000,
-            "numAuctions": 0,
-            "itemName": "Worn Leather Vest"
-        },
-        {
-            "itemId": 1431,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 9991,
-            "numAuctions": 0,
-            "itemName": "Patchwork Pants"
-        },
-        {
-            "itemId": 1433,
-            "minBuyout": 0,
-            "quantity": 0,
-            "marketValue": 89996,
-            "numAuctions": 0,
-            "itemName": "Patchwork Armor"
-        },
-        {
-            "itemId": 1443,
-            "minBuyout": 4000000,
-            "quantity": 1,
-            "marketValue": 2680736,
-            "numAuctions": 1,
-            "itemName": "Jeweled Amulet of Cainwyn"
         }
     ]
 }
