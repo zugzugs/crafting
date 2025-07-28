@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cooking 1-300 Guide</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    h1 { text-align: center; }
+    .skill-bracket { margin-bottom: 40px; }
+    .recipe-card {
+      border: 1px solid #ccc; padding: 10px; border-radius: 8px;
+      margin-bottom: 15px; background: #f9f9f9;
+    }
+    .material { margin-left: 15px; }
+    img.icon { width: 20px; height: 20px; vertical-align: middle; margin-right: 5px; }
+  </style>
+</head>
+<body>
+  <h1>Cooking 1-300 Guide</h1>
+  <div id="guide"></div>
+
+  <script>
+    const skillBrackets = [
+      { name: "1-75", min: 1, max: 75 },
+      { name: "75-150", min: 75, max: 150 },
+      { name: "150-225", min: 150, max: 225 },
+      { name: "225-300", min: 225, max: 300 },
+      { name: "Unspecified", min: null, max: null }
+    ];
+
+    const loadData = async () => {
+      const [recipes, materials, horde] = await Promise.all([
+        fetch('recipes.json').then(res => res.json()),
+        fetch('materials.json').then(res => res.json()),
+        fetch('horde.json').then(res => res.json())
+      ]);
+
+      const materialMap = Object.fromEntries(materials.map(m => [m.itemId, m]));
+      const priceMap = Object.fromEntries(horde.pricing_data.map(p => [p.itemId, p]));
+
+      const grouped = {};
+
+      recipes.forEach(recipe => {
+        let level = parseInt(recipe.skillLevel);
+        if (isNaN(level)) level = null;
+
+        const bracket = skillBrackets.find(b => {
+          return b.min === null || (level >= b.min && level < b.max);
+        });
+
+        if (!grouped[bracket.name]) grouped[bracket.name] = [];
+        grouped[bracket.name].push(recipe);
+      });
+
+      const container = document.getElementById('guide');
+      skillBrackets.forEach(bracket => {
+        const recipes = grouped[bracket.name];
+        if (!recipes) return;
+
+        const section = document.createElement('div');
+        section.className = 'skill-bracket';
+        section.innerHTML = `<h2>${bracket.name}</h2>`;
+
+        recipes.forEach(recipe => {
+          const card = document.createElement('div');
+          card.className = 'recipe-card';
+
+          card.innerHTML = `
+            <h3><img class="icon" src="https://wow.zamimg.com/images/wow/icons/large/${recipe.icon}.jpg" />
+            ${recipe.name} (Skill: ${recipe.skillLevel})</h3>
+            <p><strong>Materials:</strong></p>
+          `;
+
+          recipe.materials.forEach(mat => {
+            const material = materialMap[mat.itemId];
+            const price = priceMap[mat.itemId];
+
+            const matName = material ? material.name : `Item ${mat.itemId}`;
+            const icon = material ? material.iconname : 'inv_misc_questionmark';
+            const priceText = price ? ` - ${price.marketValue.toLocaleString()}g` : ' - Price N/A';
+
+            card.innerHTML += `
+              <div class="material">
+                <img class="icon" src="https://wow.zamimg.com/images/wow/icons/large/${icon}.jpg" />
+                ${mat.quantity} x ${matName}${priceText}
+              </div>
+            `;
+          });
+
+          section.appendChild(card);
+        });
+
+        container.appendChild(section);
+      });
+    };
+
+    loadData();
+  </script>
+</body>
+</html>
