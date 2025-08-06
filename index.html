@@ -3,171 +3,492 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Minto | WoW Classic SoD</title>
+  <title>Minto | WoW Classic SoD Crafting Prices</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <!-- Wowhead Power.js for tooltips -->
   <script src="https://wow.zamimg.com/widgets/power.js"></script>
   <style>
+    /* CSS Variables for consistent theming */
+    :root {
+      --primary-gold: #e6d5a8;
+      --accent-gold: #f0c05a;
+      --border-gold: #b89737;
+      --bg-dark: #1a1a1a;
+      --bg-darker: #0f0f0f;
+      --bg-card: #2c2c2c;
+      --bg-card-hover: #3a3a3a;
+      --text-primary: #e0e0e0;
+      --text-secondary: #b0b0b0;
+      --text-muted: #888;
+      --success-color: #28a745;
+      --danger-color: #dc3545;
+      --warning-color: #ffc107;
+      --info-color: #17a2b8;
+      --shadow-light: 0 2px 8px rgba(0, 0, 0, 0.1);
+      --shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.2);
+      --shadow-heavy: 0 8px 32px rgba(0, 0, 0, 0.3);
+      --border-radius: 12px;
+      --border-radius-sm: 8px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Light mode variables */
+    :root[data-theme="light"] {
+      --bg-dark: #f8f9fa;
+      --bg-darker: #e9ecef;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f8f9fa;
+      --text-primary: #212529;
+      --text-secondary: #495057;
+      --text-muted: #6c757d;
+    }
+
+    /* Base Styles */
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      background-color: #1a1a1a; /* Dark background */
-      color: #e0e0e0; /* Light text */
-      transition: all 0.3s ease;
+      background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-darker) 100%);
+      color: var(--text-primary);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      transition: var(--transition);
+      line-height: 1.6;
     }
-    body.light-mode {
-      background-color: #f8f9fa;
-      color: #212529;
+
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, rgba(44, 44, 44, 0.95) 0%, rgba(26, 26, 26, 0.95) 100%);
+      backdrop-filter: blur(10px);
+      border-bottom: 2px solid var(--border-gold);
+      padding: 1.5rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: var(--shadow-medium);
     }
-    .recipe-card {
-      margin-bottom: 0.5rem; /* Less space between cards */
-      animation: fadeIn 0.5s ease-in;
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
     }
-    .profit-positive {
-      color: #28a745; /* Green for positive profit */
-      font-weight: bold;
+
+    .header h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--accent-gold);
+      margin: 0;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      letter-spacing: 1px;
     }
-    .profit-negative {
-      color: #dc3545; /* Red for negative profit */
-      font-weight: bold;
+
+    .header h1::before {
+      content: "⚔️";
+      margin-right: 0.5rem;
+      font-size: 2rem;
     }
-    .filter-container {
+
+    /* Main Container */
+    .main-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    /* Filter Section */
+    .filter-section {
+      background: var(--bg-card);
+      border: 1px solid rgba(184, 151, 55, 0.3);
+      border-radius: var(--border-radius);
+      padding: 2rem;
       margin-bottom: 2rem;
+      box-shadow: var(--shadow-light);
+      backdrop-filter: blur(10px);
+    }
+
+    .filter-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      align-items: end;
+    }
+
+    .filter-group {
       display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      align-items: center;
+      flex-direction: column;
+      gap: 0.5rem;
     }
-    .item-link {
-      text-decoration: none;
-      color: #66b0ff; /* Lighter blue for links */
-      font-size: 0.85rem; /* Smaller font for links */
+
+    .filter-label {
+      font-weight: 600;
+      color: var(--text-primary);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.25rem;
     }
-    .item-link:hover {
-      text-decoration: underline;
-      color: #99ccff; /* Lighter hover color */
+
+    /* Form Controls */
+    .form-control, .form-select {
+      background: var(--bg-darker);
+      border: 2px solid rgba(184, 151, 55, 0.2);
+      border-radius: var(--border-radius-sm);
+      color: var(--text-primary);
+      padding: 0.75rem 1rem;
+      font-size: 0.95rem;
+      transition: var(--transition);
+      font-family: 'Inter', sans-serif;
     }
-    /* Card styling */
-    .card {
-      background-color: #2c2c2c; /* Dark card background */
-      border: 1px solid #444; /* Subtle border */
-      color: #e0e0e0; /* Light text */
-      transition: all 0.3s ease;
-      margin-bottom: 0.5rem; /* Reduce margin between cards */
+
+    .form-control:focus, .form-select:focus {
+      background: var(--bg-darker);
+      border-color: var(--accent-gold);
+      color: var(--text-primary);
+      box-shadow: 0 0 0 3px rgba(240, 192, 90, 0.1);
+      outline: none;
     }
-    .card-body {
-      padding: 0.75rem; /* Reduce padding for compactness */
-      font-size: 0.9rem; /* Smaller font size for card content */
+
+    .form-control::placeholder {
+      color: var(--text-muted);
     }
-    .card-title {
-      font-size: 1.1rem; /* Smaller heading size */
-      margin-bottom: 0.5rem; /* Reduce spacing below title */
+
+    /* Buttons */
+    .btn {
+      border-radius: var(--border-radius-sm);
+      font-weight: 600;
+      padding: 0.75rem 1.5rem;
+      transition: var(--transition);
+      font-family: 'Inter', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-size: 0.85rem;
     }
-    .card img {
-      margin: 5px 0; /* Reduce vertical spacing */
-      max-width: 36px; /* Smaller image size */
-      transition: border-color 0.3s ease;
+
+    .btn-outline-secondary {
+      background: transparent;
+      border: 2px solid var(--border-gold);
+      color: var(--accent-gold);
     }
-    .card.light-mode {
-      background-color: #ffffff;
-      border: 1px solid #ddd;
-      color: #212529;
+
+    .btn-outline-secondary:hover {
+      background: var(--accent-gold);
+      border-color: var(--accent-gold);
+      color: var(--bg-darker);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-medium);
     }
-    .card ul {
-      padding-left: 0; /* Reduce indent for list */
-      margin-bottom: 0.5rem; /* Reduce spacing below list */
-    }
-    .card ul li {
-      font-size: 0.85rem; /* Smaller font for materials */
-      display: flex;
-      align-items: center;
-      gap: 2px;
-    }
-    .card-text strong {
-      font-size: 0.9rem; /* Slightly smaller font for strong text */
-    }
-    /* Adjust spacing in grid */
-    .col-md-4 {
-      padding-left: 0.5rem; /* Reduce horizontal padding */
-      padding-right: 0.5rem;
-    }
-    /* Dropdown styling */
-    .form-select {
-      background-color: #333; /* Dark dropdown background */
-      color: #e0e0e0; /* Light text */
-      border: 1px solid #555; /* Subtle border */
-      transition: all 0.3s ease;
-    }
-    .form-select.light-mode {
-      background-color: #ffffff;
-      color: #212529;
-      border: 1px solid #ccc;
-    }
-    .form-select:focus {
-      background-color: #333;
-      color: #e0e0e0;
-      border-color: #66b0ff;
-      box-shadow: 0 0 0 0.25rem rgba(102, 176, 255, 0.25);
-    }
-    .form-select.light-mode:focus {
-      background-color: #ffffff;
-      color: #212529;
-    }
-    .form-select option {
-      background-color: #333;
-      color: #e0e0e0;
-    }
-    .form-select.light-mode option {
-      background-color: #ffffff;
-      color: #212529;
-    }
-    /* Label styling */
-    .form-label {
-      color: #e0e0e0;
-      transition: all 0.3s ease;
-    }
-    .form-label.light-mode {
-      color: #212529;
-    }
-    /* Last updated styling */
-    #lastUpdated {
-      font-size: 0.9rem; /* Slightly smaller text */
-      font-style: italic; /* Optional: make it stand out */
-    }
-    /* Error message styling */
-    .text-danger {
-      color: #ff6666 !important;
-    }
-    /* Favorite button */
-    .favorite-btn {
-      cursor: pointer;
-      color: #e0e0e0;
-      transition: color 0.2s;
-    }
-    .favorite-btn.favorited {
-      color: #ffd700;
-    }
-    /* Favorites filter button */
+
     .favorites-filter-btn {
-      background-color: #333;
-      color: #e0e0e0;
-      border: 1px solid #555;
-      transition: all 0.3s ease;
+      background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-darker) 100%);
+      border: 2px solid var(--border-gold);
+      color: var(--accent-gold);
+      position: relative;
+      overflow: hidden;
     }
+
+    .favorites-filter-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(240, 192, 90, 0.1), transparent);
+      transition: left 0.5s;
+    }
+
+    .favorites-filter-btn:hover::before {
+      left: 100%;
+    }
+
     .favorites-filter-btn.active {
-      background-color: #ffd700;
-      color: #212529;
-      border-color: #ffd700;
+      background: linear-gradient(135deg, var(--accent-gold) 0%, #d4af37 100%);
+      border-color: var(--accent-gold);
+      color: var(--bg-darker);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-medium);
     }
-    .favorites-filter-btn.light-mode {
-      background-color: #ffffff;
-      color: #212529;
-      border: 1px solid #ccc;
+
+    /* Status Bar */
+    .status-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      border-top: 1px solid rgba(184, 151, 55, 0.2);
+      margin-top: 1.5rem;
     }
-    .favorites-filter-btn.light-mode.active {
-      background-color: #ffd700;
-      color: #212529;
-      border-color: #ffd700;
+
+    #lastUpdated {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      font-style: italic;
     }
-    /* Loading spinner */
+
+    /* Recipe Grid */
+    .recipe-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 1.5rem;
+    }
+
+    /* Recipe Cards */
+    .recipe-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(184, 151, 55, 0.2);
+      border-radius: var(--border-radius);
+      padding: 1.5rem;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-light);
+    }
+
+    .recipe-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-gold), var(--border-gold));
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .recipe-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-heavy);
+      border-color: rgba(184, 151, 55, 0.4);
+    }
+
+    .recipe-card:hover::before {
+      opacity: 1;
+    }
+
+    .recipe-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+
+    .recipe-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--accent-gold);
+      margin: 0;
+      line-height: 1.3;
+      flex: 1;
+      margin-right: 1rem;
+    }
+
+    .favorite-btn {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: var(--transition);
+      padding: 0.25rem;
+      border-radius: 50%;
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .favorite-btn:hover {
+      color: var(--warning-color);
+      transform: scale(1.1);
+    }
+
+    .favorite-btn.favorited {
+      color: var(--warning-color);
+      animation: pulse 0.6s ease-in-out;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+
+    .recipe-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--border-radius-sm);
+      margin: 1rem 0;
+      box-shadow: var(--shadow-light);
+      transition: var(--transition);
+    }
+
+    .recipe-icon:hover {
+      transform: scale(1.1);
+      box-shadow: var(--shadow-medium);
+    }
+
+    .recipe-info {
+      display: grid;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(184, 151, 55, 0.1);
+    }
+
+    .info-label {
+      font-weight: 600;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .info-value {
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    .item-link {
+      color: var(--accent-gold);
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition);
+      border-bottom: 1px solid transparent;
+    }
+
+    .item-link:hover {
+      color: var(--primary-gold);
+      border-bottom-color: var(--primary-gold);
+    }
+
+    /* Materials List */
+    .materials-section {
+      margin-top: 1rem;
+    }
+
+    .materials-title {
+      font-weight: 600;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.75rem;
+    }
+
+    .materials-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    .material-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem;
+      background: var(--bg-darker);
+      border-radius: var(--border-radius-sm);
+      border: 1px solid rgba(184, 151, 55, 0.1);
+      transition: var(--transition);
+    }
+
+    .material-item:hover {
+      background: var(--bg-card-hover);
+      border-color: rgba(184, 151, 55, 0.2);
+    }
+
+    .material-quantity {
+      background: var(--accent-gold);
+      color: var(--bg-darker);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.25rem 0.5rem;
+      border-radius: 12px;
+      min-width: 1.5rem;
+      text-align: center;
+    }
+
+    .material-name {
+      flex: 1;
+      font-size: 0.9rem;
+    }
+
+    .material-price {
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .vendor-price {
+      color: var(--info-color);
+      font-size: 0.8rem;
+      font-style: italic;
+    }
+
+    /* Profit Display */
+    .profit-section {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: var(--bg-darker);
+      border-radius: var(--border-radius-sm);
+      border: 1px solid rgba(184, 151, 55, 0.2);
+    }
+
+    .profit-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .profit-row:last-child {
+      margin-bottom: 0;
+      padding-top: 0.5rem;
+      border-top: 1px solid rgba(184, 151, 55, 0.2);
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .profit-positive {
+      color: var(--success-color);
+      font-weight: 700;
+    }
+
+    .profit-negative {
+      color: var(--danger-color);
+      font-weight: 700;
+    }
+
+    /* Money Icons */
+    .money-icon {
+      width: 16px;
+      height: 16px;
+      vertical-align: middle;
+      margin: 0 2px;
+      filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+    }
+
+    /* Loading Spinner */
     .loading-spinner {
       display: none;
       position: fixed;
@@ -175,97 +496,207 @@
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: 2000;
+      background: var(--bg-card);
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-heavy);
+      border: 1px solid var(--border-gold);
     }
+
     .loading-spinner.show {
       display: block;
     }
-    /* Animation */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    /* Wowhead tooltips */
-    .wowhead-tooltip {
-      z-index: 1000;
-    }
-    /* Badge styling for material quantities */
-    .badge-light {
-      background-color: #444;
-      color: #e0e0e0;
-      font-size: 0.75rem;
-    }
-    .card.light-mode .badge-light {
-      background-color: #e0e0e0;
-      color: #212529;
-    }
-    /* Money icon styling */
-    .money-icon {
-      width: 16px;
-      height: 16px;
-      vertical-align: middle;
-      margin-right: 2px;
-      margin-left: 2px;
-    }
-    /* Responsive adjustments for smaller screens */
-    @media (max-width: 576px) {
-      .card-body {
-        font-size: 0.85rem;
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
       }
-      .card-title {
-        font-size: 1rem;
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
-      .badge-light {
-        font-size: 0.7rem;
+    }
+
+    .recipe-card {
+      animation: fadeInUp 0.6s ease-out;
+    }
+
+    .recipe-card:nth-child(odd) {
+      animation-delay: 0.1s;
+    }
+
+    .recipe-card:nth-child(even) {
+      animation-delay: 0.2s;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 2rem;
       }
-      .money-icon {
-        width: 14px;
-        height: 14px;
+
+      .header-content {
+        padding: 0 1rem;
+        flex-direction: column;
+        gap: 1rem;
       }
+
+      .main-container {
+        padding: 1rem;
+      }
+
+      .filter-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .recipe-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .recipe-card {
+        padding: 1rem;
+      }
+
+      .recipe-title {
+        font-size: 1.1rem;
+      }
+
+      .status-bar {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header h1 {
+        font-size: 1.5rem;
+      }
+
+      .header h1::before {
+        font-size: 1.5rem;
+      }
+
+      .filter-section {
+        padding: 1rem;
+      }
+
+      .recipe-header {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .recipe-title {
+        margin-right: 0;
+      }
+
+      .info-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+      }
+    }
+
+    /* Scrollbar Styling */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg-darker);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--border-gold);
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--accent-gold);
+    }
+
+    /* Focus styles for accessibility */
+    .favorite-btn:focus,
+    .btn:focus,
+    .form-control:focus,
+    .form-select:focus {
+      outline: 2px solid var(--accent-gold);
+      outline-offset: 2px;
+    }
+
+    /* Error states */
+    .text-danger {
+      color: var(--danger-color) !important;
+    }
+
+    /* Success states */
+    .text-success {
+      color: var(--success-color) !important;
     }
   </style>
 </head>
 <body>
-  <main class="container my-4">
-    <div class="d-flex justify-content-between align-items-center mb-4">
+  <header class="header">
+    <div class="header-content">
       <h1>WoW Classic SoD Crafting Prices</h1>
-      <button id="themeToggle" class="btn btn-outline-secondary">Toggle Light/Dark Mode</button>
+      <button id="themeToggle" class="btn btn-outline-secondary">
+        <span class="theme-icon">🌙</span>
+        <span class="theme-text">Toggle Theme</span>
+      </button>
     </div>
+  </header>
 
-    <section class="filter-container">
-      <div>
-        <label for="searchFilter" class="form-label">Search Recipes:</label>
-        <input type="text" id="searchFilter" class="form-control" placeholder="Enter recipe name...">
+  <main class="main-container">
+    <section class="filter-section">
+      <div class="filter-grid">
+        <div class="filter-group">
+          <label for="searchFilter" class="filter-label">Search Recipes</label>
+          <input type="text" id="searchFilter" class="form-control" placeholder="Enter recipe name...">
+        </div>
+        
+        <div class="filter-group">
+          <label for="professionFilter" class="filter-label">Profession</label>
+          <select id="professionFilter" class="form-select">
+            <option value="all">All Professions</option>
+          </select>
+        </div>
+        
+        <div class="filter-group">
+          <label for="sortFilter" class="filter-label">Sort By</label>
+          <select id="sortFilter" class="form-select">
+            <option value="default">Default</option>
+            <option value="profit-desc" selected>Profit (High to Low)</option>
+            <option value="profit-asc">Profit (Low to High)</option>
+          </select>
+        </div>
+        
+        <div class="filter-group">
+          <label for="favoritesFilter" class="filter-label">Favorites</label>
+          <button id="favoritesFilter" class="btn favorites-filter-btn w-100">
+            <span class="favorite-icon">⭐</span>
+            <span class="favorite-text">Show Favorites Only</span>
+          </button>
+        </div>
       </div>
-      <div>
-        <label for="professionFilter" class="form-label">Filter by Profession:</label>
-        <select id="professionFilter" class="form-select w-100 w-md-25">
-          <option value="all">All Professions</option>
-        </select>
-      </div>
-      <div>
-        <label for="sortFilter" class="form-label">Sort by:</label>
-        <select id="sortFilter" class="form-select w-100 w-md-25">
-          <option value="default">Default</option>
-          <option value="profit-desc" selected>Profit (High to Low)</option>
-          <option value="profit-asc">Profit (Low to High)</option>
-        </select>
-      </div>
-      <div>
-        <label for="favoritesFilter" class="form-label">Favourites:</label>
-        <button id="favoritesFilter" class="btn favorites-filter-btn w-75 w-md-25">Show Favorites Only</button>
-      </div>
-      <div class="align-self-center">
-        <span id="lastUpdated" class="form-label">Last updated: Loading...</span>
+      
+      <div class="status-bar">
+        <span id="lastUpdated" class="status-text">Last updated: Loading...</span>
+        <span class="recipe-count">Recipes: <span id="recipeCount">0</span></span>
       </div>
     </section>
 
     <div id="loadingSpinner" class="loading-spinner">
-      <div class="spinner-border text-primary" role="status">
+      <div class="spinner-border text-warning" role="status">
         <span class="visually-hidden">Loading...</span>
       </div>
+      <div class="mt-2 text-center">Loading recipe data...</div>
     </div>
 
-    <section id="recipeList" class="row" aria-live="polite"></section>
+    <section id="recipeList" class="recipe-grid" aria-live="polite"></section>
   </main>
 
   <script>
@@ -295,6 +726,7 @@
     const recipeList = document.getElementById("recipeList");
     const themeToggle = document.getElementById("themeToggle");
     const favoritesFilter = document.getElementById("favoritesFilter");
+    const recipeCount = document.getElementById("recipeCount");
 
     // Format copper to display with gold, silver, copper images
     const formatCopper = (copper) => {
@@ -315,7 +747,7 @@
       return result.trim();
     };
 
-    // Format ISO timestamp to readable format (e.g., "Apr 26, 2025, 4:08 PM")
+    // Format ISO timestamp to readable format
     const formatTimestamp = (isoString) => {
       const date = new Date(isoString);
       return date.toLocaleString('en-US', {
@@ -331,7 +763,6 @@
     const calculateRecipeCost = (recipe, priceMap) => {
       let totalCost = 0;
       recipe.materials.forEach(mat => {
-        // Use fixed price if available, otherwise fall back to auction price
         const price = fixedPrices[mat.itemId] !== undefined ? fixedPrices[mat.itemId] : (priceMap.get(mat.itemId) || 0);
         totalCost += price * mat.quantity;
       });
@@ -341,13 +772,10 @@
     };
 
     const toggleFavorite = (recipeId) => {
-      console.log('Toggling favorite for recipe:', recipeId);
       if (favorites.includes(recipeId)) {
         favorites = favorites.filter(id => id !== recipeId);
-        console.log('Removed from favorites:', recipeId);
       } else {
         favorites.push(recipeId);
-        console.log('Added to favorites:', recipeId);
       }
       localStorage.setItem('favoriteRecipes', JSON.stringify(favorites));
       renderRecipes(professionFilter.value, sortFilter.value, searchFilter.value);
@@ -390,6 +818,9 @@
         });
       }
 
+      // Update recipe count
+      recipeCount.textContent = filteredRecipes.length;
+
       filteredRecipes.forEach((recipe, index) => {
         const { totalCost, profit, resultPrice } = calculateRecipeCost(recipe, priceMap);
         const resultName = materialMap.get(recipe.result.itemId) || "Unknown Item";
@@ -398,55 +829,84 @@
 
         const materialsHTML = recipe.materials.map(mat => {
           const name = materialMap.get(mat.itemId) || "Unknown";
-          // Use fixed price if available, otherwise fall back to auction price
           const matPrice = fixedPrices[mat.itemId] !== undefined ? fixedPrices[mat.itemId] * mat.quantity : (priceMap.get(mat.itemId) || 0) * mat.quantity;
+          const isVendor = fixedPrices[mat.itemId] !== undefined;
+          
           return `
-            <li>
-              <span class="badge badge-light">${mat.quantity}</span>
+            <li class="material-item">
+              <span class="material-quantity">${mat.quantity}</span>
               <a href="https://www.wowhead.com/classic/item=${mat.itemId}" 
-                 class="item-link" 
+                 class="material-name item-link" 
                  data-wowhead="item=${mat.itemId}" 
                  target="_blank" 
                  rel="noopener noreferrer">
                 ${name}
-              </a> (${formatCopper(matPrice)}${fixedPrices[mat.itemId] !== undefined ? ' (Vendor)' : ''})
+              </a>
+              <span class="material-price">
+                ${formatCopper(matPrice)}
+                ${isVendor ? '<span class="vendor-price">(Vendor)</span>' : ''}
+              </span>
             </li>`;
         }).join("");
 
         recipeList.insertAdjacentHTML("beforeend", `
-          <div class="col-md-4 recipe-card">
-            <div class="card h-100 ${document.body.classList.contains('light-mode') ? 'light-mode' : ''}">
-              <div class="card-body">
-                <div class="d-flex justify-content-between align-items-center">
-                  <h5 class="card-title">${recipe.name}</h5>
-                  <span class="favorite-btn ${isFavorited ? 'favorited' : ''}" 
-                        onclick="toggleFavorite('${recipeId}')">
-                    ★
-                  </span>
-                </div>
-                <img src="https://wow.zamimg.com/images/wow/icons/large/${recipe.icon}.jpg">
-                <p class="card-text">
-                  <strong>Profession:</strong> ${recipe.profession}<br>
-                  <strong>Skill Level:</strong> ${recipe.skillLevel}<br>
-                  <strong>Result:</strong>
+          <article class="recipe-card">
+            <div class="recipe-header">
+              <h3 class="recipe-title">${recipe.name}</h3>
+              <button class="favorite-btn ${isFavorited ? 'favorited' : ''}" 
+                      onclick="toggleFavorite('${recipeId}')"
+                      aria-label="${isFavorited ? 'Remove from favorites' : 'Add to favorites'}">
+                ★
+              </button>
+            </div>
+            
+            <img src="https://wow.zamimg.com/images/wow/icons/large/${recipe.icon}.jpg" 
+                 alt="${recipe.name}" 
+                 class="recipe-icon">
+            
+            <div class="recipe-info">
+              <div class="info-row">
+                <span class="info-label">Profession</span>
+                <span class="info-value">${recipe.profession}</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">Skill Level</span>
+                <span class="info-value">${recipe.skillLevel}</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">Result</span>
+                <span class="info-value">
                   <a href="https://www.wowhead.com/classic/item=${recipe.result.itemId}" 
                      class="item-link" 
                      data-wowhead="item=${recipe.result.itemId}" 
                      target="_blank" 
                      rel="noopener noreferrer">
                     ${resultName}
-                  </a> x${recipe.result.quantity} (${formatCopper(resultPrice)})<br>
-                  <strong>Materials:</strong>
-                  <ul>${materialsHTML}</ul>
-                  <strong>Total Cost:</strong> ${formatCopper(totalCost)}<br>
-                  <strong>Profit:</strong> 
-                  <span class="${profit >= 0 ? 'profit-positive' : 'profit-negative'}">
-                    ${formatCopper(profit)}
-                  </span>
-                </p>
+                  </a> 
+                  ×${recipe.result.quantity} 
+                  (${formatCopper(resultPrice)})
+                </span>
               </div>
             </div>
-          </div>
+            
+            <div class="materials-section">
+              <h4 class="materials-title">Materials Required</h4>
+              <ul class="materials-list">${materialsHTML}</ul>
+            </div>
+            
+            <div class="profit-section">
+              <div class="profit-row">
+                <span class="info-label">Total Cost</span>
+                <span class="info-value">${formatCopper(totalCost)}</span>
+              </div>
+              <div class="profit-row">
+                <span class="info-label">Profit</span>
+                <span class="${profit >= 0 ? 'profit-positive' : 'profit-negative'}">
+                  ${formatCopper(profit)}
+                </span>
+              </div>
+            </div>
+          </article>
         `);
       });
     };
@@ -460,6 +920,7 @@
           fetch('horde.json'),
           fetch('horde_update.json')
         ]);
+        
         materials = await matRes.json();
         recipes = await recRes.json();
         const priceData = await priceRes.json();
@@ -467,7 +928,7 @@
         const updateData = await updateRes.json();
         const lastUpdated = updateData.last_updated;
 
-        // Update the "Last updated" timestamp in the UI
+        // Update the "Last updated" timestamp
         const lastUpdatedElement = document.getElementById('lastUpdated');
         lastUpdatedElement.textContent = `Last updated: ${formatTimestamp(lastUpdated)}`;
 
@@ -477,6 +938,7 @@
           id: recipe.id || `recipe-${recipe.result.itemId}-${index}`
         }));
 
+        // Populate profession filter
         const professions = [...new Set(recipes.map(r => r.profession))];
         professions.forEach(prof => {
           const option = document.createElement("option");
@@ -491,11 +953,49 @@
         renderRecipes("Alchemy", "profit-desc");
       } catch (err) {
         console.error("Failed to load data:", err);
-        recipeList.innerHTML = `<p class="text-danger">Error loading data. Check console for details.</p>`;
+        recipeList.innerHTML = `
+          <div class="alert alert-danger" role="alert">
+            <h4>Error Loading Data</h4>
+            <p>Failed to load recipe data. Please check your connection and try again.</p>
+            <details>
+              <summary>Technical Details</summary>
+              <pre>${err.message}</pre>
+            </details>
+          </div>`;
       } finally {
         loadingSpinner.classList.remove('show');
       }
     };
+
+    // Theme toggle functionality
+    const toggleTheme = () => {
+      const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+      document.documentElement.setAttribute('data-theme', isLight ? 'dark' : 'light');
+      
+      const themeIcon = themeToggle.querySelector('.theme-icon');
+      const themeText = themeToggle.querySelector('.theme-text');
+      
+      if (isLight) {
+        themeIcon.textContent = '🌙';
+        themeText.textContent = 'Dark Mode';
+      } else {
+        themeIcon.textContent = '☀️';
+        themeText.textContent = 'Light Mode';
+      }
+      
+      localStorage.setItem('theme', isLight ? 'dark' : 'light');
+    };
+
+    // Initialize theme
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    
+    if (savedTheme === 'light') {
+      const themeIcon = themeToggle.querySelector('.theme-icon');
+      const themeText = themeToggle.querySelector('.theme-text');
+      themeIcon.textContent = '☀️';
+      themeText.textContent = 'Light Mode';
+    }
 
     // Event listeners
     professionFilter.addEventListener("change", (e) => {
@@ -510,21 +1010,27 @@
       renderRecipes(professionFilter.value, sortFilter.value, e.target.value);
     });
 
-    themeToggle.addEventListener("click", () => {
-      document.body.classList.toggle('light-mode');
-      document.querySelectorAll('.card').forEach(card => card.classList.toggle('light-mode'));
-      document.querySelectorAll('.form-select').forEach(select => select.classList.toggle('light-mode'));
-      document.querySelectorAll('.form-label').forEach(label => label.classList.toggle('light-mode'));
-      document.querySelectorAll('.favorites-filter-btn').forEach(btn => btn.classList.toggle('light-mode'));
-    });
+    themeToggle.addEventListener("click", toggleTheme);
 
     favoritesFilter.addEventListener("click", () => {
       showFavoritesOnly = !showFavoritesOnly;
       favoritesFilter.classList.toggle('active');
-      favoritesFilter.textContent = showFavoritesOnly ? 'Show All Recipes' : 'Show Favorites Only';
+      
+      const favoriteIcon = favoritesFilter.querySelector('.favorite-icon');
+      const favoriteText = favoritesFilter.querySelector('.favorite-text');
+      
+      if (showFavoritesOnly) {
+        favoriteIcon.textContent = '⭐';
+        favoriteText.textContent = 'Show All Recipes';
+      } else {
+        favoriteIcon.textContent = '⭐';
+        favoriteText.textContent = 'Show Favorites Only';
+      }
+      
       renderRecipes(professionFilter.value, sortFilter.value, searchFilter.value);
     });
 
+    // Initialize on page load
     document.addEventListener("DOMContentLoaded", loadData);
   </script>
 </body>
