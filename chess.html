@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chess Game with AI</title>
+    <link rel="icon" href="data:;base64,="> <!-- Suppress favicon 404 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css">
+    <script src="chess.min.js"></script>
+    <script>
+        // Load chess.js with fallback
+        function loadChessJs(callback) {
+            if (typeof Chess !== 'undefined') {
+                callback();
+                return;
+            }
+            console.warn('Chess.js CDN failed, attempting fallback...');
+            const script = document.createElement('script');
+            script.src = 'chess.min.js'; // Adjust to your local path
+            script.type = 'text/javascript'; // Explicitly non-module
+            script.onerror = () => {
+                document.getElementById('error').innerText = 'Error: Chess.js failed to load from both CDN and fallback. Please ensure chess.min.js is in the project directory.';
+            };
+            script.onload = callback;
+            document.head.appendChild(script);
+        }
+
+        window.addEventListener('load', () => loadChessJs(initializeGame));
+    </script>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        #game-container { max-width: 800px; margin: 0 auto; display: flex; }
+        #board { width: 400px; margin: 20px; }
+        #sidebar { width: 300px; margin: 20px; text-align: left; }
+        #status { font-size: 18px; margin: 10px 0; }
+        #legal-moves { font-size: 14px; margin: 10px 0; }
+        #move-history { font-size: 14px; margin: 10px 0; max-height: 300px; overflow-y: auto; }
+        button { padding: 10px 20px; font-size: 16px; margin: 10px; }
+        #promotion-modal { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border: 1px solid black; }
+        #error { color: red; font-size: 14px; margin: 10px; }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div>
+            <h1>Chess Game (You: White, AI: Black)</h1>
+            <div id="board"></div>
+            <button onclick="resetGame()">Reset Game</button>
+            <div id="error"></div>
+        </div>
+        <div id="sidebar">
+            <div id="status">Initializing...</div>
+            <div id="legal-moves"></div>
+            <div id="move-history"><strong>Move History:</strong><br></div>
+        </div>
+    </div>
+    <div id="promotion-modal">
+        <p>Promote pawn to:</p>
+        <button onclick="promoteTo('q')">Queen</button>
+        <button onclick="promoteTo('r')">Rook</button>
+        <button onclick="promoteTo('b')">Bishop</button>
+        <button onclick="promoteTo('n')">Knight</button>
+    </div>
+
+    <script>
+        let board;
+        let game;
+        let pendingMove = null;
+        let moveHistory = [];
+
+        function initializeGame() {
+            if (typeof Chess === 'undefined') {
+                document.getElementById('error').innerText = 'Error: Chess.js not loaded. Please check your internet or local chess.min.js.';
+                return;
+            }
+            game = new Chess();
+            const config = {
+                draggable: true,
+                position: 'start',
+                onDrop: onDrop,
+                orientation: 'white'
+            };
+            board = Chessboard('board', config);
+            updateBoard();
+        }
+
+        function evaluateBoard() {
+            if (game.in_checkmate()) {
+                return game.turn() === 'w' ? -Infinity : Infinity;
+            }
+            if (game.in_stalemate() || game.in_draw()) {
+                return 0;
+            }
+            const pieceValues = { p: 1, n: 3, b: 3, r: 5, q: 9, k: 0 };
+            let score = 0;
+            const board = game.board();
+            for (let i = 0; i < 8; i++) {
+                for (let j = 0; j < 8; j++) {
+                    const piece = board[i][j];
+                    if (piece) {
+                        const value = pieceValues[piece.type];
+                        score += piece.color === 'w' ? value : -value;
+                    }
+                }
+            }
+            return score;
+        }
+
+        function minimax(depth, alpha, beta, maximizingPlayer) {
+            if (depth === 0 || game.game_over()) {
+                return evaluateBoard();
+            }
+            const moves = game.moves();
+            if (maximizingPlayer) {
+                let maxEval = -Infinity;
+                for (const move of moves) {
+                    game.move(move);
+                    const evalScore = minimax(depth - 1, alpha, beta, false);
+                    game.undo();
+                    maxEval = Math.max(maxEval, evalScore);
+                    alpha = Math.max(alpha, evalScore);
+                    if (beta <= alpha) break;
+                }
+                return maxEval;
+            } else {
+                let minEval = Infinity;
+                for (const move of moves) {
+                    game.move(move);
+                    const evalScore = minimax(depth - 1, alpha, beta, true);
+                    game.undo();
+                    minEval = Math.min(minEval, evalScore);
+                    beta = Math.min(beta, evalScore);
+                    if (beta <= alpha) break;
+                }
+                return minEval;
+            }
+        }
+
+        function getBestMove(depth = 3) {
+            const moves = game.moves();
+            if (moves.length === 0) return null;
+            let bestMove = null;
+            let bestValue = -Infinity;
+            let alpha = -Infinity;
+            let beta = Infinity;
+            for (const move of moves) {
+                game.move(move);
+                const value = minimax(depth - 1, alpha, beta, false);
+                game.undo();
+                if (value > bestValue) {
+                    bestValue = value;
+                    bestMove = move;
+                }
+                alpha = Math.max(alpha, value);
+            }
+            return bestMove;
+        }
+
+        function updateBoard() {
+            board.position(game.fen());
+            const legalMoves = game.moves();
+            document.getElementById('legal-moves').innerText = `Legal moves: ${legalMoves.join(', ')}`;
+            if (game.game_over()) {
+                let statusText = 'Game over: ';
+                if (game.in_checkmate()) {
+                    statusText += game.turn() === 'w' ? 'Black wins!' : 'White wins!';
+                } else {
+                    statusText += 'Draw!';
+                }
+                document.getElementById('status').innerText = statusText;
+            } else {
+                document.getElementById('status').innerText = game.turn() === 'w' ? 'Your turn (White)' : 'AI thinking...';
+                if (game.turn() === 'b') {
+                    setTimeout(() => {
+                        const move = getBestMove();
+                        if (move) {
+                            game.move(move);
+                            updateMoveHistory(move);
+                            updateBoard();
+                        }
+                    }, 500);
+                }
+            }
+        }
+
+        function updateMoveHistory(move) {
+            moveHistory.push(move);
+            const historyDiv = document.getElementById('move-history');
+            historyDiv.innerHTML = '<strong>Move History:</strong><br>' + moveHistory.join('<br>');
+            historyDiv.scrollTop = historyDiv.scrollHeight;
+        }
+
+        function onDrop(source, target, piece) {
+            if (game.turn() === 'b' || game.game_over()) {
+                document.getElementById('error').innerText = 'Not your turn or game over!';
+                return 'snapback';
+            }
+            const move = { from: source, to: target };
+            if (piece[1] === 'P' && target[1] === '8') {
+                pendingMove = move;
+                document.getElementById('promotion-modal').style.display = 'block';
+                return;
+            }
+            const moveResult = game.move(move);
+            if (!moveResult) {
+                document.getElementById('error').innerText = 'Invalid move!';
+                return 'snapback';
+            }
+            document.getElementById('error').innerText = '';
+            updateMoveHistory(moveResult.san);
+            updateBoard();
+        }
+
+        function promoteTo(piece) {
+            document.getElementById('promotion-modal').style.display = 'none';
+            if (pendingMove) {
+                const move = { from: pendingMove.from, to: pendingMove.to, promotion: piece };
+                const moveResult = game.move(move);
+                if (moveResult) {
+                    updateMoveHistory(moveResult.san);
+                    updateBoard();
+                } else {
+                    document.getElementById('error').innerText = 'Invalid promotion move!';
+                }
+                pendingMove = null;
+            }
+        }
+
+        function resetGame() {
+            if (typeof Chess === 'undefined') {
+                document.getElementById('error').innerText = 'Error: Chess.js not loaded. Cannot reset game.';
+                return;
+            }
+            game = new Chess();
+            moveHistory = [];
+            board.position('start');
+            document.getElementById('move-history').innerHTML = '<strong>Move History:</strong><br>';
+            document.getElementById('error').innerText = '';
+            updateBoard();
+        }
+    </script>
+</body>
+</html>
