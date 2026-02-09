@@ -1,8 +1,4 @@
-{
-  "total_urls": 2058,
-  "successful": 2050,
-  "failed": 8,
-  "recipes": [
+[
     {
       "recipe_id": 11448,
       "name": "Greater Mana Potion",
@@ -48142,5 +48138,4 @@
       "result_quantity": 1,
       "url": "https://www.wowhead.com/tbc/spell=8804/crimson-silk-gloves"
     }
-  ]
-}
+]
