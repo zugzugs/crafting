@@ -766,8 +766,8 @@
         const price = fixedPrices[mat.itemId] !== undefined ? fixedPrices[mat.itemId] : (priceMap.get(mat.itemId) || 0);
         totalCost += price * mat.quantity;
       });
-      const resultPrice = priceMap.get(recipe.result.itemId) || 0;
-      const profit = (resultPrice * recipe.result.quantity) - totalCost;
+      const resultPrice = priceMap.get(recipe.materials.itemId) || 0;
+      const profit = (resultPrice * recipe.materials.quantity) - totalCost;
       return { totalCost, profit, resultPrice };
     };
 
@@ -823,8 +823,8 @@
 
       filteredRecipes.forEach((recipe, index) => {
         const { totalCost, profit, resultPrice } = calculateRecipeCost(recipe, priceMap);
-        const resultName = materialMap.get(recipe.result.itemId) || "Unknown Item";
-        const recipeId = recipe.id || `recipe-${recipe.result.itemId}-${index}`;
+        const resultName = materialMap.get(recipe.materials.itemId) || "Unknown Item";
+        const recipeId = recipe.id || `recipe-${recipe.materials.itemId}-${index}`;
         const isFavorited = favorites.includes(recipeId);
 
         const materialsHTML = recipe.materials.map(mat => {
@@ -876,14 +876,14 @@
               <div class="info-row">
                 <span class="info-label">Result</span>
                 <span class="info-value">
-                  <a href="https://www.wowhead.com/classic/item=${recipe.result.itemId}" 
+                  <a href="https://www.wowhead.com/classic/item=${recipe.materials.itemId}" 
                      class="item-link" 
-                     data-wowhead="item=${recipe.result.itemId}" 
+                     data-wowhead="item=${recipe.materials.itemId}" 
                      target="_blank" 
                      rel="noopener noreferrer">
                     ${resultName}
                   </a> 
-                  ×${recipe.result.quantity} 
+                  ×${recipe.materials.quantity} 
                   (${formatCopper(resultPrice)})
                 </span>
               </div>
@@ -935,7 +935,7 @@
         // Ensure each recipe has a unique ID
         recipes = recipes.map((recipe, index) => ({
           ...recipe,
-          id: recipe.id || `recipe-${recipe.result.itemId}-${index}`
+          id: recipe.id || `recipe-${recipe.materials.itemId}-${index}`
         }));
 
         // Populate profession filter
